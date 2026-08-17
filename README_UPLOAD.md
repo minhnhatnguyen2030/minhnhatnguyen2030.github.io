@@ -1,23 +1,12 @@
-# Selected Research Update — Upload Guide
+# SCDL3991 GitHub Research Page — Full Update
 
-This package is designed for the existing repository:
+This package updates the dedicated SCDL3991 research page with a substantially richer research narrative and replaces the old generic image placeholders/captions with three report-derived visualisations.
 
-`minhnhatnguyen2030/minhnhatnguyen2030.github.io`
+## Replace / upload these files
 
-It updates the empty **Selected Research** section and adds dedicated pages for SCDL3991 and DATA3888.
-
-## What this package changes
-
-### Replace these existing root files
-1. `/index.html`
-2. `/style.css`
-
-### Add these new files/folders
 ```text
 research/
-├── scdl3991/
-│   └── index.html
-└── data3888/
+└── scdl3991/
     └── index.html
 
 assets/
@@ -27,75 +16,55 @@ assets/
     └── research/
         ├── scdl3991-card.jpg
         ├── scdl3991-geometry.jpg
-        ├── scdl3991-results.jpg
-        ├── data3888-card.jpg
-        ├── data3888-models.jpg
-        ├── data3888-shiny.jpg
-        └── IMAGE_GUIDE.md
-
-files/
-└── RESEARCH_REPORTS_README.md
+        └── scdl3991-results.jpg
 ```
 
-Your existing `script.js`, journey folders, profile photo, CV path and other assets are not changed by this update.
+Upload the **contents** of this folder to the root of:
 
-## Easiest GitHub web upload
+`minhnhatnguyen2030/minhnhatnguyen2030.github.io`
 
-1. Open:
-   `https://github.com/minhnhatnguyen2030/minhnhatnguyen2030.github.io`
-2. Choose **Add file → Upload files**.
-3. Drag the **contents of this package** into the repository root.
-4. Keep the folder structure exactly as shown above.
-5. GitHub will ask whether to replace `index.html` and `style.css` — confirm the replacement.
-6. Commit to `main`.
-7. Wait for GitHub Pages to redeploy.
-8. Visit:
-   `https://minhnhatnguyen2030.github.io/#research`
+and allow GitHub to replace files with the same names.
 
-Dedicated pages:
-- `https://minhnhatnguyen2030.github.io/research/scdl3991/`
-- `https://minhnhatnguyen2030.github.io/research/data3888/`
+## New figure titles on the page
 
-## Images
+### Figure 1
+**Optimiser robustness changes with mixture geometry**
 
-The included research JPGs are clean placeholders.
+Shows mean RMSE for all six optimisers across K = 2, 3, 4, 5 using Table 7 of the final report.
 
-When ready, replace each placeholder with your chosen project image **using exactly the same filename**.
+### Figure 2
+**Asymmetry can matter more than adding another mode**
 
-Read:
-`/assets/images/research/IMAGE_GUIDE.md`
+Directly compares K = 3 and K = 4 for the five non-SGD methods. The caption explicitly notes that Momentum is the exception, avoiding an over-strong claim.
 
-for the recommended pages / figures from your uploaded reports and presentation slides.
+### Figure 3
+**More data helps, but optimiser robustness still matters**
 
-## Confidential reports
+Uses the K = 3 sample-size results from Table 6 to show how RMSE changes from n = 50 to 1000.
 
-The website does **not** publish either report PDF.
+## Page improvements
 
-The "Request report" buttons open an email to:
-`thomas.nguyen.ai2030@gmail.com`
+The updated page now includes:
 
-This avoids putting confidential coursework or research material into public Git history.
+- why analytical score learning on GMMs is useful;
+- the exact score equation;
+- a compact experimental-design dashboard;
+- the project's three scientific questions;
+- full methodology cards;
+- a mean-RMSE result table;
+- six research insights;
+- sample-size and diffusion-noise interpretation;
+- limitations;
+- future research directions;
+- supervisor background;
+- a concise explanation of how the project shaped Thomas's research direction.
 
-## Included claims
+## Source integrity
 
-SCDL3991:
-- High Distinction: 88/100
-- individual semester-long research
-- more than 10,000 experimental runs
-- six optimisers
-- core finding: geometry / curvature anisotropy mattered more than mode count alone
+All quantitative project claims and interpretations on the page are grounded in:
 
-DATA3888:
-- High Distinction: 88/100
-- team / technical lead
-- Image21 breast-cancer H&E project
-- five CNN architectures
-- ResNet18: 88.65% accuracy, macro-F1 0.8796
-- EfficientNetB0 selected for practical Shiny / Grad-CAM deployment
+`Final_SCDL3991_Report_540619953.pdf`
 
-## Important wording choice
+The generated charts are new web visualisations made directly from the numerical tables in the submitted report; they are not screenshots of the confidential PDF.
 
-For Manoj M. Wagle, the website says:
-"University of Sydney researcher with MIT CSAIL research affiliation"
-
-rather than simply "from MIT". This is more precise while still showing the MIT connection.
+The report PDF itself is **not included** in this public GitHub update.
