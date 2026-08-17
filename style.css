@@ -7,7 +7,7 @@
   --line: #e5e7eb;
   --link: #1f5f99;
   --soft: #f7f8fa;
-  --max: 1120px;
+  --max: 1180px;
 }
 
 html { scroll-behavior: smooth; }
@@ -27,16 +27,16 @@ a:hover { text-decoration: underline; }
   width: min(var(--max), calc(100% - 48px));
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 250px minmax(0, 1fr);
-  gap: 72px;
+  grid-template-columns: 280px minmax(0, 1fr);
+  gap: 64px;
   padding: 72px 0;
 }
 
 .sidebar { position: sticky; top: 48px; align-self: start; }
 
 .profile-photo {
-  width: 170px;
-  height: 170px;
+  width: 260px;
+  height: 260px;
   display: block;
   object-fit: cover;
   object-position: center;
@@ -46,7 +46,7 @@ a:hover { text-decoration: underline; }
 }
 
 .profile-placeholder {
-  width: 170px; height: 170px; display: grid; place-items: center;
+  width: 260px; height: 260px; display: grid; place-items: center;
   border-radius: 50%; background: #eef1f4; border: 1px solid var(--line);
   color: #8a919a; font-size: 2rem; font-weight: 700; letter-spacing: .05em;
 }
@@ -63,10 +63,23 @@ a:hover { text-decoration: underline; }
 .profile-links {
   display: flex;
   flex-wrap: wrap;
-  gap: 6px 14px;
+  gap: 7px 16px;
   padding-bottom: 22px;
   border-bottom: 1px solid var(--line);
 }
+
+
+.profile-contact-note {
+  margin: -6px 0 16px;
+  color: var(--muted);
+  font-size: .82rem;
+  line-height: 1.45;
+}
+.profile-contact-note a { font-weight: 600; }
+
+.contact-list { display: grid; gap: 10px; }
+.contact-list p { margin: 0; }
+.contact-label { display: inline-block; min-width: 152px; font-weight: 700; color: #4b5563; }
 
 .desktop-nav { display: flex; flex-direction: column; gap: 8px; margin-top: 22px; }
 .desktop-nav a { color: #4b5563; font-size: .94rem; }
