@@ -1,12 +1,12 @@
-# SCDL3991 GitHub Research Page — Full Update
+# DATA3888 / Image21 GitHub Research Page — Full Update
 
-This package updates the dedicated SCDL3991 research page with a substantially richer research narrative and replaces the old generic image placeholders/captions with three report-derived visualisations.
+This package upgrades the dedicated DATA3888 page into a detailed applied-AI research case study.
 
-## Replace / upload these files
+## Upload / replace these paths
 
 ```text
 research/
-└── scdl3991/
+└── data3888/
     └── index.html
 
 assets/
@@ -14,69 +14,76 @@ assets/
 │   └── research-project.css
 └── images/
     └── research/
-        ├── scdl3991-card.jpg
-        ├── scdl3991-geometry.jpg
-        └── scdl3991-results.jpg
+        ├── data3888-card.jpg
+        ├── data3888-class-recall.jpg
+        ├── data3888-shiny.jpg
+        └── data3888-gradcam.jpg
 ```
 
-Upload the **contents** of this folder to the root of:
+Upload the **contents** of this folder into the root of:
 
 `minhnhatnguyen2030/minhnhatnguyen2030.github.io`
 
-and allow GitHub to replace files with the same names.
+Allow GitHub to replace files with the same names.
 
-## New figure titles on the page
+The CSS in this update is based on the latest SCDL3991 research-page CSS, so both detailed project pages retain a consistent design.
+
+## Figure titles
 
 ### Figure 1
-**Optimiser robustness changes with mixture geometry**
+**Architecture complexity did not determine test performance**
 
-Shows mean RMSE for all six optimisers across K = 2, 3, 4, 5 using Table 7 of the final report.
+A new clean web chart generated from the final report's five-model test accuracy and macro-F1 values.
+
+Directly underneath this figure is the Google Drive link to the full Image21 presentation:
+
+`https://drive.google.com/file/d/1GGktW8ytDUZv6jVuHPz6HX4sPvnx0Knc/view?usp=sharing`
 
 ### Figure 2
-**Asymmetry can matter more than adding another mode**
+**The strongest models shared the same class-level weakness**
 
-Directly compares K = 3 and K = 4 for the five non-SGD methods. The caption explicitly notes that Momentum is the exception, avoiding an over-strong claim.
+A new chart generated from the row-normalised ResNet18 and EfficientNetB0 confusion-matrix values in the final report, showing that Immune recall was the weakest for both leading models.
 
 ### Figure 3
-**More data helps, but optimiser robustness still matters**
+**Image21 turns model comparison into an inspectable research tool**
 
-Uses the K = 3 sample-size results from Table 6 to show how RMSE changes from n = 50 to 1000.
+Uses the real Shiny App slide from the uploaded DATA3888 presentation.
 
-## Page improvements
+### Figure 4
+**Grad-CAM makes a prediction inspectable, not clinically validated**
 
-The updated page now includes:
+Uses the representative Immune / Grad-CAM case from the uploaded presentation.
 
-- why analytical score learning on GMMs is useful;
-- the exact score equation;
-- a compact experimental-design dashboard;
-- the project's three scientific questions;
-- full methodology cards;
-- a mean-RMSE result table;
-- six research insights;
-- sample-size and diffusion-noise interpretation;
-- limitations;
-- future research directions;
-- supervisor background;
-- a concise explanation of how the project shaped Thomas's research direction.
+## Major page additions
+
+- project motivation and research questions;
+- six-label → three-superclass design;
+- fixed 70/15/15 split and leakage caveat;
+- balanced sampling and natural-distribution evaluation;
+- augmentation and regularisation;
+- detailed description of all five CNN architectures;
+- full performance table;
+- pipeline-level interpretation of model ranking;
+- class-level Immune failure analysis;
+- ResNet18 vs EfficientNetB0 deployment distinction;
+- Shiny inference pipeline;
+- Grad-CAM interpretation and limitations;
+- Thomas's team / technical-lead contribution;
+- reproducibility package and prediction-provenance discussion;
+- responsible-AI boundary;
+- limitations and future work;
+- research-mentor background;
+- link between the project and Thomas's developing research interests.
 
 ## Source integrity
 
-All quantitative project claims and interpretations on the page are grounded in:
+Project details, metrics and interpretations are grounded in the uploaded:
 
-`Final_SCDL3991_Report_540619953.pdf`
+- `Data3888_image21_final_report_31May.pdf`
+- `DATA3888_Minh_Nhat_Nguyen_Slides_24_May.pdf`
 
-The generated charts are new web visualisations made directly from the numerical tables in the submitted report; they are not screenshots of the confidential PDF.
+The two quantitative charts are newly generated from values reported in the final report.
 
-The report PDF itself is **not included** in this public GitHub update.
+The Shiny and Grad-CAM images are rendered from the user's actual presentation slides.
 
-
-## Presentation link added
-
-Figure 1 now includes a direct external link to the full SCDL3991 research presentation:
-
-**View the full SCDL3991 research presentation — 7 November 2025**
-
-Google Drive:
-`https://drive.google.com/file/d/1jXbOGUhUW0pds0I2t2dqeOtt7HwN-TIc/view?usp=sharing`
-
-The link opens in a new browser tab and does not place the slide deck inside the GitHub repository.
+No full coursework/report PDF is included in this public GitHub update.
