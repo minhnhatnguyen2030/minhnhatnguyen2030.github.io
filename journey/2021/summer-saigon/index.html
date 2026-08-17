@@ -3,14 +3,19 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Summer of 2021 — Saigon. Story 01 of Thomas Nguyen's AI Journey." />
+  <meta name="description" content="Summer 2021 in Saigon — COVID-19 volunteering, mathematics, forecasting, data, and the questions that first pointed Thomas Nguyen toward machine learning and AI." />
   <title>Summer of 2021 | My AI Journey | Thomas Nguyen</title>
   <link rel="stylesheet" href="/assets/css/journey.css" />
+  <link rel="stylesheet" href="/assets/css/story-01-saigon.css" />
 </head>
-<body class="story-page">
+
+<body class="story-page saigon-story">
   <header class="journey-site-header">
     <a class="brand" href="/">Thomas Nguyen</a>
-    <nav aria-label="Journey navigation"><a href="/journey/">← My AI Journey</a><a href="/">Academic home</a></nav>
+    <nav aria-label="Journey navigation">
+      <a href="/journey/">← My AI Journey</a>
+      <a href="/">Academic home</a>
+    </nav>
   </header>
 
   <main>
@@ -18,49 +23,288 @@
       <header class="story-hero">
         <p class="kicker">My AI Journey · Story 01</p>
         <h1>Summer of 2021</h1>
-        <p class="story-dek">Saigon, COVID volunteering, and the summer when a question about technology and the future began to take shape.</p>
+        <p class="story-dek">When mathematics left the classroom — and a public-health crisis turned questions about testing, data, forecasting, and uncertainty into the beginning of a direction.</p>
         <p class="story-meta">Saigon (Ho Chi Minh City), Vietnam · Summer 2021</p>
       </header>
-      <div class="story-hero-placeholder"><strong>Hero photograph · Saigon 2021</strong><small>assets/images/journey/2021-saigon/hero.jpg</small></div>
+
+      <figure class="story-hero-image photo-slot">
+        <img src="/assets/images/journey/2021-saigon/01-hero-saigon-volunteering.jpg"
+             alt="COVID-19 volunteering in Saigon during Summer 2021"
+             onerror="this.closest('.photo-slot').classList.add('missing-photo')" />
+        <div class="photo-placeholder" aria-hidden="true">
+          <strong>PHOTO 01</strong>
+          <span>01-hero-saigon-volunteering.jpg</span>
+          <small>Opening COVID-19 volunteering photograph</small>
+        </div>
+        <figcaption>Saigon, Summer 2021 — when numbers stopped being abstract.</figcaption>
+      </figure>
+
+      <aside class="privacy-note" aria-label="Privacy note">
+        <strong>Privacy note.</strong> This story includes selected photographs from my COVID-19 volunteering period. Identifiable third parties are cropped, blurred, withheld, or shown only where appropriate in order to protect the privacy of patients, volunteers, healthcare personnel, and others present during the response. Supporting or less-redacted documentation can be made available upon reasonable request where consent, privacy, and applicable restrictions allow.
+      </aside>
     </div>
 
     <article class="story-body">
       <section class="story-chapter">
-        <p class="chapter-no">01</p><h2>The Summer</h2>
-        <p class="story-placeholder-copy">[We will write the opening here: the city, the pandemic, what life felt like, and why you chose to volunteer.]</p>
-      </section>
-      <section class="story-chapter">
-        <p class="chapter-no">02</p><h2>Volunteering</h2>
-        <p class="story-placeholder-copy">[Your actual role, organisation, responsibilities, people you met, and the work you did.]</p>
+        <p class="chapter-no">01</p>
+        <h2>When Mathematics Left the Classroom</h2>
+
+        <p>The summer of 2021 was not a normal summer in Saigon. The Delta wave changed the rhythm of the city: streets emptied, hospitals came under extraordinary pressure, and words such as <em>testing</em>, <em>positivity rate</em>, <em>exposure</em>, and <em>prediction</em> entered everyday conversation.</p>
+
+        <p>During that period I volunteered in the COVID-19 response. Until then, mathematics had mostly belonged to classrooms, exercises, and examinations. That summer I began to see something different: decisions affecting millions of people could begin with a number, a probability, a test result, or a model.</p>
+
+        <aside class="story-callout">
+          <p>2021 was the summer when mathematics left the classroom.</p>
+        </aside>
       </section>
     </article>
 
-    <figure class="story-media">
-      <div class="story-media-placeholder"><span>Documentary photo</span><small>volunteering-01.jpg</small></div>
-      <figcaption>[Caption: place, date, and what is happening in the photograph.]</figcaption>
+    <figure class="story-media photo-slot">
+      <img class="story-image" src="/assets/images/journey/2021-saigon/02-covid-testing-context.jpg"
+           alt="COVID-19 testing context during the Delta wave in Vietnam" loading="lazy"
+           onerror="this.closest('.photo-slot').classList.add('missing-photo')" />
+      <div class="photo-placeholder" aria-hidden="true">
+        <strong>PHOTO 02</strong>
+        <span>02-covid-testing-context.jpg</span>
+        <small>Testing, PCR, fieldwork, or a group-testing visual</small>
+      </div>
+      <figcaption>A question of scale: how do we search efficiently when the population is measured in millions?</figcaption>
     </figure>
 
     <article class="story-body">
       <section class="story-chapter">
-        <p class="chapter-no">03</p><h2>What I Saw</h2>
-        <p class="story-placeholder-copy">[The problems, systems, information gaps, people, or moments that stayed with you.]</p>
+        <p class="chapter-no">02</p>
+        <h2>The Testing Question</h2>
+
+        <p>One conversation with my father began with a question that sounded deceptively simple: <strong>why did we need to test so many people — and sometimes test them repeatedly?</strong></p>
+
+        <p>He introduced me to the idea of <em>group testing</em>. Instead of treating every individual test as an isolated problem, samples could be organised intelligently so that information about many people could be obtained more efficiently under the right conditions.</p>
+
+        <p>But my next question made the scale uncomfortable. A toy example might search for one positive case among one hundred people. What happens when the population is ten million? Or nearly one hundred million?</p>
+
+        <p>That was when testing stopped looking like only a laboratory procedure and started looking like a mathematical problem: how do we reduce uncertainty, search efficiently, and infer what remains unseen?</p>
       </section>
-      <aside class="story-callout"><p>“[A short sentence from the final story that captures the turning point.]”</p></aside>
+
       <section class="story-chapter">
-        <p class="chapter-no">04</p><h2>A Question About the Future</h2>
-        <p class="story-placeholder-copy">[Connect the experience to technology and AI carefully and honestly — without overstating a single-cause story.]</p>
-      </section>
-      <section class="story-chapter">
-        <p class="chapter-no">05</p><h2>Five Summers Later</h2>
-        <p class="story-placeholder-copy">[A short bridge forward to Sydney and then Seoul in 2026.]</p>
+        <p class="chapter-no">03</p>
+        <h2>Prediction and Exponential Thinking</h2>
+
+        <p>The harder problem was not only finding infections that had already been observed. It was reasoning about infections that had not yet been detected. My father explained that mathematical and computational models could use partial observations to estimate the larger situation and support decisions about where to look next.</p>
+
+        <p>I was fascinated — and sceptical. Mathematics had taught me to prove what was true. Forecasting asked a different question: <strong>what can we reasonably believe about what we cannot yet see?</strong></p>
+
+        <p>Public forecasts from the pandemic period gave that question a visual form. Curves could grow far faster than linear intuition expected; small changes in assumptions could lead to very different futures. A model could compress a crisis into a few lines on a graph — useful precisely because it simplified, dangerous if we forgot what the simplification left out.</p>
       </section>
     </article>
 
+    <figure class="story-media wide source-figure">
+      <img class="story-image" src="/assets/images/journey/2021-saigon/03-truyen-tran-covid-forecast.jpg"
+           alt="COVID-19 forecast for Vietnam shared by Professor Truyen Tran" loading="lazy" />
+      <figcaption>A pandemic-era forecasting post by Truyen Tran: an early visual reminder that exponential dynamics can outrun linear intuition.</figcaption>
+    </figure>
+
+    <article class="story-body">
+      <section class="story-chapter person-chapter">
+        <div class="person-card">
+          <p class="person-label">A person behind the curves</p>
+          <h3><a href="https://truyentran.github.io" target="_blank" rel="noopener noreferrer">Professor Truyen Tran ↗</a></h3>
+          <p>Truyen Tran is Professor and Head of AI, Health and Science at Deakin University's Applied Artificial Intelligence Institute. His work spans foundational AI, AI for scientific discovery, and AI for health, with a focus on building AI systems that can reason, code, plan, and support real professional work.</p>
+        </div>
+
+        <p>At the time, a name attached to a graph was simply part of the stream of ideas I was trying to understand. Years later, that name would become part of my own AI journey too. I like that symmetry: a forecast encountered during a crisis became one of many small markers between the questions I was asking in Saigon and the research world I would later enter more seriously.</p>
+      </section>
+    </article>
+
+    <figure class="story-media photo-slot">
+      <img class="story-image" src="/assets/images/journey/2021-saigon/04-data-question.jpg"
+           alt="A reflective scene about data, public statistics, and forecasting" loading="lazy"
+           onerror="this.closest('.photo-slot').classList.add('missing-photo')" />
+      <div class="photo-placeholder" aria-hidden="true">
+        <strong>PHOTO 04</strong>
+        <span>04-data-question.jpg</span>
+        <small>Café, notebook, public dashboard, newspaper, or data scene</small>
+      </div>
+      <figcaption>Before asking what a model predicts, I began learning to ask what its data actually represents.</figcaption>
+    </figure>
+
+    <article class="story-body">
+      <section class="story-chapter">
+        <p class="chapter-no">04</p>
+        <h2>Where Does the Data Come From?</h2>
+
+        <p>Sitting with my father in the corner of a café, another question appeared: if forecasting depends on data, <strong>where does the data come from?</strong></p>
+
+        <p>During COVID, numbers seemed to be everywhere — daily cases, tests, positivity rates, hospitalisations, vaccinations. Public reports were accessible, but my father pointed out that accessible data is not automatically complete data, and complete data is not automatically good data.</p>
+
+        <p>A pandemic can be simplified into equations, but every model leaves something out. Some variables are measured carefully, others approximated, and others barely measurable at all. Years later, statistics would give me formal language for this problem. In 2021, I learned it as a metaphor:</p>
+
+        <aside class="story-callout">
+          <p>A model is a map, not the territory.</p>
+        </aside>
+      </section>
+
+      <section class="story-chapter">
+        <p class="chapter-no">05</p>
+        <h2>Prediction Has to Meet Evidence</h2>
+
+        <p>I still wanted proof. If a model suggested that many infections remained undetected, how could a few curves justify testing on such a large scale?</p>
+
+        <p>My father's answer was simple: a forecast becomes useful only when it meets reality. A model proposes a hypothesis. Strategy turns that hypothesis into action. Testing creates new observations. Those observations then strengthen, weaken, or reshape the original belief.</p>
+
+        <p>I began to see a loop that still describes much of the way I think about applied machine learning:</p>
+
+        <div class="process-line" aria-label="Data model prediction action new data">
+          <span>data</span><b>→</b><span>model</span><b>→</b><span>prediction</span><b>→</b><span>action</span><b>→</b><span>new data</span>
+        </div>
+
+        <p>It was not mathematics replacing reality. It was mathematics entering into conversation with reality.</p>
+      </section>
+    </article>
+
+    <figure class="story-photo-grid natural">
+      <figure class="photo-slot">
+        <img class="story-image" src="/assets/images/journey/2021-saigon/05-quantity-quality.jpg"
+             alt="Book, notes, or a reflective image connected with the idea of quantity and quality" loading="lazy"
+             onerror="this.closest('.photo-slot').classList.add('missing-photo')" />
+        <div class="photo-placeholder" aria-hidden="true">
+          <strong>PHOTO 05</strong>
+          <span>05-quantity-quality.jpg</span>
+          <small>Book, notes, garden, or father-related symbolic image</small>
+        </div>
+        <figcaption>Some lessons make sense first as ideas, and only later as experiences.</figcaption>
+      </figure>
+      <figure class="photo-slot">
+        <img class="story-image" src="/assets/images/journey/2021-saigon/06-biomafia-origin.jpg"
+             alt="BioHacker or BioMAFIA team origin memory" loading="lazy"
+             onerror="this.closest('.photo-slot').classList.add('missing-photo')" />
+        <div class="photo-placeholder" aria-hidden="true">
+          <strong>PHOTO 06</strong>
+          <span>06-biomafia-origin.jpg</span>
+          <small>BioHacker poster, BioMAFIA memory, or closing volunteering image</small>
+        </div>
+        <figcaption>Curiosity eventually needed somewhere to go.</figcaption>
+      </figure>
+    </figure>
+
+    <article class="story-body">
+      <section class="story-chapter">
+        <p class="chapter-no">06</p>
+        <h2>Quantity, Quality, and a Moving World</h2>
+
+        <p>A few mornings later, my father returned to an idea from a book he had given me: the relationship between <em>quantity</em> and <em>quality</em> — how accumulated quantitative change can eventually produce a qualitative transformation.</p>
+
+        <p>The pandemic made the abstraction easier to feel. One test tells us something about one person. Thousands of tests begin to describe a community. Millions of observations can change our understanding of an epidemic.</p>
+
+        <p>Yet the world does not stand still while a model is being built. Vaccination expanded, behaviour changed, restrictions changed, and the virus changed. Yesterday's model could become tomorrow's mistake.</p>
+
+        <p>So I asked the uncomfortable question: <strong>what if the forecast is wrong?</strong></p>
+
+        <p>His answer was less mathematical than I expected. Forecasting requires care, persistence, continual updating — and humility. The objective is not to become someone who is never wrong. It is to build a process capable of noticing when reality has moved, and correcting course.</p>
+      </section>
+
+      <section class="story-chapter">
+        <p class="chapter-no">07</p>
+        <h2>One Life Is Not a Statistic</h2>
+
+        <p>Among my father's writings from that period was a sentence whose meaning I only gradually understood: <strong>one human life is immeasurably precious.</strong></p>
+
+        <p>Ten million people can become a denominator. Thousands of cases can become a curve. A percentage can fit neatly inside a spreadsheet cell. But every point in the data represents somebody's life.</p>
+
+        <p>That tension would stay with me as I moved toward statistics and AI: we need abstraction to reason at scale, but we should never become so fascinated by the abstraction that we forget what it represents.</p>
+
+        <aside class="story-callout">
+          <p>Data makes people countable. It should never make people disposable.</p>
+        </aside>
+      </section>
+
+      <section class="story-chapter">
+        <p class="chapter-no">08</p>
+        <h2>Nobody Solves a Crisis Alone</h2>
+
+        <p>By the end of those conversations, I understood the pandemic response less as one solution than as a chain of people: healthcare workers collecting samples, laboratories performing tests, statisticians interpreting observations, researchers building models, engineers creating systems, policymakers making decisions, and volunteers carrying those decisions into the physical world.</p>
+
+        <p>Prediction was only one link. Progress belonged to a team.</p>
+
+        <p>That lesson later became part of how I imagined research itself. Intelligence can belong to an individual; difficult progress usually belongs to a community.</p>
+      </section>
+
+      <section class="story-chapter">
+        <p class="chapter-no">09</p>
+        <h2>BioMAFIA</h2>
+
+        <p>On the evening before returning to school, I remembered that a student competition called <em>BioHacker</em> was approaching. Some friends and I wanted to participate, but we still had no team name.</p>
+
+        <p>I asked my father. He looked toward a nearby bookshelf, noticed a copy of <em>The Bomber Mafia</em>, paused, and proposed — with far too much satisfaction — <strong>BioMAFIA</strong>.</p>
+
+        <p>I laughed, but the name stayed.</p>
+
+        <p>Looking back, I like the accidental symbolism. The preceding days had been filled with questions about mathematics, epidemics, data, prediction, uncertainty, and machines. Suddenly those ideas were no longer only things I was asking about. There was a team. There was a problem. There was something to build.</p>
+
+        <p>Curiosity had started turning into direction.</p>
+      </section>
+    </article>
+
+    <section class="full-circle-section">
+      <div class="story-body">
+        <p class="chapter-no">10</p>
+        <h2>From a Name on a Screen to a Shared Frame</h2>
+
+        <p>I would hesitate to claim that one summer made me “choose AI.” Memory has a habit of turning complicated lives into clean stories. Mine was not that clean.</p>
+
+        <p>But 2021 changed what technology meant to me. Mathematics could leave the page. Data could describe something painfully real. Models could be useful without being perfect. Forecasts could fail. Reality could move. And difficult problems required many kinds of people working together.</p>
+
+        <p>Years later, one of the people whose public work had appeared along that path — Professor Truyen Tran — would no longer be only a name beside a pandemic forecast. The final photograph below is deliberately placed here as a small full-circle marker: the distance between encountering an idea and eventually meeting one of the people behind it.</p>
+      </div>
+
+      <figure class="story-media medium final-person-photo photo-slot">
+        <img class="story-image" src="/assets/images/journey/2021-saigon/07-thomas-with-truyen-tran.jpg"
+             alt="Thomas Nguyen with Professor Truyen Tran" loading="lazy"
+             onerror="this.closest('.photo-slot').classList.add('missing-photo')" />
+        <div class="photo-placeholder" aria-hidden="true">
+          <strong>PHOTO 07 — FINAL</strong>
+          <span>07-thomas-with-truyen-tran.jpg</span>
+          <small>Your photograph together with Professor Truyen Tran</small>
+        </div>
+        <figcaption>Years later — from a name attached to a forecast to a person I could meet and learn from.</figcaption>
+      </figure>
+    </section>
+
+    <article class="story-body">
+      <section class="story-chapter epilogue">
+        <p class="chapter-no">EPILOGUE</p>
+        <h2>The First Page</h2>
+
+        <p>Five years later, I would study statistics and machine learning seriously in Sydney. I would stand among researchers at ICML in Seoul. I would walk through KAIST wondering whether Korea might become the next chapter of my life.</p>
+
+        <p>None of that was visible in 2021.</p>
+
+        <p>There was only a city in crisis, a volunteer, a father answering too many questions, and a young student beginning to realise that the future might be something we could try to understand before it arrived.</p>
+
+        <aside class="story-callout story-final-callout">
+          <p>That was enough for a beginning.</p>
+        </aside>
+      </section>
+    </article>
+
+    <div class="story-end">
+      <p class="kicker">Next in My AI Journey</p>
+      <h2>Saigon → Sydney → Seoul</h2>
+    </div>
+
     <nav class="story-footer-nav" aria-label="Story navigation">
-      <a href="/journey/">← <strong>All stories</strong></a>
-      <a href="/journey/2026/summer-seoul/">Next story →<strong>Summer 2026 in Seoul</strong></a>
+      <a href="/journey/">
+        <span>← Journey index</span>
+        <strong>My AI Journey</strong>
+      </a>
+      <a href="/journey/2026/summer-seoul/" style="text-align:right; margin-left:auto;">
+        <span>Next story →</span>
+        <strong>Summer 2026 in Seoul</strong>
+      </a>
     </nav>
   </main>
+
   <footer class="site-footer">© 2026 Thomas Nguyen · My AI Journey</footer>
+
+  <script src="/assets/js/journey-images.js"></script>
 </body>
 </html>

@@ -1,28 +1,42 @@
-# Upload guide
+# Upload Guide — Story 01: Summer of 2021
 
-This package is designed to replace / extend the current repository root.
+This package is designed to sit beside your existing Story 02 files without replacing them.
 
-## Easiest method in GitHub web UI
+## Upload these new files
 
-1. Open the repository `minhnhatnguyen2030/minhnhatnguyen2030.github.io`.
-2. Choose **Add file → Upload files**.
-3. Drag the **contents** of this skeleton folder into the repository root, preserving the folder structure.
-4. GitHub should show new folders such as `journey/` and `assets/`, plus updated root files.
-5. Commit the changes to `main`.
-6. Wait briefly for GitHub Pages to redeploy, then visit the site.
+```text
+journey/
+└── 2021/
+    └── summer-saigon/
+        └── index.html
 
-## Files that replace existing files
+assets/
+├── css/
+│   └── story-01-saigon.css
+├── js/
+│   └── journey-images.js
+└── images/
+    └── journey/
+        └── 2021-saigon/
+            ├── 01-hero-saigon-volunteering.jpg
+            ├── 02-covid-testing-context.jpg
+            ├── 03-truyen-tran-covid-forecast.jpg   [already included]
+            ├── 04-data-question.jpg
+            ├── 05-quantity-quality.jpg
+            ├── 06-biomafia-origin.jpg
+            ├── 07-thomas-with-truyen-tran.jpg
+            └── PHOTO_UPLOAD_LIST.md
+```
 
-- `index.html`
-- `style.css`
-- `script.js`
-- `404.html`
-- `README.md`
+## Important
 
-## New files/folders
+- Keep your existing `/assets/css/journey.css` — Story 01 loads it first.
+- `story-01-saigon.css` only adds Story 01-specific styling and placeholders.
+- If you already uploaded `/assets/js/journey-images.js` for Story 02, the included copy is the same
+  adaptive sizing helper and can simply replace/confirm that file.
+- Missing photos display as clean filename placeholders until you upload the real images.
+- Photo 03 is already filled with the Truyen Tran forecasting screenshot you supplied.
 
-- `journey/`
-- `assets/css/journey.css`
-- `assets/images/journey/...`
+## URL after GitHub Pages deploys
 
-Do not add real story photographs until you are ready. The skeleton deliberately uses clean visual placeholders instead of broken image links.
+`https://minhnhatnguyen2030.github.io/journey/2021/summer-saigon/`
