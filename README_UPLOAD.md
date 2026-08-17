@@ -1,26 +1,35 @@
-# Profile + contact update
+# Thomas website — Shubin-style rectangular profile update
 
-This update is based on the current public homepage structure and only changes the root `index.html` and `style.css`.
-
-## What changed
-
-- Enlarged the desktop profile portrait from 170 × 170 px to 260 × 260 px so it has a much stronger visual presence, closer to the large-profile treatment on Shubin Kim's site.
-- Widened the desktop sidebar from 250 px to 280 px and slightly widened the overall page shell so the larger portrait does not crowd the research content.
-- Added LinkedIn: https://www.linkedin.com/in/dnaguy2030/
-- Added the University of Sydney email prominently in the sidebar: mngu0728@uni.sydney.edu.au
-- Added both emails to the Contact section with explicit purposes:
-  - University of Sydney: mngu0728@uni.sydney.edu.au — USyd-related correspondence
-  - General / research: thomas.nguyen.ai2030@gmail.com
-- Kept GitHub and CV links.
-- Kept mobile profile sizing compact (128 × 128 px) so the mobile layout remains usable.
+This update changes only the **main homepage/profile presentation**. Your existing research folders, Journey pages, images, CV, and JavaScript remain untouched.
 
 ## Upload to GitHub
 
-1. Open the root of `minhnhatnguyen2030.github.io`.
-2. Upload `index.html` and `style.css` from this folder.
-3. Allow GitHub to replace the two existing files.
-4. Do **not** delete your existing `assets`, `research`, `journey`, `files`, or `script.js` folders/files.
-5. Commit the changes.
-6. After GitHub Pages rebuilds, hard-refresh the website if Safari still shows the cached CSS.
+In the root of `minhnhatnguyen2030.github.io`, replace:
 
-No profile image file needs to be re-uploaded; the page continues using `assets/images/profile.jpg`.
+1. `index.html`
+2. `style.css`
+
+Do **not** delete your existing folders such as `assets/`, `research/`, `journey/`, or `files/`.
+
+## What changed
+
+- Large **rectangular 3:4-style portrait** with subtle rounded corners, closely matching the academic-profile presentation in Shubin Kim's site.
+- Profile identity is now **center-aligned** beneath the portrait.
+- University of Sydney email is displayed prominently:
+  `mngu0728@uni.sydney.edu.au`
+- Compact Shubin-style social row:
+  - CV
+  - General/research email
+  - GitHub
+  - LinkedIn
+- Existing left-side section navigation remains underneath, so the rest of Thomas's one-page website continues to work normally.
+- Responsive rectangular portrait on mobile.
+
+## Portrait note
+
+The CSS will use your existing file:
+
+`assets/images/profile.jpg`
+
+The current square selfie will automatically be cropped into the portrait frame with `object-fit: cover`.
+For the closest visual match to Shubin's page, replace `profile.jpg` later with a naturally vertical portrait (roughly 3:4 or 4:5 aspect ratio) using the **same filename**. No HTML/CSS changes will then be necessary.
