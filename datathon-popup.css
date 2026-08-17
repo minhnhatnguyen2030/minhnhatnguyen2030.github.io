@@ -1,0 +1,500 @@
+/* =========================================================
+   AWARD ROW
+   Adjust these few classes if your existing award layout differs.
+   ========================================================= */
+
+.award-item--clickable {
+  cursor: pointer;
+  transition: background-color .18s ease, transform .18s ease;
+}
+
+.award-item--clickable:hover {
+  background: rgba(31, 95, 145, .035);
+}
+
+.award-item--clickable:focus-visible {
+  outline: 2px solid #1f5f91;
+  outline-offset: 5px;
+}
+
+.award-title {
+  display: flex;
+  align-items: center;
+  gap: .45rem;
+}
+
+.award-open-icon {
+  color: #75808c;
+  font-size: .8em;
+  transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   MODAL
+   ========================================================= */
+
+body.datathon-modal-open {
+  overflow: hidden;
+}
+
+.datathon-modal {
+  --dt-ink: #202124;
+  --dt-muted: #68707d;
+  --dt-line: #e4e8ec;
+  --dt-soft: #f6f8fa;
+  --dt-blue: #1f5f91;
+  --dt-gold: #a57616;
+
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: none;
+  color: var(--dt-ink);
+  font-family: inherit;
+}
+
+.datathon-modal.is-open {
+  display: block;
+}
+
+.datathon-modal__backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(12, 17, 24, .68);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  animation: dtFade .2s ease;
+}
+
+.datathon-modal__panel {
+  position: absolute;
+  inset: 4vh auto auto 50%;
+  transform: translateX(-50%);
+  width: min(1040px, calc(100vw - 40px));
+  max-height: 92vh;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  background: #fff;
+  border-radius: 22px;
+  box-shadow: 0 30px 100px rgba(0, 0, 0, .28);
+  animation: dtRise .26s ease;
+}
+
+.datathon-modal__close {
+  position: sticky;
+  top: 18px;
+  float: right;
+  margin: 18px 18px -60px 0;
+  z-index: 5;
+  width: 42px;
+  height: 42px;
+  border: 1px solid rgba(0,0,0,.09);
+  border-radius: 50%;
+  background: rgba(255,255,255,.94);
+  color: #222;
+  font-size: 28px;
+  line-height: 1;
+  cursor: pointer;
+  box-shadow: 0 5px 20px rgba(0,0,0,.08);
+}
+
+.datathon-modal__close:hover {
+  background: #f4f5f6;
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.datathon-hero {
+  padding: 72px 72px 58px;
+  border-bottom: 1px solid var(--dt-line);
+}
+
+.datathon-kicker,
+.datathon-overline {
+  margin: 0 0 12px;
+  color: var(--dt-gold);
+  text-transform: uppercase;
+  letter-spacing: .13em;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.datathon-hero h2 {
+  margin: 0;
+  max-width: 830px;
+  font-size: clamp(46px, 7vw, 78px);
+  line-height: .98;
+  letter-spacing: -.055em;
+}
+
+.datathon-hero h2 span {
+  color: var(--dt-blue);
+}
+
+.datathon-lead {
+  max-width: 760px;
+  margin: 26px 0 0;
+  color: #525a64;
+  font-size: 20px;
+  line-height: 1.55;
+}
+
+.datathon-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 28px;
+}
+
+.datathon-tags span {
+  padding: 7px 11px;
+  border: 1px solid var(--dt-line);
+  border-radius: 999px;
+  background: var(--dt-soft);
+  font-size: 13px;
+  font-weight: 650;
+}
+
+
+/* =========================================================
+   CHAPTERS
+   ========================================================= */
+
+.datathon-chapter {
+  display: grid;
+  grid-template-columns: 105px minmax(0, 1fr);
+  gap: 38px;
+  padding: 62px 72px;
+  border-bottom: 1px solid var(--dt-line);
+}
+
+.datathon-chapter__year {
+  padding-top: 2px;
+  color: #9aa1aa;
+  font-size: 15px;
+  font-weight: 800;
+  letter-spacing: .08em;
+}
+
+.datathon-chapter--2025 .datathon-chapter__year {
+  color: var(--dt-blue);
+}
+
+.datathon-chapter h3,
+.datathon-award h3 {
+  margin: 0 0 17px;
+  font-size: 30px;
+  line-height: 1.15;
+  letter-spacing: -.03em;
+}
+
+.datathon-chapter p,
+.datathon-award p {
+  margin: 0 0 18px;
+  line-height: 1.72;
+  color: #3f454d;
+}
+
+.datathon-photo {
+  margin: 30px 0 0;
+}
+
+.datathon-photo img,
+.datathon-certificate img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+  border: 1px solid var(--dt-line);
+}
+
+.datathon-photo figcaption {
+  margin-top: 10px;
+  color: var(--dt-muted);
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.datathon-photo--hero img {
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+
+/* =========================================================
+   TRANSITION
+   ========================================================= */
+
+.datathon-transition {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 24px 72px;
+  color: #8b929b;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: .15em;
+}
+
+.datathon-transition div {
+  flex: 1;
+  height: 1px;
+  background: var(--dt-line);
+}
+
+
+/* =========================================================
+   2025 PIVOT
+   ========================================================= */
+
+.datathon-pivot {
+  margin: 34px 0;
+  padding: 25px;
+  background: var(--dt-soft);
+  border-left: 4px solid var(--dt-blue);
+  border-radius: 0 14px 14px 0;
+}
+
+.datathon-pivot__label {
+  margin-bottom: 8px !important;
+  color: var(--dt-blue) !important;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: .12em;
+  font-weight: 800;
+}
+
+.datathon-question {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 18px;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.datathon-question__old,
+.datathon-question__new {
+  padding: 14px 15px;
+  border: 1px solid var(--dt-line);
+  border-radius: 11px;
+  background: #fff;
+  line-height: 1.45;
+  font-size: 14px;
+}
+
+.datathon-question__old {
+  color: #7a8088;
+}
+
+.datathon-question__new {
+  border-color: rgba(31,95,145,.22);
+  color: var(--dt-blue);
+  font-weight: 700;
+}
+
+.datathon-arrow {
+  color: #9299a2;
+  font-weight: 700;
+}
+
+.datathon-flow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 7px;
+  margin: 28px 0 34px;
+}
+
+.datathon-flow span {
+  padding: 7px 10px;
+  border: 1px solid var(--dt-line);
+  border-radius: 8px;
+  background: #fff;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.datathon-flow b {
+  color: #9da3aa;
+  font-size: 12px;
+}
+
+.datathon-flow .datathon-flow__turn {
+  border-color: rgba(31,95,145,.25);
+  background: rgba(31,95,145,.07);
+  color: var(--dt-blue);
+}
+
+.datathon-tech-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin: 30px 0;
+}
+
+.datathon-tech-card {
+  min-height: 210px;
+  padding: 20px;
+  border: 1px solid var(--dt-line);
+  border-radius: 14px;
+}
+
+.datathon-tech-number {
+  display: block;
+  margin-bottom: 24px;
+  color: #a0a6ad;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.datathon-tech-card h4 {
+  margin: 0 0 9px;
+  font-size: 17px;
+}
+
+.datathon-tech-card p {
+  margin: 0;
+  color: var(--dt-muted);
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.datathon-lesson {
+  margin: 34px 0 24px;
+  padding: 4px 0 4px 22px;
+  border-left: 3px solid var(--dt-gold);
+  color: #2d3136;
+  font-size: 22px;
+  line-height: 1.45;
+  letter-spacing: -.015em;
+}
+
+
+/* =========================================================
+   AWARD OUTCOME
+   ========================================================= */
+
+.datathon-award {
+  display: grid;
+  grid-template-columns: 1fr .95fr;
+  gap: 40px;
+  padding: 62px 72px;
+  background: #fafbfc;
+  border-bottom: 1px solid var(--dt-line);
+}
+
+.datathon-certificate {
+  margin: 0;
+  align-self: center;
+}
+
+.datathon-links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 9px;
+  margin-top: 27px;
+}
+
+.datathon-links a {
+  color: var(--dt-blue);
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.datathon-links a:hover {
+  text-decoration: underline;
+}
+
+.datathon-modal__footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 24px 72px 30px;
+  color: var(--dt-muted);
+  font-size: 12px;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 760px) {
+  .datathon-modal__panel {
+    inset: 12px auto auto 50%;
+    width: calc(100vw - 24px);
+    max-height: calc(100vh - 24px);
+    border-radius: 16px;
+  }
+
+  .datathon-hero {
+    padding: 62px 24px 38px;
+  }
+
+  .datathon-chapter {
+    grid-template-columns: 1fr;
+    gap: 8px;
+    padding: 42px 24px;
+  }
+
+  .datathon-transition {
+    padding: 20px 24px;
+  }
+
+  .datathon-question {
+    grid-template-columns: 1fr;
+  }
+
+  .datathon-arrow {
+    text-align: center;
+    transform: rotate(90deg);
+  }
+
+  .datathon-tech-grid,
+  .datathon-award {
+    grid-template-columns: 1fr;
+  }
+
+  .datathon-award {
+    padding: 42px 24px;
+  }
+
+  .datathon-modal__footer {
+    flex-direction: column;
+    padding: 22px 24px 28px;
+  }
+}
+
+
+/* =========================================================
+   ANIMATIONS
+   ========================================================= */
+
+@keyframes dtFade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes dtRise {
+  from {
+    opacity: 0;
+    transform: translate(-50%, 16px) scale(.985);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, 0) scale(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .datathon-modal__backdrop,
+  .datathon-modal__panel {
+    animation: none;
+  }
+}

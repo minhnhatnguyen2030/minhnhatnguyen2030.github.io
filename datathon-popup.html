@@ -1,0 +1,252 @@
+<!-- =========================================================
+     DATATHON AWARD ROW + POP-UP STORY
+     Drop this inside your existing Awards & Scholarships section.
+     The modal itself can live anywhere before </body>.
+     ========================================================= -->
+
+<!-- Award row: keep this with your other Awards & Scholarships entries -->
+<div class="award-item award-item--clickable"
+     role="button"
+     tabindex="0"
+     data-open-datathon-story
+     aria-haspopup="dialog"
+     aria-controls="datathon-story-modal">
+  <div class="award-year">2025</div>
+
+  <div class="award-content">
+    <div class="award-title">
+      1st Place — SUDATA × SUBAA Datathon 2025
+      <span class="award-open-icon" aria-hidden="true">↗</span>
+    </div>
+    <div class="award-subtitle">
+      Team Clesmor · Supply-chain forecasting & optimisation
+    </div>
+  </div>
+</div>
+
+
+<!-- =========================================================
+     POP-UP / MODAL
+     Put this block near the end of your HTML, before </body>.
+     ========================================================= -->
+<div class="datathon-modal"
+     id="datathon-story-modal"
+     aria-hidden="true">
+
+  <div class="datathon-modal__backdrop" data-close-datathon-story></div>
+
+  <article class="datathon-modal__panel"
+           role="dialog"
+           aria-modal="true"
+           aria-labelledby="datathon-story-title">
+
+    <button class="datathon-modal__close"
+            type="button"
+            data-close-datathon-story
+            aria-label="Close Datathon story">
+      ×
+    </button>
+
+    <header class="datathon-hero">
+      <div class="datathon-kicker">SUDATA × SUBAA Datathon · 2024 → 2025</div>
+
+      <h2 id="datathon-story-title">
+        From the Far Left<br>
+        <span>to First Place.</span>
+      </h2>
+
+      <p class="datathon-lead">
+        In 2024, Calvin and I entered the Datathon and left without a placing.
+        One year later, we returned as part of Team Clesmor — and won.
+      </p>
+
+      <div class="datathon-tags">
+        <span>🏆 1st Place · 2025</span>
+        <span>24-hour Datathon</span>
+        <span>Forecasting</span>
+        <span>Machine Learning</span>
+        <span>Optimisation</span>
+      </div>
+    </header>
+
+
+    <!-- 2024: deliberately brief -->
+    <section class="datathon-chapter datathon-chapter--2024">
+      <div class="datathon-chapter__year">2024</div>
+
+      <div class="datathon-chapter__content">
+        <p class="datathon-overline">Where it began</p>
+        <h3>Our first attempt was about prediction.</h3>
+
+        <p>
+          The 2024 competition focused on predicting JP Morgan stock-price
+          movements. Our approach was primarily machine-learning driven:
+          historical stock-price time series, tweet sentiment as a predictive
+          feature, preprocessing, model training and cross-validation.
+        </p>
+
+        <p>
+          We did not place. But the experience gave us something more useful
+          than a line on a résumé: one full competition cycle of building,
+          testing, failing, presenting and learning under time pressure.
+        </p>
+
+        <figure class="datathon-photo">
+          <img src="assets/datathon-2024-group.jpg"
+               alt="SUDATA × SUBAA Datathon 2024 group photo">
+          <figcaption>
+            2024. Calvin and I are the two men standing at the far left.
+            At the time, we were simply two competitors who had not made the podium.
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+
+    <!-- Transition -->
+    <div class="datathon-transition" aria-hidden="true">
+      <div></div>
+      <span>ONE YEAR LATER</span>
+      <div></div>
+    </div>
+
+
+    <!-- 2025: main story -->
+    <section class="datathon-chapter datathon-chapter--2025">
+      <div class="datathon-chapter__year">2025</div>
+
+      <div class="datathon-chapter__content">
+        <p class="datathon-overline">The return</p>
+        <h3>A different problem. A different way of thinking.</h3>
+
+        <p>
+          The 2025 Datathon moved from financial prediction to supply-chain
+          management. Team Clesmor — Lyra, Carmen, Calvin, Shane and Thomas —
+          had 24 hours to turn raw logistics data into an actionable strategy.
+        </p>
+
+        <figure class="datathon-photo datathon-photo--hero">
+          <img src="assets/team-clesmor-2025-anime.jpg"
+               alt="Anime illustration representing Team Clesmor in 2025">
+          <figcaption>
+            Team Clesmor · SUDATA × SUBAA Datathon 2025
+          </figcaption>
+        </figure>
+
+        <div class="datathon-pivot">
+          <p class="datathon-pivot__label">The decisive moment</p>
+          <p>
+            Our initial predictive models underperformed. Instead of forcing a
+            weak model into the final story, we changed the question.
+          </p>
+
+          <div class="datathon-question">
+            <span class="datathon-question__old">
+              “Can we predict every shipment accurately?”
+            </span>
+            <span class="datathon-arrow">→</span>
+            <span class="datathon-question__new">
+              “Can the information we trust support a better decision?”
+            </span>
+          </div>
+        </div>
+
+        <div class="datathon-flow">
+          <span>Data</span><b>→</b>
+          <span>EDA</span><b>→</b>
+          <span>Prediction</span><b>→</b>
+          <span class="datathon-flow__turn">Pivot</span><b>→</b>
+          <span>Forecasting</span><b>→</b>
+          <span>Network optimisation</span><b>→</b>
+          <span>Decision</span>
+        </div>
+
+        <div class="datathon-tech-grid">
+          <div class="datathon-tech-card">
+            <span class="datathon-tech-number">01</span>
+            <h4>Forecasting</h4>
+            <p>
+              ETS and hierarchical forecast reconciliation explored delivery
+              patterns and operational planning at aggregated levels.
+            </p>
+          </div>
+
+          <div class="datathon-tech-card">
+            <span class="datathon-tech-number">02</span>
+            <h4>Machine Learning</h4>
+            <p>
+              Cost and delay models were tested honestly. Weak held-out
+              performance became evidence to reformulate the task rather than
+              overstate predictive power.
+            </p>
+          </div>
+
+          <div class="datathon-tech-card">
+            <span class="datathon-tech-number">03</span>
+            <h4>Optimisation</h4>
+            <p>
+              We moved toward a data-derived logistics network and multi-objective
+              optimisation across cost, delivery reliability and emissions.
+            </p>
+          </div>
+        </div>
+
+        <blockquote class="datathon-lesson">
+          A failed model can still be valuable when it tells you to ask a
+          better question.
+        </blockquote>
+
+        <p>
+          That shift — from prediction to decision-making — became the centre
+          of our 2025 submission and the clearest sign of how much we had
+          evolved since the previous Datathon.
+        </p>
+      </div>
+    </section>
+
+
+    <!-- Award -->
+    <section class="datathon-award">
+      <div class="datathon-award__copy">
+        <p class="datathon-overline">Outcome</p>
+        <h3>1st Place.</h3>
+        <p>
+          Team Clesmor won the SUDATA × SUBAA Datathon 2025. For me, the award
+          connects two moments: standing at the far left of the 2024 group
+          photo after an unsuccessful first attempt, and returning one year
+          later with a stronger team, broader toolkit and a better way of
+          thinking about data problems.
+        </p>
+
+        <div class="datathon-links">
+          <a href="https://github.com/LinLyra/2025-Datathon"
+             target="_blank" rel="noopener noreferrer">
+            2025 Team Repository ↗
+          </a>
+
+          <a href="https://www.linkedin.com/posts/lyra-lin_datathon-sudata-subaa-activity-7384533315615162368-Iy0i?utm_source=share&utm_medium=member_desktop&rcm=ACoAAF_B-dgBSHJdEtcei83SqnFyM0TTt5quSI4"
+             target="_blank" rel="noopener noreferrer">
+            Lyra's LinkedIn Story ↗
+          </a>
+
+          <a href="https://github.com/claisyd/Stock-Prediction-Datathon-2024"
+             target="_blank" rel="noopener noreferrer">
+            2024 Project ↗
+          </a>
+        </div>
+      </div>
+
+      <figure class="datathon-certificate">
+        <img src="assets/datathon-2025-certificate.jpg"
+             alt="Certificate showing Minh Nhat Nguyen awarded 1st Place in the SUDATA × SUBAA Datathon 2025">
+      </figure>
+    </section>
+
+
+    <footer class="datathon-modal__footer">
+      <span>Thomas (Minh-Nhat) Nguyen</span>
+      <span>Machine Learning × Statistics × AI</span>
+    </footer>
+
+  </article>
+</div>
