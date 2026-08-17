@@ -122,6 +122,20 @@ figcaption {
   line-height: 1.55;
 }
 
+.figure-resource {
+  margin: 10px 0 0;
+  font-size: .84rem;
+  color: #4b5563;
+}
+
+.figure-resource strong {
+  color: var(--text);
+}
+
+.figure-resource a {
+  font-weight: 600;
+}
+
 .overview-grid,
 .method-grid,
 .question-grid,

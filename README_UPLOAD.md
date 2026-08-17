@@ -68,3 +68,15 @@ All quantitative project claims and interpretations on the page are grounded in:
 The generated charts are new web visualisations made directly from the numerical tables in the submitted report; they are not screenshots of the confidential PDF.
 
 The report PDF itself is **not included** in this public GitHub update.
+
+
+## Presentation link added
+
+Figure 1 now includes a direct external link to the full SCDL3991 research presentation:
+
+**View the full SCDL3991 research presentation — 7 November 2025**
+
+Google Drive:
+`https://drive.google.com/file/d/1jXbOGUhUW0pds0I2t2dqeOtt7HwN-TIc/view?usp=sharing`
+
+The link opens in a new browser tab and does not place the slide deck inside the GitHub repository.
