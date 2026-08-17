@@ -1,314 +1,260 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Thomas (Minh-Nhat) Nguyen — Machine Learning × Statistics × AI. Academic research portfolio and My AI Journey." />
-  <title>Thomas (Minh-Nhat) Nguyen | AI Research</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Thomas (Minh-Nhat) Nguyen's SUDATA × SUBAA Datathon story: from the 2024 stock-prediction competition to winning 1st place with Team Clesmor in 2025.">
+  <title>From the Far Left to First Place — Thomas Nguyen</title>
+  <link rel="stylesheet" href="datathon-story.css">
 </head>
+
 <body>
-  <header class="mobile-header">
-    <a class="brand" href="#top">Thomas (Minh-Nhat) Nguyen</a>
-    <button id="menuButton" class="menu-button" aria-label="Open navigation" aria-expanded="false">☰</button>
+  <header class="topbar">
+    <div class="wrap topbar-inner">
+      <!-- Change ../index.html only if your homepage lives somewhere else -->
+      <a class="back" href="../index.html">← Thomas (Minh-Nhat) Nguyen</a>
+      <nav class="top-links" aria-label="Page sections">
+        <a href="#2024">2024</a>
+        <a href="#2025">2025</a>
+        <a href="#technical">Technical story</a>
+        <a href="#award">Award</a>
+      </nav>
+    </div>
   </header>
-  <div class="page-shell" id="top">
-    <aside class="sidebar">
-      <div class="profile-card">
-        <img class="profile-photo" src="assets/images/profile.jpg" alt="Thomas (Minh-Nhat) Nguyen" />
 
-        <h1>Thomas (Minh-Nhat) Nguyen</h1>
-        <p class="tagline">Machine Learning × Statistics × AI</p>
-        <p class="affiliation">University of Sydney</p>
+  <main>
+    <section class="hero">
+      <div class="wrap">
+        <div class="kicker">SUDATA × SUBAA Datathon · 2024 → 2025</div>
+        <h1>From the Far Left<br>to First Place.</h1>
+        <p class="lead">
+          One year separated two very different datathons. In 2024, Calvin and I entered a
+          stock-prediction challenge and did not place. In 2025, we returned as part of Team
+          Clesmor, changed our modelling strategy when prediction failed, and won 1st place.
+          This is the story of that progression.
+        </p>
 
-        <a class="profile-email" href="mailto:mngu0728@uni.sydney.edu.au">mngu0728@uni.sydney.edu.au</a>
-
-        <div class="profile-links" aria-label="Profile links">
-          <a class="profile-link-text" href="files/Thomas_Nguyen_CV.pdf">CV</a>
-          <a class="profile-icon-link" href="mailto:thomas.nguyen.ai2030@gmail.com" aria-label="Email" title="General / research email">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.75 5.75h16.5v12.5H3.75z"/><path d="m4.25 6.5 7.75 6 7.75-6"/></svg>
-          </a>
-          <a class="profile-icon-link" href="https://github.com/minhnhatnguyen2030" target="_blank" rel="noreferrer" aria-label="GitHub" title="GitHub">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path class="fill-icon" d="M12 2.4a9.8 9.8 0 0 0-3.1 19.1c.49.09.67-.21.67-.47v-1.86c-2.73.59-3.31-1.16-3.31-1.16-.45-1.14-1.09-1.44-1.09-1.44-.89-.61.07-.6.07-.6.98.07 1.5 1.01 1.5 1.01.88 1.5 2.3 1.07 2.86.82.09-.63.34-1.07.62-1.32-2.18-.25-4.47-1.09-4.47-4.85 0-1.07.38-1.95 1.01-2.64-.1-.25-.44-1.25.1-2.6 0 0 .83-.27 2.7 1.01A9.36 9.36 0 0 1 12 7.07c.84 0 1.67.11 2.46.33 1.88-1.28 2.7-1.01 2.7-1.01.54 1.35.2 2.35.1 2.6.63.69 1.01 1.57 1.01 2.64 0 3.77-2.3 4.59-4.48 4.84.35.3.66.9.66 1.82v2.74c0 .26.18.57.67.47A9.8 9.8 0 0 0 12 2.4Z"/></svg>
-          </a>
-          <a class="profile-icon-link" href="https://www.linkedin.com/in/dnaguy2030/" target="_blank" rel="noreferrer" aria-label="LinkedIn" title="LinkedIn">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path class="fill-icon" d="M5.2 8.3H2.5V21h2.7V8.3Zm.2-3.9A1.57 1.57 0 1 0 2.26 4.4a1.57 1.57 0 0 0 3.14 0ZM21 13.72c0-3.82-2.04-5.6-4.76-5.6-2.2 0-3.18 1.21-3.73 2.06V8.3H9.8V21h2.71v-6.29c0-1.66.31-3.27 2.37-3.27 2.03 0 2.05 1.9 2.05 3.38V21H21v-7.28Z"/></svg>
-          </a>
+        <div class="hero-meta">
+          <span class="pill">🏆 1st Place · 2025</span>
+          <span class="pill">Supply-chain optimisation</span>
+          <span class="pill">Forecasting · ML · Gurobi</span>
+          <span class="pill">24-hour datathon</span>
         </div>
       </div>
-      <nav class="desktop-nav" aria-label="Primary navigation">
-        <a class="journey-nav" href="#journey">My AI Journey</a>
-        <a href="#about">About</a>
-        <a href="#news">News</a>
-        <a href="#research">Research</a>
-        <a href="#publications">Publications</a>
-        <a href="#experience">Experience</a>
-        <a href="#education">Education</a>
-        <a href="#awards">Awards</a>
-        <a href="#activities">Activities</a>
-        <a href="#skills">Skills</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </aside>
-    <main>
-      <section id="about" class="section hero-section">
-        <p class="eyebrow">ABOUT</p>
-        <h2>Hi, I’m Thomas.</h2>
-        <p class="lead">
-          I am an undergraduate researcher at the University of Sydney working at the intersection of
-          machine learning, statistics, and artificial intelligence.
-        </p>
-        <p>
-          This website is my academic research portfolio and a record of my journey into artificial intelligence —
-          the research, people, places, and experiences that continue to shape the questions I want to pursue.
-        </p>
-        <div class="interest-row">
-          <span>Machine Learning</span>
-          <span>Statistical Learning</span>
-          <span>Deep Learning</span>
-          <span>AI Research</span>
-        </div>
-      </section>
+    </section>
 
-      <section id="journey" class="section journey-home">
-        <div class="section-heading">
-          <div>
-            <p class="eyebrow">PERSONAL JOURNAL</p>
-            <h2>My AI Journey</h2>
+    <section class="section" id="2024">
+      <div class="wrap section-grid">
+        <div class="eyebrow">Chapter I · 2024</div>
+        <div>
+          <h2>First attempt: predict the market.</h2>
+
+          <p>
+            The 2024 SUDATA × SUBAA Datathon was centred on financial prediction. Our project
+            analysed historical JP Morgan stock prices and incorporated tweet sentiment as a
+            predictive feature, combining time-series analysis, preprocessing, machine learning
+            and cross-validation.
+          </p>
+
+          <p>
+            We did not place that year. What remained, however, was experience: building under a
+            hard deadline, deciding which signals were worth trusting, and seeing how quickly a
+            technically plausible predictive story can become fragile when it meets real data.
+          </p>
+
+          <div class="callout">
+            In the 2024 group photo below, Calvin and I are the two men standing at the far left.
+            A year later, we would return to the same datathon and finish in first place.
           </div>
-          <span>Stories behind the research</span>
-        </div>
-        <p class="journey-intro">
-          A record of the experiences, people, places, and questions that shaped my path toward artificial intelligence.
-        </p>
-        <div class="three-s" aria-label="Saigon to Sydney to Seoul">
-          <span><strong>Saigon</strong><small>2021 · origin</small></span>
-          <i aria-hidden="true">→</i>
-          <span><strong>Sydney</strong><small>study · research</small></span>
-          <i aria-hidden="true">→</i>
-          <span><strong>Seoul</strong><small>2026 · turning point</small></span>
-          <i aria-hidden="true">→</i>
-          <span class="future"><strong>2030</strong><small>next checkpoint</small></span>
-        </div>
-        <article class="journey-feature-card">
-          <a class="journey-feature-image" href="journey/2026/summer-seoul/" aria-label="Open Summer 2026 in Seoul story">
-            <img src="assets/images/journey/2026-seoul/hero.jpg" alt="Summer 2026 in Seoul" loading="eager" />
-          </a>
-          <div class="journey-feature-copy">
-            <p class="meta">STORY 02 · SUMMER 2026 · SEOUL, SOUTH KOREA</p>
-            <h3><a href="journey/2026/summer-seoul/">Summer 2026 in Seoul</a></h3>
-            <p>
-              Five years after AI first entered my plans, a summer in Korea became a turning point in how I thought about research and the future I wanted to build.
-            </p>
-            <div class="journey-tags">
-              <span>Seoul</span><span>Yonsei</span><span>Research</span><span>KAIST</span>
-            </div>
-            <a class="read-more" href="journey/2026/summer-seoul/">Read story →</a>
-          </div>
-        </article>
-        <div class="journey-secondary-grid">
-          <article class="journey-small-card">
-            <p class="meta">STORY 01 · SUMMER 2021 · SAIGON</p>
-            <h3><a href="journey/2021/summer-saigon/">Summer of 2021</a></h3>
-            <p>COVID volunteering in Saigon, and the beginning of a question that would eventually lead toward data, machine learning, and AI.</p>
-            <a class="read-more" href="journey/2021/summer-saigon/">Read the origin story →</a>
-          </article>
-          <article class="journey-small-card journey-future-card">
-            <p class="meta">CHECKPOINT · 2030 · A NOTE TO MY FUTURE SELF</p>
-            <h3><a href="journey/2030/next-checkpoint/">2030: To Be Continued</a></h3>
-            <p>The future can stay unwritten. I only want to leave one reminder for the person who reaches it: if life allows, slow down enough to notice it.</p>
-            <a class="read-more" href="journey/2030/next-checkpoint/">Open the 2030 reminder →</a>
-          </article>
-        </div>
-        <p class="journey-all-link"><a href="journey/">Explore the full journey →</a></p>
-      </section>
-      <section id="news" class="section">
-        <div class="section-heading">
-          <h2>News</h2>
-          <span>Selected updates</span>
-        </div>
-        <div class="news-list">
-          <article class="news-item">
-            <time>Aug 2026</time>
-            <p>Academic website launched. More research and application materials coming soon.</p>
-          </article>
-          <article class="news-item placeholder-item">
-            <time>2026</time>
-            <p>[Add research, conference, award, visit, or graduate-application milestone.]</p>
-          </article>
-        </div>
-      </section>
-      <section id="research" class="section">
-        <div class="section-heading">
-          <h2>Selected Research</h2>
-          <span>Projects and ongoing work</span>
-        </div>
-        <article class="research-card">
-          <a class="research-thumb-link" href="research/scdl3991/" aria-label="Open SCDL3991 project details">
-            <img class="research-thumb" src="assets/images/research/scdl3991-card.jpg" alt="Optimiser comparison from SCDL3991 research" loading="lazy" />
-          </a>
-          <div>
-            <div class="research-topline">
-              <p class="meta">SCDL3991 · INDIVIDUAL RESEARCH · 2025</p>
-              <span class="research-badge">HD · 88/100</span>
-            </div>
-            <h3><a href="research/scdl3991/">Geometry-Driven Benchmarking of Optimisers for Score Learning</a></h3>
-            <p>
-              Semester-long individual research on diffusion-inspired score learning using Gaussian Mixture Models as a controlled testbed. I built a reproducible PyTorch benchmark comparing six optimisers across mixture geometry, diffusion noise and sample size, with more than 10,000 experimental runs. The central finding was that <strong>geometric asymmetry and curvature anisotropy</strong> were stronger drivers of optimisation difficulty than mode count alone.
-            </p>
-            <p class="research-person"><strong>Supervisor:</strong> <a href="https://andihan3.github.io" target="_blank" rel="noreferrer">Dr Andi Han ↗</a> — University of Sydney Mathematics &amp; Statistics; research in large generative models, manifold optimisation, efficient foundation models and graph neural networks, with multiple recent papers at ICML and other top ML venues.</p>
-            <div class="link-row">
-              <a href="research/scdl3991/">Project details</a>
-              <a href="https://www.sydney.edu.au/units/SCDL3991" target="_blank" rel="noreferrer">Unit</a>
-              <a href="https://andihan3.github.io" target="_blank" rel="noreferrer">Supervisor</a>
-              <a href="mailto:thomas.nguyen.ai2030@gmail.com?subject=SCDL3991%20research%20report%20request">Request report</a>
-            </div>
-            <p class="research-note">Full report available upon request; not stored in the public repository.</p>
-          </div>
-        </article>
-        <article class="research-card">
-          <a class="research-thumb-link" href="research/data3888/" aria-label="Open DATA3888 project details">
-            <img class="research-thumb" src="assets/images/research/data3888-card.jpg" alt="Five-model comparison from DATA3888 Image21 project" loading="lazy" />
-          </a>
-          <div>
-            <div class="research-topline">
-              <p class="meta">DATA3888 · DATA SCIENCE CAPSTONE · 2026</p>
-              <span class="research-badge">HD · 88/100</span>
-            </div>
-            <h3><a href="research/data3888/">Image21 — Deep Learning for Accessible Breast Cancer Histopathology Analysis</a></h3>
-            <p>
-              As <strong>team and technical lead</strong>, I helped coordinate Image21, a breast-cancer H&amp;E histopathology project comparing five CNN architectures and integrating an interpretable Shiny prototype. ResNet18 achieved <strong>88.65% test accuracy</strong> with macro-F1 <strong>0.8796</strong>, while EfficientNetB0 was selected for live deployment because it offered a strong accuracy–practicality trade-off with Grad-CAM visualisation.
-            </p>
-            <p class="research-person"><strong>Research mentor:</strong> <a href="https://manojmw.github.io" target="_blank" rel="noreferrer">Manoj M. Wagle ↗</a> — researcher working across the University of Sydney and MIT CSAIL, with interests in interpretable deep learning, biomedical AI, neuroscience and computational biology.</p>
-            <div class="link-row">
-              <a href="research/data3888/">Project details</a>
-              <a href="https://www.sydney.edu.au/units/DATA3888" target="_blank" rel="noreferrer">Unit</a>
-              <a href="https://manojmw.github.io" target="_blank" rel="noreferrer">Mentor</a>
-              <a href="mailto:thomas.nguyen.ai2030@gmail.com?subject=DATA3888%20project%20materials%20request">Request report</a>
-            </div>
-            <p class="research-note">Project materials available upon request; research and education prototype, not a clinical diagnostic tool.</p>
-          </div>
-        </article>
-        <article class="research-card ongoing-card">
-          <a class="research-thumb-link" href="research/sparse-sdr/" aria-label="Open sparse SDR project details">
-            <img class="research-thumb" src="assets/images/research/sparse-sdr-card.jpg" alt="Official 2026 honours listing for Sparse sufficient dimension reduction via distance covariance" loading="lazy" />
-          </a>
-          <div>
-            <div class="research-topline">
-              <p class="meta">PROPOSED HONOURS RESEARCH · 2026</p>
-              <span class="research-badge status-discussion">IN DISCUSSION</span>
-            </div>
-            <h3><a href="research/sparse-sdr/">Sparse Sufficient Dimension Reduction via Distance Covariance</a></h3>
-            <p>
-              Research direction currently under discussion with <strong>Dr Linh Nghiem</strong> and <strong>Dr Andi Han</strong>. The proposed project studies sufficient dimension reduction through distance covariance, then extends the framework to impose structure such as <strong>sparsity</strong> while developing efficient <strong>manifold optimisation</strong> algorithms for high-dimensional data.
-            </p>
-            <p class="research-person"><strong>Academic preparation:</strong> I have studied with Dr Nghiem in <a href="https://www.sydney.edu.au/units/MATH1962" target="_blank" rel="noreferrer">MATH1962 Mathematics 1B (Advanced)</a> and <a href="https://www.sydney.edu.au/units/STAT3922" target="_blank" rel="noreferrer">STAT3922 Applied Linear Models (Advanced)</a>, giving this prospective project a direct link to my advanced mathematical-statistical training.</p>
-            <div class="link-row">
-              <a href="research/sparse-sdr/">Project details</a>
-              <a href="https://www.maths.usyd.edu.au/u/UG/HM/coordinator/stat2026.pdf" target="_blank" rel="noreferrer">Official project listing</a>
-              <a href="https://lnghiemum.github.io" target="_blank" rel="noreferrer">Linh Nghiem</a>
-              <a href="https://andihan3.github.io" target="_blank" rel="noreferrer">Andi Han</a>
-            </div>
-            <p class="research-note">Status is deliberately shown as “in discussion”; this page does not present the honours project as formally confirmed.</p>
-          </div>
-        </article>
-        <article class="research-card ongoing-card">
-          <a class="research-thumb-link" href="research/stat3888/" aria-label="Open STAT3888 project details">
-            <img class="research-thumb" src="assets/images/research/stat3888-card.jpg" alt="STAT3888 Australian Health Survey project overview" loading="lazy" />
-          </a>
-          <div>
-            <div class="research-topline">
-              <p class="meta">STAT3888 · STATISTICAL MACHINE LEARNING · 2026</p>
-              <span class="research-badge status-progress">IN PROGRESS</span>
-            </div>
-            <h3><a href="research/stat3888/">Australian Health Survey — Interdisciplinary Statistical Machine Learning Project</a></h3>
-            <p>
-              Current Semester 2 group project linking Statistics/Data Science and Nutrition through analysis of Australian Health Survey data. As the <strong>statistics / machine-learning lead</strong>, I coordinate the quantitative side of the project: translating the team’s research question into an analysis strategy, guiding model selection and evaluation, and helping communicate statistical findings to an interdisciplinary audience.
-            </p>
-            <p class="research-person"><strong>Academic context:</strong> <a href="https://www.maths.usyd.edu.au/u/jormerod/" target="_blank" rel="noreferrer">A/Prof John Ormerod ↗</a> — University of Sydney statistician whose research interests include variational approximations, generalised linear mixed models, splines, data mining, semiparametric regression and missing data.</p>
-            <div class="link-row">
-              <a href="research/stat3888/">Project details</a>
-              <a href="https://www.sydney.edu.au/units/STAT3888" target="_blank" rel="noreferrer">Unit</a>
-              <a href="https://www.maths.usyd.edu.au/u/jormerod/" target="_blank" rel="noreferrer">Academic profile</a>
-            </div>
-            <p class="research-note">Project is ongoing; final methods, results and conclusions will be added only after they are established.</p>
-          </div>
-        </article>
-      </section>
-      <section id="publications" class="section">
-        <div class="section-heading"><h2>Publications &amp; Manuscripts</h2><span>Papers, preprints, and manuscripts</span></div>
-        <div class="publication">
-          <p class="pub-number">[1]</p>
-          <div>
-            <p><strong>[Paper title]</strong></p>
-            <p>[Authors]. [Venue / manuscript / preprint], [Year].</p>
-            <div class="link-row"><a href="#">PDF</a><a href="#">Code</a><a href="#">Project</a></div>
+
+          <figure class="figure">
+            <img src="assets/datathon-2024-group.jpg"
+                 alt="Group photo from the SUDATA × SUBAA Datathon 2024">
+            <figcaption>
+              SUDATA × SUBAA Datathon 2024. The beginning of the story — before the 2025 win.
+            </figcaption>
+          </figure>
+
+          <div class="links">
+            <a class="button" href="https://github.com/claisyd/Stock-Prediction-Datathon-2024"
+               target="_blank" rel="noopener noreferrer">View the 2024 project ↗</a>
           </div>
         </div>
-      </section>
-      <section id="experience" class="section">
-        <div class="section-heading"><h2>Research Experience</h2><span>Labs, supervisors, and research roles</span></div>
-        <article class="timeline-item">
-          <div class="timeline-date">20XX–20XX</div>
-          <div>
-            <h3>[University / Lab]</h3>
-            <p class="meta">[Research role] · Supervisor: [Name]</p>
-            <ul><li>[Research topic or problem.]</li><li>[Methods / technical contribution.]</li><li>[Result / manuscript / presentation.]</li></ul>
+      </div>
+    </section>
+
+    <section class="section" id="2025">
+      <div class="wrap section-grid">
+        <div class="eyebrow">Chapter II · 2025</div>
+        <div>
+          <h2>We came back with a different kind of problem.</h2>
+
+          <p>
+            The 2025 challenge moved from financial prediction to supply-chain management. Team
+            Clesmor — Lyra, Carmen, Calvin, Shane and Thomas — had 24 hours to turn raw logistics
+            data into an actionable recommendation.
+          </p>
+
+          <p>
+            The important part was not that our first model worked. It did not. Shipment-level
+            prediction showed little useful signal. Rather than spending the remaining time
+            forcing a weak predictive model to look convincing, we changed the question.
+          </p>
+
+          <div class="callout">
+            Instead of asking <em>“Can we accurately predict every shipment?”</em>, we moved toward
+            <em>“Can the information we do trust support a better logistics decision?”</em>
           </div>
-        </article>
-        <div class="subsection"><h3>Work Experience</h3><p class="muted">[Add relevant technical, research, or AI-industry roles here.]</p></div>
-        <div class="subsection"><h3>Teaching &amp; Leadership</h3><p class="muted">[Add tutoring, mentoring, leadership, or student-project roles here.]</p></div>
-      </section>
-      <section id="education" class="section">
-        <div class="section-heading"><h2>Education</h2><span>Academic background</span></div>
-        <article class="timeline-item">
-          <div class="timeline-date">— 2026</div>
-          <div><h3>The University of Sydney</h3><p>Bachelor of Science / Bachelor of Advanced Studies (Advanced)</p><p class="meta">Data Science · Statistics</p></div>
-        </article>
-        <article class="timeline-item placeholder-item">
-          <div class="timeline-date">2026</div>
-          <div><h3>[Visiting / international study]</h3><p class="meta">[Institution · Program]</p></div>
-        </article>
-      </section>
-      <section id="awards" class="section">
-        <div class="section-heading"><h2>Awards &amp; Scholarships</h2><span>Selected recognition</span></div>
-        <div class="simple-list"><p><span>20XX</span> [Award / scholarship / academic distinction]</p><p><span>20XX</span> [Award / scholarship / academic distinction]</p></div>
-      </section>
-      <section id="activities" class="section">
-        <div class="section-heading"><h2>Academic &amp; Research Activities</h2><span>Conferences, visits, workshops, and programs</span></div>
-        <div class="simple-list"><p><span>20XX</span> [Conference / workshop / research visit]</p><p><span>20XX</span> [Summer school / academic program]</p></div>
-      </section>
-      <section id="skills" class="section">
-        <div class="section-heading"><h2>Skills</h2><span>Research and technical toolkit</span></div>
-        <div class="skills-grid">
-          <div><h3>Research</h3><p>Machine Learning · Statistics · Deep Learning · Optimisation</p></div>
-          <div><h3>Programming</h3><p>Python · R · SQL · [Add more]</p></div>
-          <div><h3>Tools</h3><p>PyTorch · Git · LaTeX · [Add more]</p></div>
+
+          <figure class="figure">
+            <img src="assets/datathon-2025-team-anime.jpg"
+                 alt="Anime illustration representing Team Clesmor after the 2025 datathon">
+            <figcaption>
+              Team Clesmor, 2025 — the group illustration shared with Lyra's post announcing the win.
+            </figcaption>
+          </figure>
+
+          <div class="links">
+            <a class="button primary" href="https://github.com/LinLyra/2025-Datathon"
+               target="_blank" rel="noopener noreferrer">Explore the 2025 team repository ↗</a>
+            <a class="button"
+               href="https://www.linkedin.com/posts/lyra-lin_datathon-sudata-subaa-activity-7384533315615162368-Iy0i?utm_source=share&utm_medium=member_desktop&rcm=ACoAAF_B-dgBSHJdEtcei83SqnFyM0TTt5quSI4"
+               target="_blank" rel="noopener noreferrer">Lyra's 2025 LinkedIn post ↗</a>
+          </div>
         </div>
-      </section>
-      <section id="cv" class="section cv-section">
-        <h2>Curriculum Vitae</h2>
-        <p>My full academic CV will be available here.</p>
-        <a class="button" href="files/Thomas_Nguyen_CV.pdf">Download CV</a>
-      </section>
-      <section id="contact" class="section">
-        <div class="section-heading"><h2>Contact</h2><span>Academic correspondence</span></div>
-        <div class="contact-list">
-          <p><span class="contact-label">University of Sydney:</span> <a href="mailto:mngu0728@uni.sydney.edu.au">mngu0728@uni.sydney.edu.au</a> <span class="muted">— USyd-related correspondence</span></p>
-          <p><span class="contact-label">General / research:</span> <a href="mailto:thomas.nguyen.ai2030@gmail.com">thomas.nguyen.ai2030@gmail.com</a></p>
-          <p><span class="contact-label">LinkedIn:</span> <a href="https://www.linkedin.com/in/dnaguy2030/" target="_blank" rel="noreferrer">linkedin.com/in/dnaguy2030</a></p>
-          <p><span class="contact-label">GitHub:</span> <a href="https://github.com/minhnhatnguyen2030" target="_blank" rel="noreferrer">github.com/minhnhatnguyen2030</a></p>
+      </div>
+    </section>
+
+    <section class="section" id="technical">
+      <div class="wrap section-grid">
+        <div class="eyebrow">What changed</div>
+        <div>
+          <h2>From predictive modelling to prescriptive optimisation.</h2>
+
+          <p>
+            The 2024 entry was predominantly a predictive-modelling exercise: historical prices,
+            sentiment features and machine-learning models. In 2025, the technical scope became
+            broader. We still investigated predictive models and forecasting, but the decisive
+            step was recognising when those models were not informative enough and pivoting toward
+            optimisation.
+          </p>
+
+          <div class="flow" aria-label="2025 analytical workflow">
+            <span>Data ingestion</span><b>→</b>
+            <span>EDA & feature engineering</span><b>→</b>
+            <span>Prediction / forecasting</span><b>→</b>
+            <span>Model failure diagnosis</span><b>→</b>
+            <span>Network construction</span><b>→</b>
+            <span>Gurobi optimisation</span><b>→</b>
+            <span>Business recommendation</span>
+          </div>
+
+          <div class="tech-grid">
+            <article class="card">
+              <h3>Forecasting</h3>
+              <p>
+                Time-series work included ETS and hierarchical forecast reconciliation, exploring
+                whether delivery patterns could support operational planning.
+              </p>
+            </article>
+
+            <article class="card">
+              <h3>Machine Learning</h3>
+              <p>
+                Cost and delay models were tested rather than assumed to be useful. Weak held-out
+                performance became evidence for changing the problem formulation.
+              </p>
+            </article>
+
+            <article class="card">
+              <h3>Optimisation</h3>
+              <p>
+                A data-derived supply-chain network was optimised across cost, delivery reliability
+                and emissions, turning analysis into an interpretable decision problem.
+              </p>
+            </article>
+          </div>
+
+          <p style="margin-top:28px">
+            The most important lesson from the 2025 project was therefore methodological:
+            <strong>a failed model is still useful if it tells you to ask a better question.</strong>
+            That pivot — from prediction to decision-making — became the centre of our winning submission.
+          </p>
         </div>
-      </section>
-      <footer><p>© 2026 Thomas (Minh-Nhat) Nguyen · Last updated August 2026</p></footer>
-    </main>
-  </div>
-  <div id="mobileMenu" class="mobile-menu" aria-hidden="true">
-    <a class="journey-nav" href="#journey">My AI Journey</a>
-    <a href="#about">About</a><a href="#news">News</a><a href="#research">Research</a>
-    <a href="#publications">Publications</a><a href="#experience">Experience</a><a href="#education">Education</a>
-    <a href="#awards">Awards</a><a href="#activities">Activities</a><a href="#skills">Skills</a><a href="#contact">Contact</a>
-  </div>
-  <script src="script.js"></script>
+      </div>
+    </section>
+
+    <section class="section" id="award">
+      <div class="wrap section-grid">
+        <div class="eyebrow">Outcome</div>
+        <div>
+          <h2>1st Place — SUDATA × SUBAA Datathon 2025.</h2>
+
+          <p>
+            Team Clesmor was awarded first place in the 2025 competition. For me, the certificate
+            represents more than the final ranking: it connects the 2024 attempt with a year of
+            accumulated modelling, statistical and collaborative experience.
+          </p>
+
+          <figure class="figure certificate">
+            <img src="assets/datathon-2025-certificate.jpg"
+                 alt="Certificate of Achievement for Minh Nhat Nguyen, 1st Place in the SUDATA × SUBAA Datathon 2025">
+            <figcaption>
+              Certificate of Achievement — Minh Nhat Nguyen, 1st Place, SUDATA × SUBAA Datathon 2025.
+            </figcaption>
+          </figure>
+
+          <div class="timeline">
+            <div class="event">
+              <span class="dot" aria-hidden="true"></span>
+              <div class="year">2024</div>
+              <h3>Stock prediction + tweet sentiment</h3>
+              <p>
+                Time-series analysis, predictive features and machine learning. We competed, learned,
+                and left without a placing.
+              </p>
+            </div>
+
+            <div class="event">
+              <span class="dot" aria-hidden="true"></span>
+              <div class="year">2025</div>
+              <h3>Supply-chain decision optimisation</h3>
+              <p>
+                A broader pipeline spanning forecasting, machine learning and optimisation. When the
+                predictive path underperformed, we pivoted — and Team Clesmor won first place.
+              </p>
+            </div>
+          </div>
+
+          <h3 style="margin-top:38px">References</h3>
+          <ul class="ref-list">
+            <li>
+              <a href="https://github.com/LinLyra/2025-Datathon" target="_blank" rel="noopener noreferrer">
+                Team Clesmor — 2025 Datathon repository
+              </a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/posts/lyra-lin_datathon-sudata-subaa-activity-7384533315615162368-Iy0i?utm_source=share&utm_medium=member_desktop&rcm=ACoAAF_B-dgBSHJdEtcei83SqnFyM0TTt5quSI4"
+                 target="_blank" rel="noopener noreferrer">
+                Lyra Lin — LinkedIn post announcing Team Clesmor's 2025 win
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/claisyd/Stock-Prediction-Datathon-2024"
+                 target="_blank" rel="noopener noreferrer">
+                2024 stock-prediction project
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">
+      Thomas (Minh-Nhat) Nguyen · Machine Learning × Statistics × AI
+    </div>
+  </footer>
 </body>
 </html>
