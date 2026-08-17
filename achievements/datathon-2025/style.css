@@ -1,0 +1,385 @@
+/* ============================================================
+   Datathon 2025 Achievement Modal
+   Folder: /achievements/datathon-2025/
+   ============================================================ */
+
+body.datathon-achievement-open {
+  overflow: hidden;
+}
+
+.achievement-modal {
+  --dt-ink: #202124;
+  --dt-muted: #6b7280;
+  --dt-line: #e3e7eb;
+  --dt-soft: #f6f8fa;
+  --dt-blue: #23649a;
+  --dt-gold: #9b7218;
+
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  display: none;
+  color: var(--dt-ink);
+  font-family: inherit;
+}
+
+.achievement-modal.is-open {
+  display: block;
+}
+
+.achievement-modal__backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(10, 16, 23, .66);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.achievement-modal__panel {
+  position: absolute;
+  top: 4vh;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(1040px, calc(100vw - 40px));
+  max-height: 92vh;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  background: #fff;
+  border-radius: 22px;
+  box-shadow: 0 30px 110px rgba(0,0,0,.28);
+}
+
+.achievement-modal__close {
+  position: sticky;
+  top: 18px;
+  z-index: 6;
+  float: right;
+  margin: 18px 18px -60px 0;
+  width: 43px;
+  height: 43px;
+  border: 1px solid rgba(0,0,0,.09);
+  border-radius: 999px;
+  background: rgba(255,255,255,.95);
+  color: #1f2328;
+  font-size: 28px;
+  line-height: 1;
+  cursor: pointer;
+  box-shadow: 0 5px 20px rgba(0,0,0,.08);
+}
+
+.datathon-achievement__hero {
+  padding: 72px 72px 58px;
+  border-bottom: 1px solid var(--dt-line);
+}
+
+.datathon-achievement__kicker,
+.datathon-achievement__overline {
+  margin: 0 0 12px;
+  color: var(--dt-gold);
+  text-transform: uppercase;
+  letter-spacing: .13em;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.datathon-achievement__hero h2 {
+  margin: 0;
+  max-width: 860px;
+  font-size: clamp(48px, 7vw, 80px);
+  line-height: .98;
+  letter-spacing: -.055em;
+}
+
+.datathon-achievement__hero h2 span {
+  color: var(--dt-blue);
+}
+
+.datathon-achievement__lead {
+  max-width: 760px;
+  margin: 25px 0 0;
+  color: #535c66;
+  font-size: 20px;
+  line-height: 1.55;
+}
+
+.datathon-achievement__badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 28px;
+}
+
+.datathon-achievement__badges span {
+  padding: 7px 11px;
+  border: 1px solid var(--dt-line);
+  border-radius: 999px;
+  background: var(--dt-soft);
+  font-size: 13px;
+  font-weight: 650;
+}
+
+.datathon-achievement__section {
+  display: grid;
+  grid-template-columns: 105px minmax(0,1fr);
+  gap: 38px;
+  padding: 60px 72px;
+  border-bottom: 1px solid var(--dt-line);
+}
+
+.datathon-achievement__year {
+  color: #9aa1aa;
+  font-size: 15px;
+  font-weight: 800;
+  letter-spacing: .08em;
+}
+
+.datathon-achievement__section--2025 .datathon-achievement__year {
+  color: var(--dt-blue);
+}
+
+.datathon-achievement__section h3,
+.datathon-achievement__award h3 {
+  margin: 0 0 17px;
+  font-size: 30px;
+  line-height: 1.15;
+  letter-spacing: -.03em;
+}
+
+.datathon-achievement__section p,
+.datathon-achievement__award p {
+  margin: 0 0 18px;
+  color: #414850;
+  line-height: 1.72;
+}
+
+.datathon-achievement__figure {
+  margin: 30px 0 0;
+}
+
+.datathon-achievement__figure img,
+.datathon-achievement__award figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--dt-line);
+  border-radius: 15px;
+}
+
+.datathon-achievement__figure--team img {
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+.datathon-achievement__figure figcaption {
+  margin-top: 10px;
+  color: var(--dt-muted);
+  font-size: 13px;
+}
+
+.datathon-achievement__bridge {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 23px 72px;
+  color: #8e959e;
+  font-size: 11px;
+  letter-spacing: .15em;
+}
+
+.datathon-achievement__bridge span {
+  flex: 1;
+  height: 1px;
+  background: var(--dt-line);
+}
+
+.datathon-achievement__pivot {
+  margin: 32px 0;
+  padding: 25px;
+  background: var(--dt-soft);
+  border-left: 4px solid var(--dt-blue);
+  border-radius: 0 14px 14px 0;
+}
+
+.datathon-achievement__pivot > span {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--dt-blue);
+  text-transform: uppercase;
+  letter-spacing: .12em;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.datathon-achievement__question {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.datathon-achievement__question > div {
+  padding: 14px 15px;
+  border: 1px solid var(--dt-line);
+  border-radius: 11px;
+  background: #fff;
+  color: #6f7780;
+  line-height: 1.45;
+  font-size: 14px;
+}
+
+.datathon-achievement__question small {
+  display: block;
+  margin-bottom: 5px;
+  color: #9ba1a8;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  font-size: 10px;
+}
+
+.datathon-achievement__question .is-highlight {
+  border-color: rgba(35,100,154,.25);
+  color: var(--dt-blue);
+  font-weight: 700;
+}
+
+.datathon-achievement__pipeline {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 7px;
+  margin: 28px 0 34px;
+}
+
+.datathon-achievement__pipeline span {
+  padding: 7px 10px;
+  border: 1px solid var(--dt-line);
+  border-radius: 8px;
+  background: #fff;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.datathon-achievement__pipeline b {
+  color: #a0a6ad;
+  font-size: 12px;
+}
+
+.datathon-achievement__pipeline .pivot {
+  border-color: rgba(35,100,154,.25);
+  background: rgba(35,100,154,.07);
+  color: var(--dt-blue);
+}
+
+.datathon-achievement__cards {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 14px;
+  margin: 30px 0;
+}
+
+.datathon-achievement__cards article {
+  min-height: 205px;
+  padding: 20px;
+  border: 1px solid var(--dt-line);
+  border-radius: 14px;
+}
+
+.datathon-achievement__cards small {
+  display: block;
+  margin-bottom: 23px;
+  color: #9ca3aa;
+  font-weight: 800;
+}
+
+.datathon-achievement__cards h4 {
+  margin: 0 0 8px;
+  font-size: 17px;
+}
+
+.datathon-achievement__cards p {
+  margin: 0;
+  color: var(--dt-muted);
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.datathon-achievement__section blockquote {
+  margin: 34px 0 22px;
+  padding: 3px 0 3px 22px;
+  border-left: 3px solid var(--dt-gold);
+  color: #2d3136;
+  font-size: 22px;
+  line-height: 1.45;
+  letter-spacing: -.015em;
+}
+
+.datathon-achievement__award {
+  display: grid;
+  grid-template-columns: 1fr .95fr;
+  gap: 42px;
+  padding: 60px 72px;
+  background: #fafbfc;
+}
+
+.datathon-achievement__award figure {
+  margin: 0;
+  align-self: center;
+}
+
+.datathon-achievement__links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 9px;
+  margin-top: 25px;
+}
+
+.datathon-achievement__links a {
+  color: var(--dt-blue);
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.datathon-achievement__links a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 760px) {
+  .achievement-modal__panel {
+    top: 12px;
+    width: calc(100vw - 24px);
+    max-height: calc(100vh - 24px);
+    border-radius: 16px;
+  }
+
+  .datathon-achievement__hero {
+    padding: 62px 24px 38px;
+  }
+
+  .datathon-achievement__section {
+    grid-template-columns: 1fr;
+    gap: 8px;
+    padding: 42px 24px;
+  }
+
+  .datathon-achievement__bridge {
+    padding: 20px 24px;
+  }
+
+  .datathon-achievement__question,
+  .datathon-achievement__cards,
+  .datathon-achievement__award {
+    grid-template-columns: 1fr;
+  }
+
+  .datathon-achievement__question b {
+    text-align: center;
+    transform: rotate(90deg);
+  }
+
+  .datathon-achievement__award {
+    padding: 42px 24px;
+  }
+}
