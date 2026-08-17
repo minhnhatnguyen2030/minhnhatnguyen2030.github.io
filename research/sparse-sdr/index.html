@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Proposed research direction: Sparse Sufficient Dimension Reduction via Distance Covariance — Thomas (Minh-Nhat) Nguyen." />
+  <title>Sparse SDR via Distance Covariance | Thomas (Minh-Nhat) Nguyen</title>
+  <link rel="stylesheet" href="/assets/css/ongoing-research.css" />
+</head>
+<body>
+  <header class="project-header">
+    <a class="brand" href="/">Thomas (Minh-Nhat) Nguyen</a>
+    <nav aria-label="Project navigation">
+      <a href="/#research">← Selected Research</a>
+      <a href="/">Academic home</a>
+    </nav>
+  </header>
+
+  <main>
+    <header class="hero">
+      <p class="kicker">Proposed Honours Research · Statistics × Machine Learning · 2026</p>
+      <h1>Sparse Sufficient Dimension Reduction via Distance Covariance</h1>
+      <p class="dek">
+        A prospective research direction in high-dimensional statistics combining sufficient dimension reduction,
+        nonlinear dependence, sparsity and optimisation on matrix manifolds. The project is currently being discussed
+        rather than presented as formally commenced work.
+      </p>
+      <div class="status-row">
+        <span class="badge discussion">IN DISCUSSION</span>
+        <span class="badge">HIGH-DIMENSIONAL STATISTICS</span>
+        <span class="badge">MANIFOLD OPTIMISATION</span>
+        <span class="badge">SPARSITY</span>
+      </div>
+    </header>
+
+    <aside class="status-callout">
+      <strong>Status note.</strong> Project 11 appears in the University of Sydney 2026 Statistics Honours project guide with
+      Dr Linh Nghiem and Dr Andi Han as the listed supervisors. My possible participation is still under discussion, so this
+      page records the research direction and preparation without implying that supervision or an Honours candidature has
+      been formally confirmed.
+    </aside>
+
+    <figure class="project-figure">
+      <img src="/assets/images/research/sparse-sdr-official-listing.jpg"
+           alt="Official 2026 University of Sydney Statistics Honours project listing for Sparse sufficient dimension reduction via distance covariance" />
+      <figcaption>
+        Official 2026 Statistics Honours project listing. The proposed work extends distance-covariance SDR with structural
+        assumptions such as sparsity and efficient manifold-optimisation algorithms.
+      </figcaption>
+    </figure>
+
+    <article class="project-body">
+      <section class="section">
+        <p class="section-label">Research problem</p>
+        <h2>Reduce dimension without throwing away the response-relevant structure</h2>
+        <p>
+          In sufficient dimension reduction (SDR), a high-dimensional predictor <strong>X</strong> is replaced by a small number
+          of linear combinations while retaining the information needed to explain or predict a response <strong>Y</strong>.
+          Rather than estimating a full regression surface in a large predictor space, the central task becomes estimating a
+          lower-dimensional subspace.
+        </p>
+        <div class="equation">Z = BᵀX, &nbsp; with &nbsp; B ∈ ℝ<sup>p×d</sup> &nbsp; and &nbsp; d ≪ p</div>
+        <p>
+          The official project description focuses on a recent SDR approach that maximises <strong>distance covariance</strong>
+          between the response and the projected predictors, subject to a manifold constraint on <strong>B</strong>. Distance
+          covariance is attractive here because it captures nonlinear dependence and can work beyond narrowly specified
+          regression models.
+        </p>
+      </section>
+
+      <section class="section">
+        <p class="section-label">Proposed extension</p>
+        <h2>From a predictive subspace to a sparse, interpretable subspace</h2>
+        <p>
+          A projection can be statistically useful while still depending on many original variables. The proposed extension
+          introduces additional structure—especially <strong>sparsity</strong>—so that the learned subspace can select or heavily
+          prioritise a smaller set of variables while preserving the SDR objective.
+        </p>
+        <div class="grid-3">
+          <div class="card soft">
+            <span class="small-label">1 · Dependence</span>
+            <h3>Distance covariance</h3>
+            <p>Use a general dependence measure to make the reduced representation retain information about the response.</p>
+          </div>
+          <div class="card soft">
+            <span class="small-label">2 · Structure</span>
+            <h3>Sparse subspace estimation</h3>
+            <p>Impose row- or variable-level structure so the projection is more parsimonious and potentially interpretable.</p>
+          </div>
+          <div class="card soft">
+            <span class="small-label">3 · Geometry</span>
+            <h3>Manifold optimisation</h3>
+            <p>Respect the subspace/orthogonality geometry of the parameter while developing computationally efficient algorithms.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <p class="section-label">Research questions</p>
+        <h2>Questions I would want to investigate</h2>
+        <div class="grid-2">
+          <div class="card">
+            <h3>How should sparsity be imposed?</h3>
+            <p>Compare penalties or structured constraints that encourage variable selection without destroying the geometry of the SDR problem.</p>
+          </div>
+          <div class="card">
+            <h3>How should the structural dimension be chosen?</h3>
+            <p>Study principled ways to select the effective dimension <em>d</em> rather than assuming it is known in advance.</p>
+          </div>
+          <div class="card">
+            <h3>How should optimisation respect the subspace?</h3>
+            <p>Develop or compare algorithms on Stiefel/Grassmann-type geometries and examine their stability in high dimensions.</p>
+          </div>
+          <div class="card">
+            <h3>When does the method help in practice?</h3>
+            <p>Evaluate statistical recovery, computational cost and predictive information on challenging high-dimensional datasets.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <p class="section-label">Preparation</p>
+        <h2>Advanced-mode coursework with Dr Linh Nghiem</h2>
+        <p>
+          This prospective project also connects directly to my advanced mathematical-statistical coursework. I studied with
+          Dr Linh Nghiem in both <strong>MATH1962 Mathematics 1B (Advanced)</strong> and
+          <strong>STAT3922 Applied Linear Models (Advanced)</strong>. I want the website to make that preparation visible because
+          the proposed topic sits naturally between mathematical statistics, dimension reduction and optimisation.
+        </p>
+        <div class="course-row">
+          <a class="course-card" href="https://www.sydney.edu.au/units/MATH1962" target="_blank" rel="noreferrer">
+            <p class="course-code">MATH1962</p>
+            <h3>Mathematics 1B (Advanced) ↗</h3>
+            <p>Advanced-mode foundations including multivariable calculus, gradients and optimisation, together with mathematical statistics.</p>
+          </a>
+          <a class="course-card" href="https://www.sydney.edu.au/units/STAT3922" target="_blank" rel="noreferrer">
+            <p class="course-code">STAT3922</p>
+            <h3>Applied Linear Models (Advanced) ↗</h3>
+            <p>Advanced linear-model theory with additional mathematical techniques, proofs and distribution-theoretic material.</p>
+          </a>
+        </div>
+      </section>
+    </article>
+
+    <figure class="project-figure narrow">
+      <img src="/assets/images/research/linh-nghiem-profile.jpg"
+           alt="Dr Linh Nghiem University of Sydney profile screenshot" />
+      <figcaption>
+        Dr Linh Nghiem — University of Sydney statistician whose methodological interests include dimension reduction,
+        measurement error, longitudinal data, privacy and graphical models.
+      </figcaption>
+    </figure>
+
+    <article class="project-body">
+      <section class="section">
+        <p class="section-label">Potential supervision</p>
+        <h2>Two complementary research perspectives</h2>
+        <div class="person-card">
+          <h3><a href="https://lnghiemum.github.io" target="_blank" rel="noreferrer">Dr Linh Nghiem ↗</a></h3>
+          <p>
+            Lecturer in Statistics at the University of Sydney. His methodological interests include dimension reduction,
+            measurement-error models, longitudinal analysis, privacy and graphical models. For this project, that expertise
+            aligns directly with the statistical formulation and theory of SDR.
+          </p>
+        </div>
+        <div class="person-card">
+          <h3><a href="https://andihan3.github.io" target="_blank" rel="noreferrer">Dr Andi Han ↗</a></h3>
+          <p>
+            Lecturer at the University of Sydney and my supervisor for SCDL3991. His research includes optimisation on
+            manifolds, large generative models, efficient foundation models and graph neural networks, providing a natural
+            connection to the computational geometry and optimisation side of the proposed project.
+          </p>
+        </div>
+      </section>
+
+      <section class="section">
+        <p class="section-label">Why this direction matters to me</p>
+        <h2>A bridge between statistics and optimisation</h2>
+        <p>
+          My earlier SCDL3991 work made optimisation geometry a concrete research problem: performance changed when the
+          geometry of a score field became anisotropic even when the nominal problem size did not increase dramatically.
+          Sparse SDR offers a different setting in which geometry again matters, but now the goal is statistical dimension
+          reduction and variable structure rather than score learning. That makes the project a useful bridge between my
+          statistics training and my developing interest in optimisation for machine learning.
+        </p>
+      </section>
+
+      <section class="section">
+        <p class="section-label">Sources</p>
+        <h2>Official project and academic context</h2>
+        <p>The page deliberately distinguishes the official project description from my still-unconfirmed participation.</p>
+        <div class="source-links">
+          <a href="https://www.maths.usyd.edu.au/u/UG/HM/coordinator/stat2026.pdf" target="_blank" rel="noreferrer">2026 Statistics Honours projects ↗</a>
+          <a href="https://lnghiemum.github.io" target="_blank" rel="noreferrer">Linh Nghiem profile ↗</a>
+          <a href="https://andihan3.github.io" target="_blank" rel="noreferrer">Andi Han profile ↗</a>
+          <a href="https://www.sydney.edu.au/units/MATH1962" target="_blank" rel="noreferrer">MATH1962 ↗</a>
+          <a href="https://www.sydney.edu.au/units/STAT3922" target="_blank" rel="noreferrer">STAT3922 ↗</a>
+        </div>
+      </section>
+    </article>
+  </main>
+
+  <footer class="project-footer">
+    © 2026 Thomas (Minh-Nhat) Nguyen · Proposed research direction · Status: in discussion
+  </footer>
+</body>
+</html>

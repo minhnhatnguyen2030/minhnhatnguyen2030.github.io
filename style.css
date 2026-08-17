@@ -34,7 +34,6 @@ a:hover { text-decoration: underline; }
 
 .sidebar { position: sticky; top: 48px; align-self: start; }
 
-/* Real profile photo replaces the old TN placeholder. */
 .profile-photo {
   width: 170px;
   height: 170px;
@@ -112,7 +111,6 @@ h3 { margin: 0 0 6px; font-size: 1.05rem; }
   font-size: .82rem;
 }
 
-/* My AI Journey preview */
 .journey-intro { max-width: 680px; margin: -4px 0 24px; color: #4b5563; }
 
 .three-s {
@@ -140,7 +138,6 @@ h3 { margin: 0 0 6px; font-size: 1.05rem; }
   background: white;
 }
 
-/* Story 02 cover photo on the homepage. */
 .journey-feature-image {
   display: block;
   width: 100%;
@@ -162,7 +159,6 @@ h3 { margin: 0 0 6px; font-size: 1.05rem; }
 
 .journey-feature-image:hover img { transform: scale(1.012); }
 
-/* Old placeholder kept for compatibility if needed elsewhere. */
 .journey-photo-placeholder {
   min-height: 300px; display: grid; place-content: center; gap: 4px; text-align: center;
   padding: 32px; background: linear-gradient(135deg,#f3f4f6,#e9edf2); color: #707782;
@@ -208,92 +204,77 @@ h3 { margin: 0 0 6px; font-size: 1.05rem; }
 /* Selected Research */
 .research-card {
   display: grid;
-  grid-template-columns: 180px 1fr;
-  gap: 26px;
-  padding: 28px 0;
+  grid-template-columns: 250px minmax(0, 1fr);
+  gap: 36px;
+  padding: 38px 0;
 }
-
 .research-card + .research-card { border-top: 1px solid var(--line); }
-
-.research-image-link {
-  display: block;
-  align-self: start;
-  border-radius: 8px;
-  overflow: hidden;
-}
-
-.research-image-link:hover { text-decoration: none; }
-
+.research-card:first-of-type { padding-top: 18px; }
+.research-thumb-link { display: block; align-self: start; }
+.research-thumb-link:hover { text-decoration: none; }
 .research-thumb {
   display: block;
   width: 100%;
   aspect-ratio: 4 / 3;
   object-fit: cover;
-  border-radius: 8px;
+  object-position: center;
+  border-radius: 9px;
+  border: 1px solid #d8dde3;
   background: var(--soft);
-  border: 1px solid var(--line);
 }
-
-.placeholder-thumb {
-  display: grid;
-  place-items: center;
-  background: var(--soft);
-  border: 1px dashed #cbd1d8;
-  color: #8a919a;
-  font-size: .8rem;
-}
-
-.research-copy h3 {
-  font-size: 1.12rem;
-  line-height: 1.4;
-  margin-bottom: 10px;
-}
-
-.research-copy h3 a { color: var(--text); }
-.research-copy h3 a:hover { color: var(--link); }
-
-.research-copy > p { margin: 0 0 12px; }
-
-.research-meta-line {
+.placeholder-thumb { display: grid; place-items: center; background: var(--soft); border: 1px dashed #cbd1d8; color: #8a919a; font-size: .8rem; }
+.research-topline {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  gap: 8px 12px;
-  margin-bottom: 6px;
+  gap: 10px 14px;
+  margin-bottom: 11px;
 }
-
-.research-meta-line .meta {
+.research-topline .meta {
   margin: 0;
-  font-weight: 700;
+  font-weight: 800;
   letter-spacing: .055em;
+  color: #717784;
 }
-
-.research-grade {
+.research-badge {
   display: inline-flex;
   align-items: center;
-  border: 1px solid #d8dde4;
+  min-height: 32px;
+  padding: 4px 12px;
+  border: 1px solid #d7dce3;
   border-radius: 999px;
-  padding: 2px 9px;
-  color: #4b5563;
-  background: #fbfbfc;
-  font-size: .75rem;
-  font-weight: 700;
+  background: #fafbfc;
+  color: #505765;
+  font-size: .79rem;
+  font-weight: 750;
+  letter-spacing: .025em;
   white-space: nowrap;
 }
-
-.research-person {
-  color: #4b5563;
-  font-size: .9rem;
+.research-badge.status-discussion { border-style: dashed; background: #fbfbfb; }
+.research-badge.status-progress { background: #f5f8fb; border-color: #cbd8e5; color: #385f7f; }
+.research-card h3 {
+  margin: 0 0 12px;
+  font-size: 1.31rem;
+  line-height: 1.34;
 }
-
-.research-confidential {
-  margin-top: 9px !important;
-  color: var(--muted);
-  font-size: .79rem;
+.research-card h3 a { color: var(--text); }
+.research-card h3 a:hover { color: var(--link); }
+.research-card p { margin: 0 0 14px; }
+.research-person { color: #545c69; font-size: .95rem; }
+.research-note { color: #737b88; font-size: .84rem; margin-top: 10px !important; }
+.ongoing-card { position: relative; }
+.ongoing-card::before {
+  content: "";
+  position: absolute;
+  left: -10px;
+  top: 40px;
+  width: 3px;
+  height: 40px;
+  border-radius: 2px;
+  background: #d8e2eb;
 }
 
 .link-row { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 10px; font-size: .9rem; }
-
 .publication { display: grid; grid-template-columns: 36px 1fr; gap: 8px; }
 .publication p { margin: 0 0 6px; }
 .pub-number { color: var(--muted); }
@@ -346,8 +327,9 @@ footer { color: var(--muted); font-size: .84rem; padding-bottom: 24px; }
 
   .mobile-menu.open { display: grid; }
   .mobile-menu a { padding: 7px 8px; color: var(--text); }
-  .research-card { grid-template-columns: 1fr; }
-  .research-thumb { max-width: 320px; }
+  .research-card { grid-template-columns: 1fr; gap: 22px; }
+  .research-thumb { max-width: 360px; }
+  .ongoing-card::before { display: none; }
   .skills-grid { grid-template-columns: 1fr; }
   .journey-feature-image { height: 260px; }
   .journey-photo-placeholder { min-height: 240px; }
@@ -363,5 +345,6 @@ footer { color: var(--muted); font-size: .84rem; padding-bottom: 24px; }
   .lead { font-size: 1.08rem; }
   .journey-feature-copy { padding: 21px; }
   .journey-feature-image { height: 225px; }
-  .research-meta-line { align-items: flex-start; }
+  .research-topline { align-items: flex-start; }
+  .research-card h3 { font-size: 1.18rem; }
 }

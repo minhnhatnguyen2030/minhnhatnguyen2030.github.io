@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="STAT3888 Statistical Machine Learning — Australian Health Survey interdisciplinary group project led on the statistics and machine-learning side by Thomas (Minh-Nhat) Nguyen." />
+  <title>STAT3888 Statistical Machine Learning Project | Thomas (Minh-Nhat) Nguyen</title>
+  <link rel="stylesheet" href="/assets/css/ongoing-research.css" />
+</head>
+<body>
+  <header class="project-header">
+    <a class="brand" href="/">Thomas (Minh-Nhat) Nguyen</a>
+    <nav aria-label="Project navigation">
+      <a href="/#research">← Selected Research</a>
+      <a href="/">Academic home</a>
+    </nav>
+  </header>
+
+  <main>
+    <header class="hero">
+      <p class="kicker">STAT3888 · Statistical Machine Learning · Semester 2, 2026</p>
+      <h1>Australian Health Survey — Interdisciplinary Statistical Machine Learning Project</h1>
+      <p class="dek">
+        An ongoing University of Sydney group project combining Statistics/Data Science and Nutrition to answer a real-world
+        question using Australian Health Survey data. I am serving as the group’s statistics / machine-learning lead.
+      </p>
+      <div class="status-row">
+        <span class="badge progress">IN PROGRESS</span>
+        <span class="badge">STATISTICAL MACHINE LEARNING</span>
+        <span class="badge">AUSTRALIAN HEALTH SURVEY</span>
+        <span class="badge">INTERDISCIPLINARY TEAM</span>
+      </div>
+    </header>
+
+    <aside class="status-callout">
+      <strong>Ongoing-work note.</strong> This page documents the project brief, my current role and the analytical workflow.
+      It does not claim a final model, numerical result or scientific conclusion before the group has completed and validated
+      the analysis.
+    </aside>
+
+    <figure class="project-figure">
+      <img src="/assets/images/research/stat3888-unit-page.jpg"
+           alt="STAT3888 Statistical Machine Learning University of Sydney unit page screenshot" />
+      <figcaption>
+        STAT3888 Statistical Machine Learning. The unit brings Statistics/Data Science students into a joint project with
+        Nutrition students and centres project-based learning around real data and statistical machine-learning methods.
+      </figcaption>
+    </figure>
+
+    <article class="project-body">
+      <section class="section">
+        <p class="section-label">Project setting</p>
+        <h2>Turn a domain question into a statistical problem</h2>
+        <p>
+          The Australian Health Survey project is deliberately interdisciplinary. Nutrition students contribute domain-led
+          questions, while Statistics students help reformulate those questions into an analysable statistical problem,
+          work with the data, and communicate the findings back to the broader team.
+        </p>
+        <p>
+          That structure makes the project different from a conventional individual modelling assignment: the quality of the
+          work depends not only on selecting an algorithm but also on defining the estimand or prediction target correctly,
+          understanding the data-generating context, checking assumptions and presenting conclusions in language that remains
+          useful outside Statistics.
+        </p>
+      </section>
+    </article>
+
+    <figure class="project-figure">
+      <img src="/assets/images/research/stat3888-project-overview.jpg"
+           alt="STAT3888 Project 1 overview for Australian Health Survey data analysis" />
+      <figcaption>
+        Project 1 overview: NUTM/STAT Australian Health Survey data analysis. The brief explicitly assigns STAT students the
+        role of translating a research question into a statistics problem, analysing real data and communicating results.
+      </figcaption>
+    </figure>
+
+    <article class="project-body">
+      <section class="section">
+        <p class="section-label">My role</p>
+        <h2>Statistics / machine-learning lead</h2>
+        <p>
+          Within the group, I am leading the quantitative side of the work. My role is to keep the statistical question,
+          modelling choices and evaluation logic coherent while supporting collaboration with teammates working from a
+          nutrition/domain perspective.
+        </p>
+        <div class="role-callout">
+          <h3>Current responsibilities</h3>
+          <p>
+            Translate the research question into an analysis plan; coordinate data and feature decisions; guide appropriate
+            statistical/ML model choice and comparison; check evaluation and interpretation; and help turn technical outputs
+            into a defensible interdisciplinary narrative for the group.
+          </p>
+        </div>
+      </section>
+
+      <section class="section">
+        <p class="section-label">Current workflow</p>
+        <h2>From research question to interpretable evidence</h2>
+        <div class="flow">
+          <div class="flow-step"><div><strong>Define the question</strong><span>Clarify the domain question, outcome of interest, relevant population and what a useful answer would mean.</span></div></div>
+          <div class="flow-step"><div><strong>Audit the data</strong><span>Inspect variables, coding, missingness, distributions, possible confounding and limitations of the survey data.</span></div></div>
+          <div class="flow-step"><div><strong>Formulate the statistical task</strong><span>Translate the domain question into a modelling or inference problem with explicit assumptions and evaluation criteria.</span></div></div>
+          <div class="flow-step"><div><strong>Compare appropriate methods</strong><span>Use methods that fit the actual question rather than choosing complexity for its own sake.</span></div></div>
+          <div class="flow-step"><div><strong>Validate and stress-test</strong><span>Check robustness, diagnostics, uncertainty and whether conclusions remain stable under reasonable alternative choices.</span></div></div>
+          <div class="flow-step"><div><strong>Communicate</strong><span>Convert the technical result into clear evidence, limitations and implications that an interdisciplinary audience can scrutinise.</span></div></div>
+        </div>
+      </section>
+
+      <section class="section">
+        <p class="section-label">STAT3888 toolkit</p>
+        <h2>Methods available through the unit</h2>
+        <p>
+          STAT3888 covers a broad statistical-machine-learning toolkit. The items below describe the <strong>course methods</strong>,
+          not a claim that every method will be used in our final project. The final analysis should be driven by the research
+          question and the structure of the Australian Health Survey data.
+        </p>
+        <div class="grid-3">
+          <div class="card"><h3>Dimension reduction</h3><p>Principal component analysis and related multivariate structure.</p></div>
+          <div class="card"><h3>Classification</h3><p>Discriminant methods, classification trees, k-nearest neighbours and logistic regression.</p></div>
+          <div class="card"><h3>Unsupervised learning</h3><p>K-means and hierarchical clustering for exploratory structure.</p></div>
+          <div class="card"><h3>Graphical modelling</h3><p>Gaussian graphical models for conditional-dependence structure.</p></div>
+          <div class="card"><h3>Categorical modelling</h3><p>Log-linear modelling and multivariate testing where appropriate.</p></div>
+          <div class="card"><h3>Evaluation</h3><p>Method comparison, validation and careful interpretation rather than algorithm selection alone.</p></div>
+        </div>
+      </section>
+
+      <section class="section">
+        <p class="section-label">Current evidence</p>
+        <h2>What can be stated now—and what cannot</h2>
+        <div class="grid-2">
+          <div class="card soft">
+            <span class="small-label">Established</span>
+            <h3>Project context and role</h3>
+            <p>STAT3888 Semester 2, Australian Health Survey group project, interdisciplinary NUTM/STAT structure, and my statistics/ML leadership role.</p>
+          </div>
+          <div class="card soft">
+            <span class="small-label">Still developing</span>
+            <h3>Methods and results</h3>
+            <p>Final research question, model set, validated numerical results, substantive conclusions and any final presentation/report materials.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <p class="section-label">Academic context</p>
+        <h2>Statistical learning context: A/Prof John Ormerod</h2>
+        <div class="person-card">
+          <h3><a href="https://www.maths.usyd.edu.au/u/jormerod/" target="_blank" rel="noreferrer">A/Prof John Ormerod ↗</a></h3>
+          <p>
+            University of Sydney statistician whose research interests include variational approximations, generalised linear
+            mixed models, splines, data mining, semiparametric regression and missing data.
+          </p>
+        </div>
+        <p style="margin-top:22px;">
+          The unit is useful preparation for research because it requires the group to move between statistical methodology,
+          real-data constraints, teamwork and communication instead of treating modelling as an isolated coding exercise.
+        </p>
+      </section>
+
+      <section class="section">
+        <p class="section-label">Next update</p>
+        <h2>What will be added after the project is complete</h2>
+        <ul>
+          <li>Final research question and rationale.</li>
+          <li>Data-cleaning and feature-construction decisions that materially affect the analysis.</li>
+          <li>Models actually fitted, with a clear reason for each choice.</li>
+          <li>Validation, diagnostics and uncertainty—not only the best headline metric.</li>
+          <li>Final figures and a concise statement of the group’s substantive findings.</li>
+          <li>A precise contribution statement separating my work from the overall team result.</li>
+        </ul>
+      </section>
+
+      <section class="section">
+        <p class="section-label">Sources</p>
+        <h2>Unit and lecturer information</h2>
+        <div class="source-links">
+          <a href="https://www.sydney.edu.au/units/STAT3888" target="_blank" rel="noreferrer">STAT3888 unit page ↗</a>
+          <a href="https://www.maths.usyd.edu.au/u/jormerod/" target="_blank" rel="noreferrer">John Ormerod profile ↗</a>
+        </div>
+      </section>
+    </article>
+  </main>
+
+  <footer class="project-footer">
+    © 2026 Thomas (Minh-Nhat) Nguyen · STAT3888 project · Status: in progress
+  </footer>
+</body>
+</html>
