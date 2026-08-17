@@ -3,10 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="DATA3888 Image21 project by Thomas (Minh-Nhat) Nguyen: deep learning for breast cancer histopathology analysis." />
+  <meta
+    name="description"
+    content="DATA3888 Image21 project by Thomas (Minh-Nhat) Nguyen: CNN architecture comparison, breast-cancer H&E histopathology analysis, Shiny deployment and Grad-CAM interpretation."
+  />
   <title>DATA3888 · Image21 | Thomas (Minh-Nhat) Nguyen</title>
   <link rel="stylesheet" href="/assets/css/research-project.css" />
 </head>
+
 <body>
   <header class="research-header">
     <a class="brand" href="/">Thomas (Minh-Nhat) Nguyen</a>
@@ -18,10 +22,12 @@
 
   <main class="project-shell">
     <p class="kicker">DATA3888 · Data Science Capstone · 2026</p>
+
     <h1>Image21 — Deep Learning for Accessible Breast Cancer Histopathology Analysis</h1>
+
     <p class="dek">
-      A team-based applied AI project comparing CNN architectures for H&amp;E histopathology classification
-      and translating the results into an interpretable Shiny research prototype.
+      An interdisciplinary applied-AI project comparing CNN architectures for breast-cancer H&amp;E
+      patch classification and translating the results into an interpretable Shiny research prototype.
     </p>
 
     <div class="project-badges">
@@ -29,104 +35,517 @@
       <span>Team / Technical Lead</span>
       <span>Deep Learning</span>
       <span>Transfer Learning</span>
+      <span>Medical Imaging</span>
       <span>Grad-CAM</span>
       <span>Shiny</span>
     </div>
 
     <div class="project-links">
       <a href="https://www.sydney.edu.au/units/DATA3888" target="_blank" rel="noopener noreferrer">DATA3888 unit ↗</a>
-      <a href="https://manojmw.github.io" target="_blank" rel="noopener noreferrer">Manoj M. Wagle ↗</a>
-      <a href="mailto:thomas.nguyen.ai2030@gmail.com?subject=Request%20for%20DATA3888%20Image21%20project%20report">Request project report</a>
+      <a href="https://manojmw.github.io" target="_blank" rel="noopener noreferrer">Research mentor: Manoj M. Wagle ↗</a>
+      <a href="mailto:thomas.nguyen.ai2030@gmail.com?subject=Request%20for%20DATA3888%20Image21%20project%20report">
+        Request project report
+      </a>
     </div>
 
     <figure class="hero-figure">
-      <img src="/assets/images/research/data3888-card.jpg" alt="Placeholder for the main Image21 project visual" />
-      <figcaption>Replace with the strongest Image21 visual from the final slides or report.</figcaption>
+      <img
+        src="/assets/images/research/data3888-card.jpg"
+        alt="Grouped bar chart comparing held-out accuracy and macro-F1 for Simple CNN, Deeper CNN, EfficientNetB0, ResNet18 and DenseNet121"
+      />
+      <span class="figure-title">Figure 1 · Architecture complexity did not determine test performance</span>
+      <figcaption>
+        Held-out three-class evaluation across five CNN architectures. ResNet18 achieved the strongest
+        reported result at 88.65% accuracy and 0.8796 macro-F1, with EfficientNetB0 close behind.
+        DenseNet121 underperformed despite its greater capacity, showing that nominal depth alone was not
+        a reliable predictor of generalisation in this pipeline.
+      </figcaption>
+
+      <p class="figure-resource">
+        <strong>Presentation:</strong>
+        <a
+          href="https://drive.google.com/file/d/1GGktW8ytDUZv6jVuHPz6HX4sPvnx0Knc/view?usp=sharing"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          View the full DATA3888 / Image21 research presentation ↗
+        </a>
+      </p>
     </figure>
 
-    <h2>Project question</h2>
+    <h2>Why this project?</h2>
+
     <p>
-      We investigated how accurately deep-learning models could classify biologically distinct breast-cancer
-      cell and tissue patterns from H&amp;E image patches, and whether increasing neural-network complexity actually
-      improved performance.
+      Histopathology is central to identifying tumour morphology and immune-associated tissue patterns,
+      but expert interpretation is time-intensive and difficult to scale. Image21 asked a deliberately
+      narrower research question: <strong>how well can CNNs classify local H&amp;E breast-cancer patches,
+      and does increasing architectural complexity actually improve the result?</strong>
     </p>
 
-    <h2>What we built</h2>
     <p>
-      The team compared five architectures — Simple CNN, Deeper CNN, EfficientNetB0, ResNet18 and DenseNet121 —
-      under a shared evaluation framework. The project also produced an interactive Shiny prototype that
-      combined model predictions with Grad-CAM visualisations to expose influential image regions and make
-      agreement, disagreement and failure modes easier to inspect.
+      The aim was not to build an autonomous diagnostic system. The project instead treated histopathology
+      as a challenging applied setting for comparing representation learning, transfer learning, class imbalance,
+      model failure modes and transparent deployment.
     </p>
 
-    <div class="metrics">
-      <div class="metric"><strong>88.65%</strong><span>ResNet18 test accuracy</span></div>
-      <div class="metric"><strong>0.8796</strong><span>ResNet18 macro-F1</span></div>
-      <div class="metric"><strong>5</strong><span>CNN architectures</span></div>
+    <h2>The project at a glance</h2>
+
+    <div class="overview-grid">
+      <div class="stat-card"><strong>5</strong><span>CNN architectures compared</span></div>
+      <div class="stat-card"><strong>6 → 3</strong><span>biological labels and interpretable superclasses</span></div>
+      <div class="stat-card"><strong>70/15/15</strong><span>fixed train / validation / test split</span></div>
+      <div class="stat-card"><strong>88.65%</strong><span>best reported three-class test accuracy</span></div>
     </div>
 
-    <h2>My role</h2>
+    <h2>Research questions</h2>
+
+    <div class="question-grid">
+      <article class="question-card">
+        <span class="q-num">Q1</span>
+        <h3>Can H&amp;E morphology support useful classification?</h3>
+        <p>
+          Can CNNs distinguish early tumour, invasive tumour and immune-rich breast-cancer patches
+          from standard H&amp;E image data?
+        </p>
+      </article>
+
+      <article class="question-card">
+        <span class="q-num">Q2</span>
+        <h3>Does deeper automatically mean better?</h3>
+        <p>
+          How do scratch-trained CNNs compare with pretrained EfficientNet, ResNet and DenseNet architectures
+          under the implemented project pipelines?
+        </p>
+      </article>
+
+      <article class="question-card">
+        <span class="q-num">Q3</span>
+        <h3>Can model behaviour be made inspectable?</h3>
+        <p>
+          Can class scores, cross-model comparison and Grad-CAM help expose agreement, disagreement and
+          likely failure modes without presenting the model as a clinical authority?
+        </p>
+      </article>
+    </div>
+
+    <h2>Dataset and label design</h2>
+
     <p>
-      I served as a team and technical lead, contributing to project coordination, Shiny application
-      development, EfficientNetB0 deployment interpretation, model-comparison framing, presentation structure
-      and final technical integration. I helped connect the modelling results with the live application,
-      Grad-CAM interpretation and the project's clinical-safety limitations.
+      The source data contained six biologically distinct labels derived from breast-cancer tumour
+      microenvironment data. For the main three-class experiment, labels were collapsed
+      <strong>before model training</strong>, so the deployed classifiers directly learned three broader superclasses.
+      The six-class setting was retained separately for fine-grained biological analysis.
     </p>
 
-    <h2>Main finding</h2>
-    <p>
-      ResNet18 achieved the strongest reported three-class result, while EfficientNetB0 was close behind and
-      was selected as the deployed model because of its balance of predictive performance, practical inference
-      and reliable Grad-CAM integration. DenseNet121 underperformed despite greater capacity, reinforcing the
-      conclusion that <strong>model size alone does not determine generalisation</strong>.
-    </p>
+    <div class="label-map">
+      <div class="label-column">
+        <h3>Original biological labels</h3>
+        <ul>
+          <li>DCIS 1</li>
+          <li>DCIS 2</li>
+          <li>Invasive Tumour</li>
+          <li>CD8+ T Cells</li>
+          <li>Macrophages 1</li>
+          <li>Macrophages 2</li>
+        </ul>
+      </div>
+
+      <div class="label-arrow">→</div>
+
+      <div class="label-column">
+        <h3>Main three-class task</h3>
+        <ul>
+          <li><strong>Early Tumour</strong> — DCIS 1 + DCIS 2</li>
+          <li><strong>Invasive Tumour</strong> — invasive carcinoma-associated patches</li>
+          <li><strong>Immune</strong> — CD8+ T cells + macrophage subtypes</li>
+        </ul>
+      </div>
+    </div>
+
+    <h2>Data integrity and generalisation controls</h2>
+
+    <div class="method-grid">
+      <article class="method-card">
+        <h3>Fixed data split</h3>
+        <p>
+          A single 70/15/15 train-validation-test split was created with seed 42 and saved permanently,
+          so all models could use consistent data partitions.
+        </p>
+      </article>
+
+      <article class="method-card">
+        <h3>Leakage check</h3>
+        <p>
+          Image identifiers were checked across the three folders, confirming zero exact filename overlap.
+          The report explicitly notes that this does not by itself rule out patient-, slide- or staining-source leakage.
+        </p>
+      </article>
+
+      <article class="method-card">
+        <h3>Balanced training</h3>
+        <p>
+          Training batches used balanced sampling so each superclass contributed approximately equally,
+          while validation and test sets retained their natural distributions for realistic evaluation.
+        </p>
+      </article>
+
+      <article class="method-card">
+        <h3>Augmentation</h3>
+        <p>
+          Training augmentation included horizontal and vertical flips and approximately ±25° rotation.
+          Core TensorFlow/Keras experiments avoided colour jitter because H&amp;E colour intensity may carry useful signal.
+        </p>
+      </article>
+
+      <article class="method-card">
+        <h3>Regularisation</h3>
+        <p>
+          Depending on architecture, the pipelines used dropout, batch normalisation, label smoothing,
+          early stopping, learning-rate reduction and model checkpointing.
+        </p>
+      </article>
+
+      <article class="method-card">
+        <h3>Evaluation beyond accuracy</h3>
+        <p>
+          Macro-F1, per-class precision/recall/F1 and confusion matrices complemented accuracy so that
+          performance on the majority class could not hide weaker minority-class behaviour.
+        </p>
+      </article>
+    </div>
+
+    <h2>Five architectures, one comparative question</h2>
+
+    <div class="method-grid">
+      <article class="method-card">
+        <h3>Simple CNN</h3>
+        <p>
+          Lightweight three-block scratch-trained baseline used to establish a non-transfer-learning performance floor.
+        </p>
+      </article>
+
+      <article class="method-card">
+        <h3>Deeper CNN</h3>
+        <p>
+          Five-stage scratch-trained CNN with batch normalisation and spatial dropout, testing whether depth alone
+          improved feature learning.
+        </p>
+      </article>
+
+      <article class="method-card">
+        <h3>EfficientNetB0</h3>
+        <p>
+          ImageNet-pretrained Keras backbone with a custom three-class head and two-phase transfer learning:
+          frozen-backbone training followed by selective fine-tuning of upper layers.
+        </p>
+      </article>
+
+      <article class="method-card">
+        <h3>ResNet18</h3>
+        <p>
+          ImageNet-pretrained residual network adapted to three classes, providing a mature residual-learning
+          transfer baseline.
+        </p>
+      </article>
+
+      <article class="method-card">
+        <h3>DenseNet121</h3>
+        <p>
+          Higher-capacity pretrained densely connected network used to test whether extensive feature reuse and
+          added depth improved this small-patch histopathology task.
+        </p>
+      </article>
+
+      <article class="method-card">
+        <h3>Shared comparison goal</h3>
+        <p>
+          The project compared implemented pipelines rather than claiming a perfectly controlled architecture-only
+          ablation: preprocessing, frameworks, augmentation and training schedules differed between some models.
+        </p>
+      </article>
+    </div>
+
+    <h2>Model performance</h2>
+
+    <div class="data-table-wrap">
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Model</th>
+            <th>Training strategy</th>
+            <th>Accuracy</th>
+            <th>Macro-F1</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Simple CNN</td><td>Scratch baseline</td><td>82.30%</td><td>0.8330</td></tr>
+          <tr><td>Deeper CNN</td><td>Scratch, deeper regularised CNN</td><td>85.10%</td><td>0.8430</td></tr>
+          <tr><td>EfficientNetB0</td><td>ImageNet transfer learning</td><td>87.57%</td><td>0.8686</td></tr>
+          <tr class="result-highlight"><td>ResNet18</td><td>ImageNet transfer learning</td><td>88.65%</td><td>0.8796</td></tr>
+          <tr><td>DenseNet121</td><td>ImageNet transfer learning</td><td>82.86%</td><td>0.8110</td></tr>
+        </tbody>
+      </table>
+    </div>
 
     <div class="callout">
-      Engineering lesson: the numerically strongest model is not automatically the best deployment choice.
-      Accuracy, interpretability, integration, data fit and failure analysis all matter.
+      <strong>Central model-comparison lesson:</strong>
+      larger or deeper was not automatically better. ResNet18 produced the strongest numerical result,
+      EfficientNetB0 provided the best deployment trade-off, and DenseNet121 demonstrated that greater
+      capacity alone did not guarantee stronger generalisation under the available data and tuning budget.
     </div>
 
-    <div class="figure-grid">
-      <figure>
-        <img src="/assets/images/research/data3888-models.jpg" alt="Placeholder for model comparison figure" />
-        <figcaption>Suggested: the five-model accuracy and macro-F1 comparison.</figcaption>
-      </figure>
-      <figure>
-        <img src="/assets/images/research/data3888-shiny.jpg" alt="Placeholder for Shiny Grad-CAM application figure" />
-        <figcaption>Suggested: H&amp;E + Grad-CAM or a clean Shiny app screenshot.</figcaption>
-      </figure>
+    <p>
+      The report deliberately treats this as a <strong>pipeline-level finding</strong>, not proof that residual
+      connections alone caused ResNet18's advantage. The models differed in architecture, framework, preprocessing,
+      augmentation and training configuration, so the most defensible conclusion is that data fit, transfer-learning
+      strategy, optimisation and architecture design jointly mattered more than nominal depth.
+    </p>
+
+    <h2>Where did the strongest models still fail?</h2>
+
+    <p>
+      Aggregate accuracy concealed a consistent class-level weakness. In the row-normalised confusion matrices,
+      Immune recall was 79.1% for ResNet18 and 76.4% for EfficientNetB0, below their recall for Early Tumour and
+      Invasive Tumour. The same broad pattern appeared across architectures.
+    </p>
+
+    <figure class="figure-block">
+      <img
+        src="/assets/images/research/data3888-class-recall.jpg"
+        alt="Grouped bar chart comparing class recall for ResNet18 and EfficientNetB0 across Early Tumour, Invasive Tumour and Immune"
+      />
+      <span class="figure-title">Figure 2 · The strongest models shared the same class-level weakness</span>
+      <figcaption>
+        Row-normalised recall from the final report. Both leading models were substantially weaker on the Immune
+        superclass, suggesting that the remaining error was not merely an isolated architecture bug.
+      </figcaption>
+    </figure>
+
+    <p>
+      The project identified several plausible reasons: the Immune superclass combined biologically heterogeneous
+      CD8+ T cells and macrophage subtypes; immune cells can appear within or near tumour regions; the 100 × 100
+      patch size limits tissue context; and the class had smaller support than Invasive Tumour. These explanations
+      remain hypotheses rather than independently validated causal mechanisms.
+    </p>
+
+    <h2>Best classifier vs best deployed model</h2>
+
+    <div class="insight-grid">
+      <article class="insight-card">
+        <h3>ResNet18 — strongest numerical model</h3>
+        <p>
+          88.65% test accuracy and 0.8796 macro-F1. Residual connections and pretrained feature extraction
+          may have helped, but the project does not claim a clean causal architecture ablation.
+        </p>
+      </article>
+
+      <article class="insight-card">
+        <h3>EfficientNetB0 — strongest deployment trade-off</h3>
+        <p>
+          87.57% accuracy and 0.8686 macro-F1, with reliable integration into the TensorFlow/Keras Shiny workflow,
+          live inference and Grad-CAM visualisation.
+        </p>
+      </article>
     </div>
+
+    <p>
+      This distinction became one of the most important engineering lessons of Image21:
+      <strong>the numerically best model is not automatically the most useful deployed model.</strong>
+      Deployment also requires stable integration, acceptable inference cost, interpretability support and a clear
+      understanding of failure modes.
+    </p>
+
+    <h2>Image21: from model benchmark to inspectable system</h2>
+
+    <div class="pipeline">
+      <span>100 × 100 H&amp;E patch</span>
+      <span>CNN inference</span>
+      <span>Three-class output</span>
+      <span>Class-score display</span>
+      <span>Grad-CAM inspection</span>
+    </div>
+
+    <p>
+      The Shiny application exposed two interaction modes. In upload mode, a user could supply a new patch for
+      live inference. In reference-case mode, labelled internal examples could be inspected to understand how the
+      model behaved on known cases. Reference examples were demonstration cases, not external validation.
+    </p>
+
+    <figure class="figure-block">
+      <img
+        src="/assets/images/research/data3888-shiny.jpg"
+        alt="Image21 Shiny application showing H&E patch upload, model selection, class probabilities and Grad-CAM output"
+      />
+      <span class="figure-title">Figure 3 · Image21 turns model comparison into an inspectable research tool</span>
+      <figcaption>
+        The application joins patch input, model choice, predicted superclass, score bars and model-attention
+        visualisation in one interface. Its purpose is transparent comparison and education rather than automated diagnosis.
+      </figcaption>
+    </figure>
+
+    <h2>Interpretability without overclaiming</h2>
+
+    <p>
+      Grad-CAM was used to show which image regions most influenced a selected class score. This can help check
+      whether the network appears to focus on tissue rather than blank background or obvious artefacts, but it does
+      <strong>not</strong> prove that the learned decision rule is biologically correct.
+    </p>
+
+    <figure class="figure-block">
+      <img
+        src="/assets/images/research/data3888-gradcam.jpg"
+        alt="Image21 representative Immune reference case showing H&E patch, Grad-CAM model attention and class scores"
+      />
+      <span class="figure-title">Figure 4 · Grad-CAM makes a prediction inspectable, not clinically validated</span>
+      <figcaption>
+        A representative EfficientNetB0 reference case from the presentation. The heat map indicates influential
+        image regions, while the displayed softmax scores remain model outputs rather than calibrated diagnostic probabilities.
+      </figcaption>
+    </figure>
+
+    <p>
+      A particularly useful presentation example showed that all five models could predict the same patch correctly
+      while assigning very different output scores. That observation reinforced why a single correct prediction or a
+      visually persuasive heat map is insufficient evidence for clinical trust.
+    </p>
+
+    <h2>My role — team / technical lead</h2>
+
+    <p>
+      I served as team and technical lead, with a focus on turning several model-development streams into one coherent,
+      inspectable project. The final report records my contributions to project coordination, Shiny application development,
+      EfficientNetB0 deployment interpretation, model-comparison framing, presentation structure and technical report integration.
+    </p>
+
+    <div class="role-list">
+      <div class="role-item">
+        <strong>Project coordination</strong>
+        <span>Helped align modelling, analysis, application and submission work across the team.</span>
+      </div>
+
+      <div class="role-item">
+        <strong>Shiny application</strong>
+        <span>Contributed to the interactive workflow connecting patch input, model inference and visual interpretation.</span>
+      </div>
+
+      <div class="role-item">
+        <strong>Deployment framing</strong>
+        <span>Helped articulate why ResNet18 was the numerical winner while EfficientNetB0 was the practical deployed default.</span>
+      </div>
+
+      <div class="role-item">
+        <strong>Model-comparison narrative</strong>
+        <span>Connected architecture results to the broader question of complexity, transfer learning and generalisation.</span>
+      </div>
+
+      <div class="role-item">
+        <strong>Interpretability &amp; safety</strong>
+        <span>Integrated Grad-CAM interpretation with clear limitations around softmax scores and clinical use.</span>
+      </div>
+
+      <div class="role-item">
+        <strong>Final technical integration</strong>
+        <span>Coordinated report, figures, Shiny materials and reproducibility files into a consistent final submission.</span>
+      </div>
+    </div>
+
+    <h2>Reproducibility</h2>
+
+    <p>
+      The submitted reproducibility package included the final report, LaTeX source, figures, code, Shiny application,
+      saved outputs, prediction exports and environment files. The report also proposed a traceable prediction-export
+      schema including image ID, ground-truth label, model, predicted label, class scores, checkpoint identity,
+      training-pipeline provenance and audit fields for test membership.
+    </p>
+
+    <div class="caution-box">
+      <strong>Why this matters</strong>
+      Reproducibility was treated as part of the modelling result rather than an afterthought: model comparisons only
+      become meaningful when evaluation cases, checkpoints and pipeline provenance can be traced consistently.
+    </div>
+
+    <h2>Responsible-AI boundary</h2>
+
+    <p>
+      Image21 was explicitly designed as a <strong>research and education prototype</strong>, not a clinical diagnostic device.
+      Grad-CAM is a coarse post-hoc attention method, not a mechanistic biological explanation. Softmax outputs were not
+      calibrated and should not be interpreted as medical probabilities.
+    </p>
+
+    <p>
+      The project therefore used interpretability to support inspection rather than to create a false sense of certainty.
+      Human review remains essential, especially for ambiguous tumour–immune boundaries and out-of-distribution data.
+    </p>
+
+    <h2>Limitations</h2>
+
+    <ul>
+      <li><strong>Limited spatial context:</strong> 100 × 100 patches may omit tissue architecture visible only at larger scales.</li>
+      <li><strong>Same-source evaluation:</strong> the models were not externally validated on an independent hospital dataset.</li>
+      <li><strong>Patient/slide leakage risk:</strong> exact image overlap was checked, but higher-level provenance required further auditing.</li>
+      <li><strong>Stain variation:</strong> laboratory, scanner and preparation differences could reduce external generalisability.</li>
+      <li><strong>Class heterogeneity:</strong> the Immune superclass combined visually different immune-cell populations.</li>
+      <li><strong>Pipeline heterogeneity:</strong> model frameworks and training schedules differed, limiting strict causal architecture comparisons.</li>
+      <li><strong>Interpretability limits:</strong> Grad-CAM cannot establish biological correctness or clinical validity.</li>
+    </ul>
+
+    <h2>Where I would take this next</h2>
+
+    <ul class="future-list">
+      <li><strong>Patient-level splitting:</strong> explicitly prevent patient or slide provenance from crossing dataset partitions.</li>
+      <li><strong>External validation:</strong> evaluate on independent hospital or laboratory data.</li>
+      <li><strong>Stain normalisation:</strong> test robustness to preparation and scanner variation.</li>
+      <li><strong>Probability calibration:</strong> distinguish confidence scores from calibrated predictive uncertainty.</li>
+      <li><strong>Broader tissue context:</strong> move from local patches toward larger fields of view or whole-slide methods.</li>
+      <li><strong>Expert evaluation:</strong> involve pathologists in structured review of model errors and Grad-CAM outputs.</li>
+      <li><strong>New architectures cautiously:</strong> evaluate transformer or CNN–transformer systems only with sufficient data and comparable validation.</li>
+    </ul>
 
     <h2>Research mentor</h2>
+
     <div class="person-card">
       <h3><a href="https://manojmw.github.io" target="_blank" rel="noopener noreferrer">Manoj M. Wagle ↗</a></h3>
       <p>
-        Manoj M. Wagle is a University of Sydney researcher with MIT CSAIL research affiliation whose work
-        spans interpretable deep learning, biomedical AI, neuroscience and computational biology. His work
-        helped provide an interdisciplinary research context for a project that sat between machine learning
-        and biomedical data.
+        Manoj M. Wagle is a PhD candidate at the University of Sydney and Children's Medical Research Institute,
+        conducting research in the University of Sydney School of Mathematics and Statistics and the Kellis Lab at MIT.
+        He is also a Research Affiliate in MIT CSAIL. His research focuses on interpretable deep learning for heterogeneous
+        biological data, with interests spanning biomedical AI, neuroscience, precision medicine, computational biology and bioinformatics.
       </p>
     </div>
 
-    <h2>Responsible AI boundary</h2>
+    <h2>What this project changed for me</h2>
+
     <p>
-      Image21 was designed as a research and education prototype, not as a clinical diagnostic device.
-      Grad-CAM was used as a qualitative interpretability aid rather than proof of biological mechanism,
-      and model softmax outputs were not presented as calibrated clinical probabilities.
+      DATA3888 gave me a different view of AI research from my individual optimisation work. In a real applied pipeline,
+      performance depended not only on model architecture but also on data design, transfer learning, class balance,
+      evaluation choices, interpretability, deployment constraints and the discipline to state what the system could
+      <em>not</em> claim.
     </p>
 
-    <h2>What this project changed for me</h2>
     <p>
-      Image21 showed me that successful AI research requires more than a strong headline metric. It requires
-      careful choices about data, evaluation, interpretability, deployment and the limitations of what a model
-      is actually entitled to claim.
+      The project reinforced a theme that has become central to my research interests:
+      <strong>greater nominal complexity does not automatically produce better or more trustworthy intelligence.</strong>
+      What matters is how representation, learning strategy, evaluation and environment interact to produce behaviour
+      that is robust, interpretable and genuinely useful.
     </p>
 
     <div class="report-note">
-      <strong>Project report and additional materials:</strong> available upon request. They are intentionally
-      not stored in this public GitHub repository.
+      <strong>Project report and materials</strong>
+      <p>
+        The full report and additional project materials are available upon request and are intentionally not stored
+        directly in this public GitHub repository.
+      </p>
       <div class="project-links">
-        <a href="mailto:thomas.nguyen.ai2030@gmail.com?subject=Request%20for%20DATA3888%20Image21%20project%20report">Request materials by email →</a>
+        <a href="mailto:thomas.nguyen.ai2030@gmail.com?subject=Request%20for%20DATA3888%20Image21%20project%20report">
+          Request materials by email →
+        </a>
+        <a
+          href="https://drive.google.com/file/d/1GGktW8ytDUZv6jVuHPz6HX4sPvnx0Knc/view?usp=sharing"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          View full presentation →
+        </a>
       </div>
     </div>
 

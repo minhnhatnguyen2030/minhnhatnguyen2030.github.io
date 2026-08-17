@@ -223,7 +223,7 @@ h3 { margin: 0 0 6px; font-size: 1.05rem; }
 .journey-feature-image {
   display: block;
   width: 100%;
-  height: clamp(220px, 28vw, 320px);
+  height: clamp(260px, 38vw, 430px);
   overflow: hidden;
   background: var(--soft);
 }
@@ -250,7 +250,7 @@ h3 { margin: 0 0 6px; font-size: 1.05rem; }
 .journey-photo-placeholder span { font-weight: 700; }
 .journey-photo-placeholder small { font-size: .75rem; }
 
-.journey-feature-copy { padding: 22px 25px 24px; }
+.journey-feature-copy { padding: 26px 28px 28px; }
 .journey-feature-copy .meta, .journey-small-card .meta { margin: 0 0 7px; font-weight: 700; letter-spacing: .06em; }
 .journey-feature-copy h3 { font-size: 1.35rem; margin-bottom: 9px; }
 .journey-feature-copy h3 a, .journey-small-card h3 a { color: var(--text); }
@@ -413,7 +413,7 @@ footer { color: var(--muted); font-size: .84rem; padding-bottom: 24px; }
   .research-thumb { max-width: 360px; }
   .ongoing-card::before { display: none; }
   .skills-grid { grid-template-columns: 1fr; }
-  .journey-feature-image { height: 220px; }
+  .journey-feature-image { height: 260px; }
   .journey-photo-placeholder { min-height: 240px; }
   .journey-secondary-grid { grid-template-columns: 1fr; }
   .three-s { grid-template-columns: 1fr; gap: 2px; }
@@ -426,7 +426,7 @@ footer { color: var(--muted); font-size: .84rem; padding-bottom: 24px; }
   .news-item, .timeline-item { grid-template-columns: 1fr; gap: 4px; }
   .lead { font-size: 1.08rem; }
   .journey-feature-copy { padding: 21px; }
-  .journey-feature-image { height: 190px; }
+  .journey-feature-image { height: 225px; }
   .research-topline { align-items: flex-start; }
   .research-card h3 { font-size: 1.18rem; }
 }
