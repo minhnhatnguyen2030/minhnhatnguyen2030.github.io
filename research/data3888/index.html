@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="DATA3888 Image21 project by Thomas (Minh-Nhat) Nguyen: deep learning for breast cancer histopathology analysis." />
+  <title>DATA3888 · Image21 | Thomas (Minh-Nhat) Nguyen</title>
+  <link rel="stylesheet" href="/assets/css/research-project.css" />
+</head>
+<body>
+  <header class="research-header">
+    <a class="brand" href="/">Thomas (Minh-Nhat) Nguyen</a>
+    <nav>
+      <a href="/#research">← Selected Research</a>
+      <a href="/">Academic home</a>
+    </nav>
+  </header>
+
+  <main class="project-shell">
+    <p class="kicker">DATA3888 · Data Science Capstone · 2026</p>
+    <h1>Image21 — Deep Learning for Accessible Breast Cancer Histopathology Analysis</h1>
+    <p class="dek">
+      A team-based applied AI project comparing CNN architectures for H&amp;E histopathology classification
+      and translating the results into an interpretable Shiny research prototype.
+    </p>
+
+    <div class="project-badges">
+      <span>High Distinction · 88/100</span>
+      <span>Team / Technical Lead</span>
+      <span>Deep Learning</span>
+      <span>Transfer Learning</span>
+      <span>Grad-CAM</span>
+      <span>Shiny</span>
+    </div>
+
+    <div class="project-links">
+      <a href="https://www.sydney.edu.au/units/DATA3888" target="_blank" rel="noopener noreferrer">DATA3888 unit ↗</a>
+      <a href="https://manojmw.github.io" target="_blank" rel="noopener noreferrer">Manoj M. Wagle ↗</a>
+      <a href="mailto:thomas.nguyen.ai2030@gmail.com?subject=Request%20for%20DATA3888%20Image21%20project%20report">Request project report</a>
+    </div>
+
+    <figure class="hero-figure">
+      <img src="/assets/images/research/data3888-card.jpg" alt="Placeholder for the main Image21 project visual" />
+      <figcaption>Replace with the strongest Image21 visual from the final slides or report.</figcaption>
+    </figure>
+
+    <h2>Project question</h2>
+    <p>
+      We investigated how accurately deep-learning models could classify biologically distinct breast-cancer
+      cell and tissue patterns from H&amp;E image patches, and whether increasing neural-network complexity actually
+      improved performance.
+    </p>
+
+    <h2>What we built</h2>
+    <p>
+      The team compared five architectures — Simple CNN, Deeper CNN, EfficientNetB0, ResNet18 and DenseNet121 —
+      under a shared evaluation framework. The project also produced an interactive Shiny prototype that
+      combined model predictions with Grad-CAM visualisations to expose influential image regions and make
+      agreement, disagreement and failure modes easier to inspect.
+    </p>
+
+    <div class="metrics">
+      <div class="metric"><strong>88.65%</strong><span>ResNet18 test accuracy</span></div>
+      <div class="metric"><strong>0.8796</strong><span>ResNet18 macro-F1</span></div>
+      <div class="metric"><strong>5</strong><span>CNN architectures</span></div>
+    </div>
+
+    <h2>My role</h2>
+    <p>
+      I served as a team and technical lead, contributing to project coordination, Shiny application
+      development, EfficientNetB0 deployment interpretation, model-comparison framing, presentation structure
+      and final technical integration. I helped connect the modelling results with the live application,
+      Grad-CAM interpretation and the project's clinical-safety limitations.
+    </p>
+
+    <h2>Main finding</h2>
+    <p>
+      ResNet18 achieved the strongest reported three-class result, while EfficientNetB0 was close behind and
+      was selected as the deployed model because of its balance of predictive performance, practical inference
+      and reliable Grad-CAM integration. DenseNet121 underperformed despite greater capacity, reinforcing the
+      conclusion that <strong>model size alone does not determine generalisation</strong>.
+    </p>
+
+    <div class="callout">
+      Engineering lesson: the numerically strongest model is not automatically the best deployment choice.
+      Accuracy, interpretability, integration, data fit and failure analysis all matter.
+    </div>
+
+    <div class="figure-grid">
+      <figure>
+        <img src="/assets/images/research/data3888-models.jpg" alt="Placeholder for model comparison figure" />
+        <figcaption>Suggested: the five-model accuracy and macro-F1 comparison.</figcaption>
+      </figure>
+      <figure>
+        <img src="/assets/images/research/data3888-shiny.jpg" alt="Placeholder for Shiny Grad-CAM application figure" />
+        <figcaption>Suggested: H&amp;E + Grad-CAM or a clean Shiny app screenshot.</figcaption>
+      </figure>
+    </div>
+
+    <h2>Research mentor</h2>
+    <div class="person-card">
+      <h3><a href="https://manojmw.github.io" target="_blank" rel="noopener noreferrer">Manoj M. Wagle ↗</a></h3>
+      <p>
+        Manoj M. Wagle is a University of Sydney researcher with MIT CSAIL research affiliation whose work
+        spans interpretable deep learning, biomedical AI, neuroscience and computational biology. His work
+        helped provide an interdisciplinary research context for a project that sat between machine learning
+        and biomedical data.
+      </p>
+    </div>
+
+    <h2>Responsible AI boundary</h2>
+    <p>
+      Image21 was designed as a research and education prototype, not as a clinical diagnostic device.
+      Grad-CAM was used as a qualitative interpretability aid rather than proof of biological mechanism,
+      and model softmax outputs were not presented as calibrated clinical probabilities.
+    </p>
+
+    <h2>What this project changed for me</h2>
+    <p>
+      Image21 showed me that successful AI research requires more than a strong headline metric. It requires
+      careful choices about data, evaluation, interpretability, deployment and the limitations of what a model
+      is actually entitled to claim.
+    </p>
+
+    <div class="report-note">
+      <strong>Project report and additional materials:</strong> available upon request. They are intentionally
+      not stored in this public GitHub repository.
+      <div class="project-links">
+        <a href="mailto:thomas.nguyen.ai2030@gmail.com?subject=Request%20for%20DATA3888%20Image21%20project%20report">Request materials by email →</a>
+      </div>
+    </div>
+
+    <footer class="project-footer">
+      <span>Thomas (Minh-Nhat) Nguyen · University of Sydney</span>
+      <a href="/#research">Back to Selected Research ↑</a>
+    </footer>
+  </main>
+</body>
+</html>

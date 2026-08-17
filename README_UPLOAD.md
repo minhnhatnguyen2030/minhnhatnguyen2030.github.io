@@ -1,62 +1,101 @@
-# Three website updates
+# Selected Research Update — Upload Guide
 
-This package implements the three changes requested.
+This package is designed for the existing repository:
 
-## 1. Name
-The formal website name is now:
+`minhnhatnguyen2030/minhnhatnguyen2030.github.io`
 
-**Thomas (Minh-Nhat) Nguyen**
+It updates the empty **Selected Research** section and adds dedicated pages for SCDL3991 and DATA3888.
 
-`Hi, I’m Thomas.` is intentionally unchanged.
+## What this package changes
 
-Updated in:
-- `/index.html`
-- `/journey/2026/summer-seoul/index.html`
-
-## 2. Profile photo
-The homepage now expects your profile photo at:
-
-`/assets/images/profile.jpg`
-
-Upload your chosen square portrait and name it **exactly**:
-
-`profile.jpg`
-
-Recommended:
-- square image
-- at least 800 x 800 px
-- JPG
-- head and shoulders centred
-
-The CSS automatically crops it into a circle.
-
-## 3. Story 02 cover photo
-Both:
-- the Story 02 hero image, and
-- the Story 02 preview on the homepage
-
-now use exactly the same file:
-
-`/assets/images/journey/2026-seoul/hero.jpg`
-
-Upload your chosen Seoul cover photograph and name it **exactly**:
-
-`hero.jpg`
-
-## Files to replace on GitHub
-
-Replace these existing files:
-
+### Replace these existing root files
 1. `/index.html`
 2. `/style.css`
-3. `/journey/2026/summer-seoul/index.html`
 
-Then upload these two image files yourself:
+### Add these new files/folders
+```text
+research/
+├── scdl3991/
+│   └── index.html
+└── data3888/
+    └── index.html
 
-4. `/assets/images/profile.jpg`
-5. `/assets/images/journey/2026-seoul/hero.jpg`
+assets/
+├── css/
+│   └── research-project.css
+└── images/
+    └── research/
+        ├── scdl3991-card.jpg
+        ├── scdl3991-geometry.jpg
+        ├── scdl3991-results.jpg
+        ├── data3888-card.jpg
+        ├── data3888-models.jpg
+        ├── data3888-shiny.jpg
+        └── IMAGE_GUIDE.md
 
-Do not delete the other Story 02 photos. They remain referenced by the Seoul story.
+files/
+└── RESEARCH_REPORTS_README.md
+```
 
-## Important
-This package does NOT contain the two actual photographs because they have not been supplied as standalone source images in this step.
+Your existing `script.js`, journey folders, profile photo, CV path and other assets are not changed by this update.
+
+## Easiest GitHub web upload
+
+1. Open:
+   `https://github.com/minhnhatnguyen2030/minhnhatnguyen2030.github.io`
+2. Choose **Add file → Upload files**.
+3. Drag the **contents of this package** into the repository root.
+4. Keep the folder structure exactly as shown above.
+5. GitHub will ask whether to replace `index.html` and `style.css` — confirm the replacement.
+6. Commit to `main`.
+7. Wait for GitHub Pages to redeploy.
+8. Visit:
+   `https://minhnhatnguyen2030.github.io/#research`
+
+Dedicated pages:
+- `https://minhnhatnguyen2030.github.io/research/scdl3991/`
+- `https://minhnhatnguyen2030.github.io/research/data3888/`
+
+## Images
+
+The included research JPGs are clean placeholders.
+
+When ready, replace each placeholder with your chosen project image **using exactly the same filename**.
+
+Read:
+`/assets/images/research/IMAGE_GUIDE.md`
+
+for the recommended pages / figures from your uploaded reports and presentation slides.
+
+## Confidential reports
+
+The website does **not** publish either report PDF.
+
+The "Request report" buttons open an email to:
+`thomas.nguyen.ai2030@gmail.com`
+
+This avoids putting confidential coursework or research material into public Git history.
+
+## Included claims
+
+SCDL3991:
+- High Distinction: 88/100
+- individual semester-long research
+- more than 10,000 experimental runs
+- six optimisers
+- core finding: geometry / curvature anisotropy mattered more than mode count alone
+
+DATA3888:
+- High Distinction: 88/100
+- team / technical lead
+- Image21 breast-cancer H&E project
+- five CNN architectures
+- ResNet18: 88.65% accuracy, macro-F1 0.8796
+- EfficientNetB0 selected for practical Shiny / Grad-CAM deployment
+
+## Important wording choice
+
+For Manoj M. Wagle, the website says:
+"University of Sydney researcher with MIT CSAIL research affiliation"
+
+rather than simply "from MIT". This is more precise while still showing the MIT connection.
