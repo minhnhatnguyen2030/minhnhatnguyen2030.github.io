@@ -1,101 +1,49 @@
-# Selected Research Update — Upload Guide
+# My AI Journey — August 2026 update
 
-This package is designed for the existing repository:
+This package is built on top of the latest Shubin-style profile version of the homepage, so the rectangular profile layout, USyd email, LinkedIn, and the four research-project entries are preserved.
 
-`minhnhatnguyen2030/minhnhatnguyen2030.github.io`
+## What this update fixes
 
-It updates the empty **Selected Research** section and adds dedicated pages for SCDL3991 and DATA3888.
+1. **Journey timeline photos now display**
+   - Story 01 uses the existing `01-hero-saigon-volunteering.jpg`.
+   - Story 02 uses the existing `hero.jpg`.
+   - The old grey "Featured photo" placeholders in `/journey/` are removed.
 
-## What this package changes
+2. **Story 02 homepage preview is more compact**
+   - Desktop image maximum height reduced from 430px to 320px.
+   - Tablet/mobile heights reduced proportionally.
+   - Copy padding is slightly tighter so the feature card does not dominate the homepage.
 
-### Replace these existing root files
-1. `/index.html`
-2. `/style.css`
+3. **2030 checkpoint rewritten**
+   - Replaces "Leave this page unfinished" with an original future-self reflection: **If life allows, slow down.**
+   - Inspired by Haemin Sunim's books/themes without reproducing long passages.
+   - Includes the supplied book image, photographed page, and YouTube preview.
+   - YouTube destination: `https://youtu.be/d9cHgLl1hO0?si=FNTmgtl5SE80Z66i`
 
-### Add these new files/folders
-```text
-research/
-├── scdl3991/
-│   └── index.html
-└── data3888/
-    └── index.html
+## Upload to GitHub
 
-assets/
-├── css/
-│   └── research-project.css
-└── images/
-    └── research/
-        ├── scdl3991-card.jpg
-        ├── scdl3991-geometry.jpg
-        ├── scdl3991-results.jpg
-        ├── data3888-card.jpg
-        ├── data3888-models.jpg
-        ├── data3888-shiny.jpg
-        └── IMAGE_GUIDE.md
+Upload the **contents of this folder** into the root of `minhnhatnguyen2030.github.io` and allow GitHub to replace files with the same paths.
 
-files/
-└── RESEARCH_REPORTS_README.md
-```
+### Replace
+- `index.html`
+- `style.css`
+- `journey/index.html`
+- `journey/2030/next-checkpoint/index.html`
+- `assets/css/journey.css`
 
-Your existing `script.js`, journey folders, profile photo, CV path and other assets are not changed by this update.
+### Add
+- `assets/images/journey/2030/when-things-dont-go-your-way.jpg`
+- `assets/images/journey/2030/slow-down-page.jpg`
+- `assets/images/journey/2030/slow-down-video.jpg`
 
-## Easiest GitHub web upload
+### Keep all existing files
+In particular, do **not** delete:
+- `journey/2021/summer-saigon/`
+- `journey/2026/summer-seoul/`
+- `assets/images/journey/2021-saigon/`
+- `assets/images/journey/2026-seoul/`
+- `research/`
+- `files/`
+- `script.js`
 
-1. Open:
-   `https://github.com/minhnhatnguyen2030/minhnhatnguyen2030.github.io`
-2. Choose **Add file → Upload files**.
-3. Drag the **contents of this package** into the repository root.
-4. Keep the folder structure exactly as shown above.
-5. GitHub will ask whether to replace `index.html` and `style.css` — confirm the replacement.
-6. Commit to `main`.
-7. Wait for GitHub Pages to redeploy.
-8. Visit:
-   `https://minhnhatnguyen2030.github.io/#research`
-
-Dedicated pages:
-- `https://minhnhatnguyen2030.github.io/research/scdl3991/`
-- `https://minhnhatnguyen2030.github.io/research/data3888/`
-
-## Images
-
-The included research JPGs are clean placeholders.
-
-When ready, replace each placeholder with your chosen project image **using exactly the same filename**.
-
-Read:
-`/assets/images/research/IMAGE_GUIDE.md`
-
-for the recommended pages / figures from your uploaded reports and presentation slides.
-
-## Confidential reports
-
-The website does **not** publish either report PDF.
-
-The "Request report" buttons open an email to:
-`thomas.nguyen.ai2030@gmail.com`
-
-This avoids putting confidential coursework or research material into public Git history.
-
-## Included claims
-
-SCDL3991:
-- High Distinction: 88/100
-- individual semester-long research
-- more than 10,000 experimental runs
-- six optimisers
-- core finding: geometry / curvature anisotropy mattered more than mode count alone
-
-DATA3888:
-- High Distinction: 88/100
-- team / technical lead
-- Image21 breast-cancer H&E project
-- five CNN architectures
-- ResNet18: 88.65% accuracy, macro-F1 0.8796
-- EfficientNetB0 selected for practical Shiny / Grad-CAM deployment
-
-## Important wording choice
-
-For Manoj M. Wagle, the website says:
-"University of Sydney researcher with MIT CSAIL research affiliation"
-
-rather than simply "from MIT". This is more precise while still showing the MIT connection.
+The updated timeline intentionally references the Story 01 and Story 02 images that are already in those existing folders.
