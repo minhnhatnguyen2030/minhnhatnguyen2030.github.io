@@ -1,0 +1,232 @@
+
+/* =========================================================
+   MY AI JOURNEY — ADAPTIVE EDITORIAL PHOTO LAYOUT
+   Add this at the END of assets/css/journey.css
+   ========================================================= */
+
+:root {
+  --story-text: 740px;
+  --story-small: 620px;
+  --story-medium: 790px;
+  --story-wide: 980px;
+  --story-full: 1160px;
+}
+
+/* ---------- tighter, more consistent vertical rhythm ---------- */
+
+.story-chapter {
+  margin-bottom: 52px;
+}
+
+.story-media,
+.story-photo-grid {
+  margin-top: 44px;
+  margin-bottom: 52px;
+}
+
+/* When prose immediately follows a photograph, reduce the gap. */
+.story-media + .story-body,
+.story-photo-grid + .story-body {
+  margin-top: -4px;
+}
+
+/* Prevent the first chapter after an image from adding a second giant gap. */
+.story-media + .story-body .story-chapter:first-child,
+.story-photo-grid + .story-body .story-chapter:first-child {
+  margin-top: 0;
+}
+
+/* ---------- default figure ---------- */
+
+.story-media {
+  width: min(var(--story-medium), calc(100% - 44px));
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.story-media img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 78vh;
+  object-fit: contain;
+  margin: 0 auto;
+  border-radius: 6px;
+}
+
+/* ---------- automatically assigned image proportions ---------- */
+
+/* Portrait images should not become enormous just because the browser is wide. */
+.story-media.is-portrait {
+  width: min(var(--story-small), calc(100% - 44px));
+}
+
+/* Near-square images align closely with the essay column. */
+.story-media.is-square {
+  width: min(var(--story-text), calc(100% - 44px));
+}
+
+/* Normal landscape images get a little more breathing room. */
+.story-media.is-landscape {
+  width: min(var(--story-wide), calc(100% - 44px));
+}
+
+/* Very panoramic images can stretch wider, but not edge-to-edge. */
+.story-media.is-panorama {
+  width: min(var(--story-full), calc(100% - 30px));
+}
+
+/* Explicit chapter images remain deliberately cinematic. */
+.story-media.full {
+  width: min(var(--story-full), calc(100% - 30px));
+}
+
+.story-media.full img {
+  max-height: 82vh;
+}
+
+/* The final running photograph is intentionally quieter/smaller. */
+.story-ending-image {
+  width: min(650px, calc(100% - 44px)) !important;
+}
+
+/* ---------- captions ---------- */
+
+.story-media figcaption,
+.story-photo-grid figcaption,
+.story-hero-image figcaption {
+  width: 100%;
+  margin: 10px auto 0;
+  color: #737982;
+  font-size: .78rem;
+  line-height: 1.45;
+}
+
+/* ---------- hero ---------- */
+
+.story-hero-image {
+  width: min(var(--story-full), calc(100% - 30px));
+  margin: 0 auto 68px;
+}
+
+.story-hero-image img {
+  width: 100%;
+  height: clamp(360px, 62vh, 680px);
+  object-fit: cover;
+  object-position: center;
+}
+
+/* ---------- two-photo editorial pairs ---------- */
+
+.story-photo-grid {
+  width: min(var(--story-wide), calc(100% - 44px));
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: start;
+  gap: 18px;
+}
+
+.story-photo-grid figure {
+  margin: 0;
+}
+
+.story-photo-grid img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+/* If you want one pair to keep uncropped originals, add class="natural" */
+.story-photo-grid.natural img {
+  aspect-ratio: auto;
+  height: auto;
+  object-fit: contain;
+}
+
+/* ---------- text/image relationship ---------- */
+
+.story-body {
+  width: min(var(--story-text), calc(100% - 44px));
+}
+
+/*
+  A chapter directly after a major full-width photo gets a little extra
+  top breathing room; ordinary images do not.
+*/
+.story-media.full + .story-body {
+  padding-top: 10px;
+}
+
+/* ---------- optional manually controlled figure sizes ----------
+   You can add these classes in HTML if one particular image needs
+   special treatment:
+     class="story-media small"
+     class="story-media medium"
+     class="story-media wide"
+*/
+
+.story-media.small {
+  width: min(var(--story-small), calc(100% - 44px)) !important;
+}
+
+.story-media.medium {
+  width: min(var(--story-medium), calc(100% - 44px)) !important;
+}
+
+.story-media.wide {
+  width: min(var(--story-wide), calc(100% - 44px)) !important;
+}
+
+/* ---------- mobile ---------- */
+
+@media (max-width: 700px) {
+  .story-media,
+  .story-media.is-portrait,
+  .story-media.is-square,
+  .story-media.is-landscape,
+  .story-media.is-panorama,
+  .story-media.full,
+  .story-media.small,
+  .story-media.medium,
+  .story-media.wide,
+  .story-ending-image {
+    width: calc(100% - 28px) !important;
+    margin-top: 34px;
+    margin-bottom: 42px;
+  }
+
+  .story-media img,
+  .story-media.full img {
+    width: 100%;
+    max-height: none;
+  }
+
+  .story-photo-grid {
+    width: calc(100% - 28px);
+    grid-template-columns: 1fr;
+    gap: 28px;
+    margin-top: 36px;
+    margin-bottom: 44px;
+  }
+
+  .story-photo-grid img,
+  .story-photo-grid.natural img {
+    aspect-ratio: auto;
+    height: auto;
+  }
+
+  .story-hero-image {
+    width: calc(100% - 20px);
+    margin-bottom: 52px;
+  }
+
+  .story-hero-image img {
+    height: min(62vh, 560px);
+  }
+
+  .story-chapter {
+    margin-bottom: 42px;
+  }
+}

@@ -1,94 +1,89 @@
-# Thomas Nguyen — Academic Website + My AI Journey
+# Adaptive photo layout update
 
-GitHub Pages repository for:
+## 1. CSS
+Append the contents of:
 
-**https://minhnhatnguyen2030.github.io**
+`assets/css/adaptive-story-layout.css`
 
-## Site concept
+to the END of your existing:
 
-The site now has two connected layers:
+`assets/css/journey.css`
 
-1. **Academic portfolio** — research, publications, experience, education, CV, and contact.
-2. **My AI Journey** — a professional long-form photo journal built around key checkpoints.
+Putting it at the end lets these rules override the earlier image rules.
 
-The current narrative spine is:
+## 2. JavaScript
+Upload:
 
-**Saigon (2021) → Sydney (study & research) → Seoul (2026) → 2030 (?)**
+`assets/js/journey-images.js`
 
-## Structure
+Then add this line immediately before `</body>` in:
 
-```text
-.
-├── index.html
-├── style.css
-├── script.js
-├── 404.html
-├── README.md
-├── journey/
-│   ├── index.html
-│   ├── 2021/
-│   │   └── summer-saigon/
-│   │       └── index.html
-│   ├── 2026/
-│   │   └── summer-seoul/
-│   │       └── index.html
-│   └── 2030/
-│       └── next-checkpoint/
-│           └── index.html
-├── assets/
-│   ├── css/
-│   │   └── journey.css
-│   └── images/
-│       └── journey/
-│           ├── 2021-saigon/
-│           ├── 2026-seoul/
-│           └── 2030/
-└── files/
-    └── Thomas_Nguyen_CV.pdf
+`journey/2026/summer-seoul/index.html`
+
+```html
+<script src="/assets/js/journey-images.js"></script>
 ```
 
-## Story image folders
+## What happens automatically
 
-### Summer of 2021 — Saigon
-Place selected images in:
+For ordinary `figure.story-media` photographs, JavaScript reads the actual
+photo dimensions and adds a class automatically:
 
-`assets/images/journey/2021-saigon/`
+- Portrait → narrow (~620px)
+- Square-ish → text-aligned (~740px)
+- Landscape → wide (~980px)
+- Panorama → extra-wide (~1160px)
 
-Suggested names:
-- `hero.jpg`
-- `volunteering-01.jpg`
-- `volunteering-02.jpg`
-- `saigon-01.jpg`
-- `closing.jpg`
+Images marked `class="story-media full"` stay intentionally full-width.
 
-### Summer 2026 in Seoul
-Place selected images in:
+## Recommended manual hierarchy for the Seoul story
 
-`assets/images/journey/2026-seoul/`
+Keep these as `full`:
+- 06 ICML entrance
+- 11 KAIST Institutes
+- 15 farewell Seoul
 
-Suggested names:
-- `hero.jpg`
-- `seoul-01.jpg`
-- `yonsei-01.jpg`
-- `research-01.jpg`
-- `daejeon-01.jpg`
-- `kaist-01.jpg`
-- `closing.jpg`
+Keep these ordinary/adaptive:
+- 02 Yonsei
+- 05 Seoul culture
+- 09 friendship
+- 10 Daejeon rain
+- 14 Namsan
 
-The HTML currently uses visual placeholders so the pages remain clean before the real photographs are chosen. Once images are finalised, replace each placeholder `<div>` with a semantic `<figure><img ...><figcaption>...</figcaption></figure>` block.
+For photo pairs (03+04, 07+08, 12+13), keep `story-photo-grid`.
 
-## URLs
+If you do NOT want paired images cropped to matching 4:3 rectangles, change:
 
-- `/` — academic homepage
-- `/journey/` — My AI Journey timeline
-- `/journey/2021/summer-saigon/` — Story 01
-- `/journey/2026/summer-seoul/` — Story 02
-- `/journey/2030/next-checkpoint/` — future checkpoint
+```html
+<figure class="story-photo-grid">
+```
 
-## Next content steps
+to:
 
-1. Finalise the 2021 volunteering facts and story.
-2. Select the best 2021 photographs and captions.
-3. Finalise the 2026 Seoul story and photographs.
-4. Replace story placeholders with final prose and real `<img>` elements.
-5. Keep the 2030 checkpoint intentionally unfinished until the time comes.
+```html
+<figure class="story-photo-grid natural">
+```
+
+## Specific fix for the birthday image shown in your screenshot
+
+The birthday image should NOT be full-width. If it is currently:
+
+```html
+<figure class="story-media full">
+```
+
+change it to:
+
+```html
+<figure class="story-media medium">
+```
+
+or let the script decide automatically:
+
+```html
+<figure class="story-media">
+```
+
+This brings the photograph closer to the width of the prose and removes the
+feeling that a casual birthday moment has the same visual importance as the
+main KAIST/ICML establishing photographs.
