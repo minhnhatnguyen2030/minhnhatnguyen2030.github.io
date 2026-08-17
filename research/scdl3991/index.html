@@ -3,14 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta
-    name="description"
-    content="SCDL3991 research project by Thomas (Minh-Nhat) Nguyen: geometry-driven benchmarking of optimisers for diffusion-inspired score learning on Gaussian Mixture Models."
-  />
+  <meta name="description" content="SCDL3991 research project by Thomas (Minh-Nhat) Nguyen: geometry-driven benchmarking of optimisers for score learning." />
   <title>SCDL3991 Research | Thomas (Minh-Nhat) Nguyen</title>
   <link rel="stylesheet" href="/assets/css/research-project.css" />
 </head>
-
 <body>
   <header class="research-header">
     <a class="brand" href="/">Thomas (Minh-Nhat) Nguyen</a>
@@ -22,19 +18,16 @@
 
   <main class="project-shell">
     <p class="kicker">SCDL3991 · Science Dalyell Individual Research Project · 2025</p>
-
     <h1>Geometry-Driven Benchmarking of Optimisers for Score Learning</h1>
-
     <p class="dek">
-      A semester-long individual research project on how multimodal geometry, curvature and diffusion noise
-      interact with optimisation when neural networks learn score functions.
+      A semester-long individual research project investigating how multimodal geometry influences
+      optimisation in diffusion-inspired score learning.
     </p>
 
     <div class="project-badges">
       <span>High Distinction · 88/100</span>
       <span>Individual Research</span>
       <span>PyTorch</span>
-      <span>Diffusion Models</span>
       <span>Score Learning</span>
       <span>Optimisation</span>
       <span>Gaussian Mixture Models</span>
@@ -42,343 +35,84 @@
 
     <div class="project-links">
       <a href="https://www.sydney.edu.au/units/SCDL3991" target="_blank" rel="noopener noreferrer">SCDL3991 unit ↗</a>
-      <a href="https://andihan3.github.io" target="_blank" rel="noopener noreferrer">Supervisor: Dr Andi Han ↗</a>
+      <a href="https://andihan3.github.io" target="_blank" rel="noopener noreferrer">Dr Andi Han ↗</a>
       <a href="mailto:thomas.nguyen.ai2030@gmail.com?subject=Request%20for%20SCDL3991%20research%20report">Request full report</a>
     </div>
 
     <figure class="hero-figure">
-      <img
-        src="/assets/images/research/scdl3991-card.jpg"
-        alt="Line chart comparing mean RMSE of six optimisers across Gaussian mixture geometries K equals 2, 3, 4 and 5"
-      />
-      <span class="figure-title">Figure 1 · Optimiser robustness changes with mixture geometry</span>
-      <figcaption>
-        Mean validation RMSE across K ∈ {2,3,4,5}. Adam remains the most stable overall, whereas non-adaptive
-        methods deteriorate more strongly as the score field becomes harder. Values are derived from the final
-        SCDL3991 report.
-      </figcaption>
-      <p class="figure-resource">
-        <strong>Presentation:</strong>
-        <a
-          href="https://drive.google.com/file/d/1jXbOGUhUW0pds0I2t2dqeOtt7HwN-TIc/view?usp=sharing"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          View the full SCDL3991 research presentation — 7 November 2025 ↗
-        </a>
-      </p>
+      <img src="/assets/images/research/scdl3991-card.jpg" alt="Placeholder for the main SCDL3991 research visual" />
+      <figcaption>Replace with a clean research visual exported from the final report or presentation.</figcaption>
     </figure>
 
-    <h2>Why study score learning this way?</h2>
-
+    <h2>Research question</h2>
     <p>
-      Score-based diffusion models learn a vector field that points toward regions of higher probability under a
-      noise-perturbed data distribution. Their generative performance therefore depends on learning this field
-      accurately. In realistic datasets, however, the true score is unknown, making it difficult to separate
-      optimisation error from the effects of multimodality, curvature and noise.
+      Diffusion models depend on accurate score estimation, but the optimisation problem is shaped by the
+      geometry of the underlying probability distribution. I used Gaussian Mixture Models as a controlled
+      setting in which the true score is analytically tractable, allowing optimiser behaviour to be studied
+      without the ambiguity of an unknown target score.
     </p>
-
-    <p>
-      I used low-dimensional Gaussian Mixture Models (GMMs) as a controlled testbed. GMMs retain multimodal and
-      curved score fields while giving access to the exact analytical score, so the learned network can be compared
-      directly with ground truth.
-    </p>
-
-    <div class="equation-box">
-      <div class="equation">
-        ∇<sub>x</sub> log p<sub>t</sub>(x)
-        = 1 / (σ<sup>2</sup> + t)
-        [ Σ<sub>k</sub> r<sub>k</sub>(x) μ<sub>k</sub> − x ]
-      </div>
-      <p class="equation-note">
-        The analytical GMM score provides an exact supervision target instead of an estimated or surrogate target.
-      </p>
-    </div>
-
-    <h2>The project at a glance</h2>
-
-    <div class="overview-grid">
-      <div class="stat-card"><strong>4</strong><span>mixture geometries: K = 2, 3, 4, 5</span></div>
-      <div class="stat-card"><strong>3</strong><span>sample sizes: 50, 100, 1000</span></div>
-      <div class="stat-card"><strong>4</strong><span>noise levels: t = 0.1, 0.5, 1.0, 2.0</span></div>
-      <div class="stat-card"><strong>&gt;10,000</strong><span>training runs across the benchmark</span></div>
-    </div>
-
-    <h2>Three scientific questions</h2>
-
-    <div class="question-grid">
-      <article class="question-card">
-        <span class="q-num">Q1</span>
-        <h3>Symmetry vs asymmetry</h3>
-        <p>How does the geometry of a mixture change optimiser performance when the underlying score is known exactly?</p>
-      </article>
-
-      <article class="question-card">
-        <span class="q-num">Q2</span>
-        <h3>Why is K = 3 hard?</h3>
-        <p>Why can the asymmetric three-component mixture be more difficult than mixtures with a larger number of modes?</p>
-      </article>
-
-      <article class="question-card">
-        <span class="q-num">Q3</span>
-        <h3>Robustness to curvature</h3>
-        <p>Which optimisers remain reliable when responsibility boundaries become irregular and curvature becomes anisotropic?</p>
-      </article>
-    </div>
 
     <h2>Experimental design</h2>
+    <p>
+      I trained a common time-conditioned neural network to regress the exact score across four mixture
+      configurations, multiple diffusion-noise levels and multiple sample sizes. Six optimisers were compared:
+      SGD, Momentum, SignedGD, Adam, Muon and Muon without momentum.
+    </p>
 
-    <div class="method-grid">
-      <article class="method-card">
-        <h3>Controlled geometry</h3>
-        <p>
-          Four GMM configurations were studied. K = 2 and K = 4 served as relatively symmetric baselines;
-          K = 3 was treated as the asymmetric, strongly anisotropic case; K = 5 acted as a verification experiment.
-        </p>
-      </article>
-
-      <article class="method-card">
-        <h3>Exact score supervision</h3>
-        <p>
-          The analytical score was implemented directly in PyTorch, removing target-estimation error and allowing
-          learned vector fields to be evaluated against ground truth.
-        </p>
-      </article>
-
-      <article class="method-card">
-        <h3>Common neural architecture</h3>
-        <p>
-          A time-conditioned MLP used a two-layer time embedding with 16 SiLU units and a score network with
-          two 128-unit SiLU hidden layers, outputting a two-dimensional score vector.
-        </p>
-      </article>
-
-      <article class="method-card">
-        <h3>Systematic optimiser sweep</h3>
-        <p>
-          SGD, Momentum, SignedGD, Adam, Muon and Muon without momentum were compared over five learning rates
-          and six epoch counts — 30 hyperparameter settings per optimiser/configuration, with multiple random seeds.
-        </p>
-      </article>
-
-      <article class="method-card">
-        <h3>Noise as a geometry control</h3>
-        <p>
-          Lower t produces sharper mixture boundaries and higher curvature; larger t smooths the density.
-          This allowed optimisation behaviour to be studied from sharper to smoother score fields.
-        </p>
-      </article>
-
-      <article class="method-card">
-        <h3>Evaluation and reproducibility</h3>
-        <p>
-          An 80/20 train–validation split was used. RMSE and MAE measured magnitude error, while cosine similarity
-          measured directional alignment. Fixed seeds and CSV logging supported reproducibility.
-        </p>
-      </article>
+    <div class="metrics">
+      <div class="metric"><strong>&gt;10,000</strong><span>training runs</span></div>
+      <div class="metric"><strong>6</strong><span>optimisers compared</span></div>
+      <div class="metric"><strong>4</strong><span>mixture geometries</span></div>
     </div>
 
-    <h2>Main quantitative result</h2>
-
+    <h2>Main finding</h2>
     <p>
-      The overall optimiser ranking was strikingly stable, but the <em>amount</em> by which each method degraded
-      depended strongly on geometry. The table below reports mean RMSE averaged over noise levels and sample sizes.
+      The most important result was not simply that Adam performed best. The asymmetric three-component
+      mixture produced disproportionately large errors despite having fewer modes than some symmetric
+      configurations. This supported the interpretation that <strong>curvature anisotropy and irregular
+      responsibility boundaries</strong>, rather than mode count alone, were major drivers of optimisation difficulty.
     </p>
-
-    <div class="data-table-wrap">
-      <table class="data-table">
-        <thead>
-          <tr>
-            <th>Optimiser</th>
-            <th>K = 2</th>
-            <th>K = 3</th>
-            <th>K = 4</th>
-            <th>K = 5</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr class="result-highlight"><td>Adam</td><td>0.024</td><td>0.075</td><td>0.067</td><td>0.103</td></tr>
-          <tr><td>Muon</td><td>0.040</td><td>0.164</td><td>0.136</td><td>0.217</td></tr>
-          <tr><td>Momentum</td><td>0.043</td><td>0.129</td><td>0.142</td><td>0.214</td></tr>
-          <tr><td>SignedGD</td><td>0.078</td><td>0.152</td><td>0.143</td><td>0.233</td></tr>
-          <tr><td>Muon (no momentum)</td><td>0.104</td><td>0.230</td><td>0.188</td><td>0.341</td></tr>
-          <tr><td>SGD</td><td>0.268</td><td>0.399</td><td>0.522</td><td>0.578</td></tr>
-        </tbody>
-      </table>
-    </div>
-
-    <p class="scope-note">
-      Lower RMSE is better. The key comparison is not simply K increasing from 2 to 5: the asymmetric K = 3
-      configuration can be more difficult than the symmetric K = 4 case for most non-SGD methods.
-    </p>
-
-    <h2>What the results reveal</h2>
-
-    <div class="insight-grid">
-      <article class="insight-card">
-        <h3>1 · Mode count is not the whole story</h3>
-        <p>
-          Moving from symmetric K = 2 to symmetric K = 4 made learning somewhat harder but did not create a new
-          failure mode. This suggests that simply adding modes is a weak proxy for optimisation difficulty.
-        </p>
-      </article>
-
-      <article class="insight-card">
-        <h3>2 · Geometry can dominate cardinality</h3>
-        <p>
-          K = 3 produced disproportionately high errors despite having fewer components than K = 4.
-          The interpretation in the report is that irregular responsibility boundaries and anisotropic curvature
-          force optimisers to handle steep and flat directions simultaneously.
-        </p>
-      </article>
-
-      <article class="insight-card">
-        <h3>3 · Adam was the geometry-robust baseline</h3>
-        <p>
-          Adam achieved the lowest mean RMSE for every mixture, while keeping cosine similarity very close to one.
-          Its adaptive per-parameter scaling was the most robust to changing geometry in this benchmark.
-        </p>
-      </article>
-
-      <article class="insight-card">
-        <h3>4 · Momentum helps, but does not fully solve anisotropy</h3>
-        <p>
-          Muon and classical Momentum formed a strong second tier. Muon's mean RMSE rose from 0.040 at K = 2
-          to 0.164 at K = 3, showing considerably greater sensitivity than Adam.
-        </p>
-      </article>
-
-      <article class="insight-card">
-        <h3>5 · Sign-only updates have a geometric limit</h3>
-        <p>
-          SignedGD was surprisingly competitive in well-behaved symmetric settings, but degraded when curvature
-          became more direction-dependent — consistent with a method that discards gradient magnitude information.
-        </p>
-      </article>
-
-      <article class="insight-card">
-        <h3>6 · SGD behaved as a negative control</h3>
-        <p>
-          Plain SGD was already weak at K = 2 and deteriorated further with complexity. Its behaviour highlighted
-          how strongly fixed-step optimisation can depend on conditioning and learning-rate sensitivity.
-        </p>
-      </article>
-    </div>
-
-    <figure class="figure-block">
-      <img
-        src="/assets/images/research/scdl3991-geometry.jpg"
-        alt="Grouped bar chart comparing K equals 3 and K equals 4 mean RMSE for Adam, Muon, Momentum, SignedGD and Muon without momentum"
-      />
-      <span class="figure-title">Figure 2 · Asymmetry can matter more than adding another mode</span>
-      <figcaption>
-        Comparing the report's K = 3 and K = 4 averages shows that most non-SGD optimisers incur higher error
-        in the asymmetric three-component setting, even though K = 4 has more modes. Momentum is the main exception,
-        so the conclusion is deliberately framed as a pattern rather than an absolute rule.
-      </figcaption>
-    </figure>
-
-    <h2>Sample size and diffusion noise</h2>
-
-    <p>
-      More data substantially improved every optimiser in the difficult K = 3 setting. Adam's RMSE fell from
-      0.128 at n = 50 to 0.029 at n = 1000, while Muon fell from 0.263 to 0.083 and SGD from 0.562 to 0.156.
-      Larger n therefore mitigated estimation difficulty, but did not erase the differences between optimisation methods.
-    </p>
-
-    <p>
-      Noise also interacted with geometry. In the K = 3 case, Adam's error peaked at the intermediate noise level
-      t = 0.5 (RMSE 0.116), compared with 0.086 at t = 0.1 and 0.034 at t = 2.0. The report interprets this as a
-      regime in which the score field is neither heavily smoothed nor effectively dominated by a single local mode,
-      leaving strong direction-dependent curvature around asymmetric boundaries.
-    </p>
-
-    <figure class="figure-block">
-      <img
-        src="/assets/images/research/scdl3991-results.jpg"
-        alt="Line chart showing RMSE versus sample size for six optimisers in the K equals 3 mixture"
-      />
-      <span class="figure-title">Figure 3 · More data helps, but optimiser robustness still matters</span>
-      <figcaption>
-        Validation RMSE in the K = 3 configuration across n ∈ {50,100,1000}. Every method improves as the sample size
-        grows, but the ranking remains differentiated and SGD only partially recovers at the largest n.
-      </figcaption>
-    </figure>
-
-    <h2>Research interpretation</h2>
 
     <div class="callout">
-      <strong>Central lesson:</strong> optimisation difficulty was better explained by the geometry of the score field —
-      especially curvature anisotropy and irregular mixture boundaries — than by the nominal number of mixture components.
-      In this controlled setting, optimiser choice therefore depended on robustness to geometry, not simply on model or dataset size.
+      Research lesson: nominal complexity is a poor proxy for learning difficulty. Understanding the
+      structure and geometry of a learning problem can be more informative than simply counting components,
+      parameters or data points.
     </div>
 
-    <p>
-      This result is useful because synthetic benchmarks can expose learning failures that would be expensive to isolate
-      directly in large diffusion systems. The project does not claim that a two-dimensional GMM reproduces the full
-      complexity of image or audio diffusion; rather, it provides an interpretable environment in which one mechanism
-      can be studied precisely.
-    </p>
-
-    <h2>Limitations</h2>
-
-    <ul>
-      <li>The benchmark uses two-dimensional synthetic GMMs with only a small number of components.</li>
-      <li>A single relatively small MLP architecture was held fixed across experiments.</li>
-      <li>Learning rates and training durations came from a discrete static hyperparameter grid.</li>
-      <li>The optimiser set focuses on classical and diffusion-inspired first-order methods.</li>
-      <li>Evaluation targets score-learning accuracy rather than end-to-end sample generation quality.</li>
-    </ul>
-
-    <p>
-      These limitations are important: the findings are best read as a controlled foundation for studying optimisation
-      mechanisms, not as a replacement for full-scale diffusion-model evaluation.
-    </p>
-
-    <h2>Where I would take this next</h2>
-
-    <ul class="future-list">
-      <li><strong>Richer asymmetric geometries:</strong> unequal variances, off-axis components and clustered-versus-isolated modes.</li>
-      <li><strong>Higher dimensions and real data:</strong> test whether the observed hierarchy survives concentration effects and richer feature structure.</li>
-      <li><strong>Broader optimiser families:</strong> include newer adaptive, quasi-Newton and explicitly curvature-aware methods.</li>
-      <li><strong>Direct curvature measurement:</strong> estimate Hessian spectra or local curvature statistics and relate them quantitatively to optimiser error.</li>
-    </ul>
+    <div class="figure-grid">
+      <figure>
+        <img src="/assets/images/research/scdl3991-geometry.jpg" alt="Placeholder for score-field geometry or GMM symmetry figure" />
+        <figcaption>Suggested: a symmetry-versus-asymmetry or score-field geometry figure.</figcaption>
+      </figure>
+      <figure>
+        <img src="/assets/images/research/scdl3991-results.jpg" alt="Placeholder for optimiser result figure" />
+        <figcaption>Suggested: RMSE-vs-sample-size, optimiser league table, or heatmap.</figcaption>
+      </figure>
+    </div>
 
     <h2>Supervisor</h2>
-
     <div class="person-card">
       <h3><a href="https://andihan3.github.io" target="_blank" rel="noopener noreferrer">Dr Andi Han ↗</a></h3>
       <p>
-        Dr Andi Han is a Lecturer in the School of Mathematics and Statistics at the University of Sydney and a
-        Visiting Scientist at RIKEN. His research covers large generative models, optimisation on manifolds,
-        efficient foundation models and graph neural networks. His research profile lists five papers accepted to
-        ICML 2026, alongside recent work at ICLR, NeurIPS and other major machine-learning venues.
+        Dr Andi Han is a researcher in the School of Mathematics and Statistics at the University of Sydney.
+        His research spans large generative models, optimisation on manifolds, efficient foundation models
+        and graph neural networks. His recent research record includes multiple papers accepted to ICML
+        and other major machine-learning venues.
       </p>
     </div>
 
     <h2>What this project changed for me</h2>
-
     <p>
-      SCDL3991 was the point at which I became more interested in the mechanisms behind successful learning,
-      not only the final benchmark score. Designing a controlled experiment around geometry taught me to ask
-      which structural properties make optimisation robust, which apparent measures of complexity are misleading,
-      and how carefully designed synthetic environments can expose behaviour that is difficult to diagnose at scale.
-    </p>
-
-    <p>
-      That perspective now motivates my broader interest in how the structure of data, objectives and learning
-      environments shapes robust behaviour in larger AI systems.
+      This project shifted my attention from asking only whether an optimiser or model performs well toward
+      asking <em>why</em> particular learning dynamics are robust or fragile. That question now informs my broader
+      interest in reasoning, representation and the mechanisms through which capable AI behaviour emerges.
     </p>
 
     <div class="report-note">
-      <strong>Full research report</strong>
-      <p>
-        The submitted report is available upon request and is intentionally not stored in the public GitHub repository.
-      </p>
+      <strong>Full report:</strong> available upon request. The PDF is intentionally not stored in this public
+      GitHub repository.
       <div class="project-links">
-        <a href="mailto:thomas.nguyen.ai2030@gmail.com?subject=Request%20for%20SCDL3991%20research%20report">
-          Request the report by email →
-        </a>
+        <a href="mailto:thomas.nguyen.ai2030@gmail.com?subject=Request%20for%20SCDL3991%20research%20report">Request the report by email →</a>
       </div>
     </div>
 
