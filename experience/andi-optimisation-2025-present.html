@@ -1,0 +1,122 @@
+<div class="experience-popup-content research-story research-story--andi">
+  <header class="research-story-hero">
+    <p class="meta">JUL 2025–PRESENT · UNIVERSITY OF SYDNEY · ONGOING</p>
+    <p class="research-story-number">RESEARCH STORY 01</p>
+    <h2>Learning to ask optimisation questions that experiments can actually answer.</h2>
+
+    <p class="experience-popup-lead">
+      Since July 2025, I have worked with <strong>Dr Andi Han</strong> on optimisation in machine
+      learning and generative models. The collaboration began with a concrete question about
+      diffusion-inspired score learning and became a longer lesson in how to move between
+      mathematical structure, controlled experiments and research communication.
+    </p>
+
+    <div class="experience-tags research-story-tags">
+      <span>Optimisation</span>
+      <span>Generative Models</span>
+      <span>PyTorch</span>
+      <span>Gaussian Mixtures</span>
+      <span>Score Learning</span>
+      <span>Manifold Optimisation</span>
+    </div>
+
+    <div class="research-story-route" aria-label="Research progression">
+      <span><small>01</small> Question</span><i>→</i>
+      <span><small>02</small> Geometry</span><i>→</i>
+      <span><small>03</small> Benchmark</span><i>→</i>
+      <span><small>04</small> Interpretation</span>
+    </div>
+  </header>
+
+  <section class="research-chapter">
+    <div class="research-chapter-index">01</div>
+    <div>
+      <p class="meta">THE STARTING POINT</p>
+      <h3>From “which optimiser wins?” to “what makes optimisation hard?”</h3>
+      <p>
+        My SCDL3991 Dalyell research project examined score learning on Gaussian mixture models
+        under diffusion noise. Rather than treating optimiser comparison as a leaderboard, I tried
+        to make the problem diagnostic: vary the mixture geometry, sample size, noise level and
+        optimiser while holding the rest of the experimental system under control.
+      </p>
+      <p>
+        That shift in framing mattered. It turned a broad empirical question into something closer
+        to a scientific instrument: if performance changes, which part of the problem changed with it?
+      </p>
+    </div>
+  </section>
+
+  <section class="research-chapter">
+    <div class="research-chapter-index">02</div>
+    <div>
+      <p class="meta">THE TECHNICAL WORK</p>
+      <h3>A reproducible benchmark, not a one-off notebook.</h3>
+      <p>
+        I built a PyTorch experimental pipeline comparing six optimisation methods across multiple
+        Gaussian-mixture configurations, diffusion-noise levels and sample sizes. The final study
+        comprised more than 10,000 runs, with consistent validation metrics and controlled
+        comparisons designed to separate optimiser behaviour from data geometry.
+      </p>
+
+      <div class="research-signal-grid">
+        <div><strong>10,000+</strong><span>experimental runs</span></div>
+        <div><strong>6</strong><span>optimisers benchmarked</span></div>
+        <div><strong>PyTorch</strong><span>reproducible pipeline</span></div>
+        <div><strong>88/100</strong><span>SCDL3991 final grade</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="research-chapter">
+    <div class="research-chapter-index">03</div>
+    <div>
+      <p class="meta">THE RESEARCH SIGNAL</p>
+      <h3>Geometry changed the story.</h3>
+      <p>
+        The strongest lesson was that difficulty was not explained by mode count alone. Asymmetry
+        and curvature anisotropy could destabilise non-adaptive methods much more strongly, while
+        Adam remained comparatively stable across the benchmark. The result pushed me to think
+        about optimisation through the geometry of the learning problem, not just the optimiser name.
+      </p>
+      <blockquote class="research-pullquote">
+        The useful outcome was not simply “Adam performed best”; it was learning how to design
+        experiments that reveal <em>why</em> optimisation behaviour changes.
+      </blockquote>
+    </div>
+  </section>
+
+  <section class="research-chapter">
+    <div class="research-chapter-index">04</div>
+    <div>
+      <p class="meta">ONGOING</p>
+      <h3>A sustained research relationship.</h3>
+      <p>
+        I continue to build on this optimisation foundation with Dr Han, including discussions
+        around statistically structured problems and manifold optimisation. I value the continuity:
+        it has let me move beyond completing a single research unit toward developing the habits
+        needed for longer-horizon ML research — reading critically, isolating variables, debugging
+        experiments, and explaining what the evidence does and does not support.
+      </p>
+      <p class="research-note-box">
+        This page intentionally describes an ongoing research direction rather than claiming an
+        unpublished result or a confirmed manuscript.
+      </p>
+    </div>
+  </section>
+
+  <section class="research-story-ending">
+    <p class="meta">WHAT I CARRY FORWARD</p>
+    <h3>Research depth before research branding.</h3>
+    <p>
+      This collaboration is the academic anchor of my AI work. It taught me that technical
+      competitiveness is not only about implementing a modern model quickly; it is also about
+      understanding the structure of a problem well enough to design an experiment that can falsify
+      your intuition.
+    </p>
+
+    <div class="link-row research-story-links">
+      <a href="research/scdl3991/" target="_blank" rel="noreferrer">SCDL3991 project details ↗</a>
+      <a href="https://andihan3.github.io" target="_blank" rel="noreferrer">Dr Andi Han ↗</a>
+    </div>
+  </section>
+</div>

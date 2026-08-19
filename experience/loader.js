@@ -3,7 +3,12 @@
     "science-peer-mentor-2026": "experience/science-peer-mentor-2026.html",
     "incubate-startup-fundamentals-2026": "experience/incubate-startup-fundamentals-2026.html",
     "practera-saiep-2026": "experience/practera-saiep-2026.html",
-    "data1002-teaching-2025": "experience/data1002-teaching-2025.html"
+    "data1002-teaching-2025": "experience/data1002-teaching-2025.html",
+
+    // Research & Applied AI Experience
+    "andi-optimisation-2025-present": "experience/andi-optimisation-2025-present.html",
+    "foundershack-levelup-2026": "experience/foundershack-levelup-2026.html",
+    "datahack-expansion-copilot-2026": "experience/datahack-expansion-copilot-2026.html"
   };
 
   let lastFocusedElement = null;
@@ -38,7 +43,6 @@
     try {
       const response = await fetch(file, { cache: "no-cache" });
       if (!response.ok) throw new Error(`Could not load ${file}: ${response.status}`);
-
       modalBody.innerHTML = await response.text();
       modal.scrollTop = 0;
     } catch (error) {
@@ -67,6 +71,7 @@
   document.addEventListener("click", (event) => {
     const trigger = event.target.closest("[data-experience]");
     if (!trigger) return;
+
     event.preventDefault();
     openExperience(trigger.dataset.experience);
   });

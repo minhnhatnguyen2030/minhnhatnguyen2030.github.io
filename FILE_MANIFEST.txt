@@ -1,0 +1,13 @@
+README.md
+assets/images/experience/datahack/event-explainer.jpg
+assets/images/experience/datahack/event-post.jpg
+assets/images/experience/datahack/expansion-devpost.jpg
+assets/images/experience/datahack/team-build.jpg
+assets/images/experience/foundershack/levelup-devpost.jpg
+assets/images/experience/foundershack/remote-build.jpg
+experience/andi-optimisation-2025-present.html
+experience/datahack-expansion-copilot-2026.html
+experience/foundershack-levelup-2026.html
+experience/loader.js
+experience/research-applied-ai.css
+index-research-replacement.html

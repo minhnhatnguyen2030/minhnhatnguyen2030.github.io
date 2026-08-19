@@ -1,0 +1,159 @@
+<div class="experience-popup-content research-story research-story--datahack">
+  <header class="research-story-hero">
+    <p class="meta">18–20 APR 2026 · COMM-STEM × SUDATA DATA-HACK · TEAM LEAD</p>
+    <p class="research-story-number">BUILD STORY 03</p>
+    <h2>Turn messy city data into a decision someone can interrogate.</h2>
+
+    <p class="experience-popup-lead">
+      For <strong>Expansion Copilot</strong>, I led the spatial-intelligence workstream around a
+      practical question: can open place data provide a transparent first-pass answer to
+      <em>where should a small hospitality business investigate next?</em>
+      We built an explainable geospatial decision-support prototype rather than a black-box forecast.
+    </p>
+
+    <div class="experience-tags research-story-tags">
+      <span>Spatial Intelligence</span>
+      <span>Python</span>
+      <span>Polars</span>
+      <span>H3</span>
+      <span>PyDeck</span>
+      <span>Streamlit</span>
+      <span>Explainability</span>
+    </div>
+
+    <div class="research-story-route" aria-label="Expansion Copilot pipeline">
+      <span><small>01</small> Open POI</span><i>→</i>
+      <span><small>02</small> H3 Cells</span><i>→</i>
+      <span><small>03</small> Explainable Score</span><i>→</i>
+      <span><small>04</small> Map + Shortlist</span>
+    </div>
+  </header>
+
+  <section class="research-chapter">
+    <div class="research-chapter-index">01</div>
+    <div>
+      <p class="meta">THE DECISION PROBLEM</p>
+      <h3>Location intelligence without pretending to predict the future.</h3>
+      <p>
+        Commercial location decisions are expensive, but enterprise-grade location intelligence can
+        be inaccessible to smaller operators. Our prototype asked a narrower and more defensible
+        question: can open POI data create comparable signals that help a user shortlist areas
+        before doing deeper due diligence?
+      </p>
+      <p>
+        We deliberately framed the result as <strong>decision support</strong>, not revenue prediction.
+        The user should be able to trace the score back to visible evidence.
+      </p>
+    </div>
+  </section>
+
+  <figure class="research-evidence research-evidence--wide">
+    <img
+      src="assets/images/experience/datahack/team-build.jpg"
+      alt="Four-person team working together around a table during Data-Hack 2026"
+      loading="lazy" />
+    <figcaption>
+      Team build session during the three-day Data-Hack. I led the spatial-intelligence workstream
+      and coordinated the technical story from data to decision.
+    </figcaption>
+  </figure>
+
+  <section class="research-chapter">
+    <div class="research-chapter-index">02</div>
+    <div>
+      <p class="meta">SPATIAL INTELLIGENCE</p>
+      <h3>Build the geography so the model can be compared and explained.</h3>
+      <p>
+        The core pipeline used Python and Polars to process open POI data, H3 cells as a scalable
+        geographic unit, and transparent score components for competition, complementary activity,
+        data quality and — where available — contextual layers such as transit and market proxies.
+      </p>
+
+      <div class="research-stack-grid">
+        <div><span>Data engineering</span><strong>Python · Polars · open POI</strong></div>
+        <div><span>Spatial layer</span><strong>H3 aggregation</strong></div>
+        <div><span>Scoring</span><strong>Normalised, visible components</strong></div>
+        <div><span>Interface</span><strong>Streamlit · PyDeck · CSV export</strong></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="research-chapter">
+    <div class="research-chapter-index">03</div>
+    <div>
+      <p class="meta">EXPLAINABILITY &amp; RELIABILITY</p>
+      <h3>Make the evidence survive the demo.</h3>
+      <p>
+        We separated the deterministic score and narrative from optional LLM enrichment. That meant
+        the core recommendation remained available even if an API quota or network call failed.
+        The interface exposed the score components so a judge or user could see what moved the
+        ranking instead of receiving one opaque number.
+      </p>
+      <blockquote class="research-pullquote">
+        The strongest product lesson was simple: trust improves when the path
+        <strong>inputs → components → final score</strong> stays visible.
+      </blockquote>
+    </div>
+  </section>
+
+  <div class="research-evidence-grid research-evidence-grid--datahack">
+    <figure>
+      <img
+        src="assets/images/experience/datahack/expansion-devpost.jpg"
+        alt="Expansion Copilot project shown on Thomas's Devpost profile"
+        loading="lazy" />
+      <figcaption>Expansion Copilot on my public Devpost profile.</figcaption>
+    </figure>
+
+    <figure>
+      <img
+        src="assets/images/experience/datahack/event-explainer.jpg"
+        alt="Data-Hack explainer describing a three-day competition using real-world data"
+        loading="lazy" />
+      <figcaption>
+        The event combined hackathon creativity with datathon-style reasoning and an industry pitch.
+      </figcaption>
+    </figure>
+
+    <figure class="research-evidence-grid-wide">
+      <img
+        src="assets/images/experience/datahack/event-post.jpg"
+        alt="University of Sydney Comm-Stem Society announcement for SUDATA x COMM-STEM Data-Hack 2026"
+        loading="lazy" />
+      <figcaption>
+        Public event announcement for the 18–20 April 2026 Data-Hack.
+      </figcaption>
+    </figure>
+  </div>
+
+  <section class="research-chapter">
+    <div class="research-chapter-index">04</div>
+    <div>
+      <p class="meta">LEADERSHIP</p>
+      <h3>Connect the technical pieces to one argument.</h3>
+      <p>
+        As team lead for spatial intelligence, my job was not only to implement geospatial components.
+        I also had to keep the problem statement, scoring logic, map and pitch aligned. The project
+        strengthened a leadership style I value in research teams too: make assumptions visible,
+        keep interfaces between workstreams clear, and ensure the final claim is no stronger than
+        the evidence supporting it.
+      </p>
+    </div>
+  </section>
+
+  <section class="research-story-ending">
+    <p class="meta">WHAT CHANGED</p>
+    <h3>From optimising a metric to designing an interpretable decision.</h3>
+    <p>
+      Expansion Copilot shifted my attention from “what model scores highest?” toward
+      “what information should the system expose so another person can reason with it?”
+      That question now influences how I think about evaluation, reasoning systems and
+      human-facing AI more broadly.
+    </p>
+
+    <div class="link-row research-story-links">
+      <a href="https://devpost.com/software/expansion-copilot-a-data-driven-retail-site-intelligence"
+         target="_blank" rel="noreferrer">Expansion Copilot on Devpost ↗</a>
+    </div>
+  </section>
+</div>

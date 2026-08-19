@@ -1,125 +1,137 @@
-# SUDATA × SUBAA Datathon 2025 — Achievement Folder
+# Thomas website — Research & Applied AI patch
 
-This folder is designed for Thomas (Minh-Nhat) Nguyen's GitHub Pages portfolio.
+This is a **minimal patch** for the current GitHub Pages site. It is designed to preserve the existing
+Professional & Leadership Experience and Teaching popups while replacing only the empty
+`Research Experience` placeholder.
 
-The story **does not become a separate website page**.
+## What this patch adds
 
-Instead:
+1. **Jul 2025–Present — Optimisation & Generative Models with Dr Andi Han**
+   - sustained research relationship rather than repeating the SCDL3991 card
+   - >10,000 controlled PyTorch runs / six optimisers / score-learning geometry
+   - long-form research popup
 
-1. The main homepage keeps a compact entry inside **Awards & Scholarships**.
-2. Clicking that award entry dynamically loads this achievement folder.
-3. The full 2024 → 2025 Datathon story appears as a modal/pop-up over the homepage.
-4. Closing the modal returns the visitor to exactly where they were.
+2. **FoundersHack Sydney 2026 — LevelUp**
+   - role shown as **AI Lead**
+   - multimodal pipeline: live transcription + slide context + LLM reaction / quiz loop
+   - product constraints, remote build evidence, founder / VC ecosystem story
+   - phrasing intentionally says "AI integration workstream" rather than claiming sole authorship
 
-## Recommended repository structure
+3. **COMM-STEM × SUDATA Data-Hack 2026 — Expansion Copilot**
+   - role shown as **Team Lead — Spatial Intelligence**
+   - Python + Polars + H3 + explainable scoring + PyDeck / Streamlit
+   - group photo and public event evidence
+   - emphasis on transparent decision support and technical leadership
 
-```text
-/
-├── index.html
-├── style.css
-├── script.js
-├── assets/
-│   └── ...
-│
-├── stories/
-│   ├── story-01/
-│   └── story-02/
-│
-└── achievements/
-    └── datathon-2025/
-        ├── modal.html
-        ├── style.css
-        ├── loader.js
-        └── assets/
-            ├── certificate-2025.jpg
-            ├── datathon-2024-group.jpg
-            └── team-clesmor-2025.jpg
-```
+4. A short **Research → Systems → Product** bridge at the end of the new block.
 
-This keeps substantial achievements modular in the same spirit as the folder-per-story architecture,
-while preserving **Awards & Scholarships** as a clean section on the homepage.
+---
 
-## Installation
+## Upload / edit steps
 
-### 1. Upload the folder
+### 1. Add one stylesheet link to `index.html`
 
-Upload:
-
-```text
-achievements/datathon-2025/
-```
-
-to the repository root exactly as supplied.
-
-### 2. Replace the placeholder award row
-
-Open `index.html`.
-
-Under:
-
-```text
-Awards & Scholarships
-```
-
-replace the first placeholder award with the HTML in:
-
-```text
-INDEX-INTEGRATION.html
-```
-
-### 3. Load the achievement script
-
-The integration snippet already contains:
+Immediately after the existing line:
 
 ```html
-<script src="achievements/datathon-2025/loader.js"></script>
+<link rel="stylesheet" href="experience/experience.css" />
 ```
 
-This must appear once near the end of `index.html`, before `</body>`.
+add:
 
-If you paste only the award row, add that script separately.
-
-## Final homepage behaviour
-
-The homepage will show approximately:
-
-```text
-Awards & Scholarships
-
-2025    1st Place — SUDATA × SUBAA Datathon 2025
-        Team Clesmor · Supply-chain forecasting, machine learning & optimisation
+```html
+<link rel="stylesheet" href="experience/research-applied-ai.css" />
 ```
 
-Clicking the row opens the full achievement story.
+### 2. Replace the current placeholder block in `index.html`
 
-## Story emphasis
+In the current site, inside:
 
-### 2024 — concise origin
-- JP Morgan stock-price movement prediction
-- historical time series
-- tweet sentiment as a predictive feature
-- machine-learning models and cross-validation
-- Calvin + Thomas visible at the far left of the group photo
-- did not place
+```html
+<section id="experience" class="section">
+```
 
-### 2025 — main story
-- Team Clesmor
-- 24-hour supply-chain challenge
-- initial predictive modelling underperformed
-- team pivoted rather than forcing a weak model
-- forecasting + ML + network optimisation
-- decision-focused analytical framing
-- 1st Place
-- certificate
-- team anime image
+delete only the existing heading / placeholder:
 
-## References embedded in the modal
+```html
+<div class="section-heading"><h2>Research Experience</h2>...</div>
+<article class="timeline-item">
+  ...
+</article>
+```
 
-2025 repository:
-https://github.com/LinLyra/2025-Datathon
+Keep the later:
 
-Lyra Lin's LinkedIn post:
-https://www.linkedin.com/posts/lyra-lin_datathon-sudata-subaa-activity-7384533315615162368-Iy0i?utm_source=share&utm_medium=member_desktop&rcm=ACoAAF_B-dgBSHJdEtcei83SqnFyM0TTt5quSI4
+```html
+<div class="subsection professional-experience">
+```
 
-2024 project:
-https://github.com/claisyd/Stock-Prediction-Datathon-2024
+and everything after it.
+
+Paste the full content of:
+
+`index-research-replacement.html`
+
+where the placeholder used to be.
+
+### 3. Replace the current popup loader
+
+Replace:
+
+`experience/loader.js`
+
+with the file in this patch. It preserves the four existing popup mappings and adds the three new ones.
+
+### 4. Upload these new popup files
+
+- `experience/andi-optimisation-2025-present.html`
+- `experience/foundershack-levelup-2026.html`
+- `experience/datahack-expansion-copilot-2026.html`
+- `experience/research-applied-ai.css`
+
+### 5. Upload the image folders exactly as supplied
+
+- `assets/images/experience/foundershack/`
+- `assets/images/experience/datahack/`
+
+The filenames in the popup HTML already match these assets.
+
+---
+
+## Why the copy is written this way
+
+The main page stays **evidence-first and concise**. The popups carry the personal story.
+
+I deliberately avoid:
+- calling LevelUp a winning/finalist project without evidence;
+- implying Thomas worked *for* Blackbird, Folklore or Startmate;
+- implying the Andi work has an unpublished result or manuscript that has not been established;
+- calling Thomas a formal Research Assistant unless that was an official appointment.
+
+The venture paragraph therefore uses the safer phrase **founder / VC ecosystem exposure and training**.
+
+## Optional factual upgrades
+
+If you have public evidence for any of these, the copy can be made stronger:
+- exact formal title for the ongoing work with Dr Andi Han;
+- exact FounderHack team roster / Thomas's role evidence;
+- exact Blackbird / Folklore / Startmate program names, dates, mentors or meetings;
+- direct link to the Expansion Copilot GitHub repository;
+- FounderHack demo video / repository link that should be attributed to Thomas's team.
+
+## Strategic note for the KAIST COCO application
+
+The section is intentionally *COCO-compatible* rather than explicitly saying "built for COCO."
+It signals:
+- sustained research motivation,
+- Python / PyTorch experimentation,
+- ability to adapt quickly,
+- collaboration and discussion,
+- multimodal system building,
+- systematic evaluation / explainability,
+- willingness to connect research to real users.
+
+One gap should **not** be papered over with website wording: COCO's current Join Us page explicitly asks for
+familiarity with at least one training framework such as `verl`, `trl`, `llama factory`, or `unsloth`.
+If you do not yet have a public project using one of these, the strongest next move is a small,
+clean reproduction / ablation project that can be linked from the website before the application.
