@@ -1,80 +1,169 @@
-THOMAS WEBSITE — PROFESSIONAL & LEADERSHIP EXPERIENCE PACKAGE
-==============================================================
+THOMAS EDUCATION PACKAGE
+========================
 
-WHAT IS INCLUDED
-----------------
+WHAT THIS PACKAGE ADDS
+----------------------
+A complete replacement for the Education section, with popup details for:
+
+1. University of Sydney — current BSc/BAdvStudies (Advanced)
+2. Yonsei International Summer School 2026
+3. AMSI Summer School 2025 & 2026
+4. Korea University International Winter Campus 2025–26
+5. Earlier study — Fulbright University Vietnam + prior UNSW study
+
+It also includes the public-safe photos supplied for:
+- Yonsei certificate
+- Yonsei Developmental Psychology class
+- Yonsei Entrepreneurship & Venture Capital class
+- Yonsei AI & Society class/materials
+- AMSI optimisation learning environment
+- earlier public LinkedIn education timeline
+
+
+IMPORTANT ACADEMIC-METRIC NOTE
+------------------------------
+The USyd official academic record supplied for this update contains:
+
+- 20 completed units
+- all completed units worth 6 credit points
+- 120 completed credit points
+- marks summing to 1544
+- progressive calculated WAM = 1544 / 20 = 77.2 / 100
+
+Grade-band profile:
+- 4 High Distinctions
+- 9 Distinctions
+- 5 Credits
+- 2 Passes
+
+Indicative 7-point conversion:
+HD=7, DI=6, CR=5, PS=4
+=> (4*7 + 9*6 + 5*5 + 2*4) / 20
+=> 115 / 20
+=> 5.75 / 7.0
+
+This 5.75/7.0 value is NOT an official University of Sydney GPA.
+
+The package intentionally does NOT call any unofficial conversion a "KAIST GPA".
+KAIST uses a 4.3 scale internally, but no official University of Sydney → KAIST
+conversion formula was found. The website therefore keeps the original Australian
+record as the primary academic evidence.
+
+
+AMSI COURSE-TITLE CORRECTIONS
+-----------------------------
+For accuracy, the site uses the official AMSI titles:
+
+2026
+- Mathematical Optimisation Theory and Applications
+  Dr Hoa T. Bui + Dr Vinesha Peiris
+
+- Machine Learning in Financial Mathematics
+  Dr Kihun Nam
+
+2025
+- Machine Learning and Data Science
+  Prof Yiming Ying
+
+The official 2026 AMSI course is NOT titled "Deep Learning Theory".
+
+
+YONSEI WORDING
+--------------
+The site says "Course enrolments" rather than "courses completed":
+- Intro to Entrepreneurship and Venture Capital
+- AI and Society
+- Developmental Psychology
+
+The YISS Certificate of Completion is shown as evidence of the six-week program.
+No public grade claims are made.
+
+
+PRIVACY
+-------
+The raw USyd, Yonsei and Korea University transcripts have NOT been copied into
+this public website package because they contain student IDs and/or other personal
+information.
+
+Use verified private transcript sharing (e.g. My eQuals) for admissions when needed.
+
+
+INSTALLATION — 3 SMALL INDEX.HTML EDITS
+---------------------------------------
+
+1. HEAD
+
+Immediately after:
+  <link rel="stylesheet" href="style.css" />
+
+and after your experience CSS if you already added it, add:
+
+  <link rel="stylesheet" href="education/education.css" />
+
+
+2. EDUCATION SECTION
+
+Replace your entire existing:
+
+  <section id="education" class="section">
+    ...
+  </section>
+
+with the contents of:
+
+  education/index-snippet.html
+
+
+3. BOTTOM OF INDEX.HTML
+
+Near </body>, after your other loader scripts, add:
+
+  <script src="education/loader.js"></script>
+
+
+UPLOAD
+------
+Upload the complete:
+  education/
+
+folder to the repository root.
+
+Merge:
+  assets/images/education/
+
+into your existing assets/images/ directory.
+
+
+YOU DO NOT NEED TO EDIT
+-----------------------
+- education.css
+- education/loader.js
+- any popup HTML file
+
+They are already wired together.
+
+
+EXPECTED REPOSITORY SHAPE
+-------------------------
+index.html
+style.css
+
 experience/
-  experience.css
+  ...
+
+education/
+  education.css
   loader.js
   index-snippet.html
-  science-peer-mentor-2026.html
-  incubate-startup-fundamentals-2026.html
-  practera-saiep-2026.html
+  usyd-2024-2026.html
+  yonsei-yiss-2026.html
+  amsi-2025-2026.html
+  korea-iwc-2025-26.html
+  earlier-study.html
 
-assets/images/experience/
-  peer-mentor/
-    certificate.jpg
-    co-mentor-linkedin.jpg
-    mentee-message.jpeg
-  incubate/
-    badge.jpg
-    slack-introduction.jpeg
-    founder-qa.jpg
-    networking-session.jpg
-  practera/
-    team-call.jpg
-    team-roles.jpg
-    certificate.jpg
-
-INSTALLATION — ONLY 3 INDEX.HTML CHANGES
------------------------------------------
-
-1) Upload the folders `experience/` and `assets/` to the ROOT of your GitHub Pages repository.
-   Merge the provided `assets/` folder with your existing `assets/` folder. Do NOT replace/delete
-   your current images.
-
-2) In <head>, immediately AFTER your existing main stylesheet:
-
-   <link rel="stylesheet" href="style.css" />
-
-   add:
-
-   <link rel="stylesheet" href="experience/experience.css" />
-
-   You do NOT need to paste the experience CSS into style.css.
-
-3) Replace your existing Work Experience placeholder with the contents of:
-
-   experience/index-snippet.html
-
-4) At the bottom of index.html, immediately after your other script tags and before </body>, add:
-
-   <script src="experience/loader.js"></script>
-
-That is all.
-
-IMPORTANT
----------
-- The detail files are HTML fragments loaded into a modal by loader.js. Do not open them as
-  standalone pages and do not add <html>, <head>, or <body> around them.
-- The popups require the site to be served over HTTP/HTTPS. They will work on GitHub Pages.
-  Browser security may block fetch() if you double-click index.html locally using file://.
-- If your existing Datathon popup also uses a global body.modal-open class, this package uses
-  the separate class `experience-modal-open` to avoid conflicts.
-- Your screenshots include other students/participants. They are included exactly as supplied.
-  Before publishing publicly, consider whether you want to crop or blur names/faces that are
-  not necessary to tell the story.
-
-SOURCE LINKS USED IN THE DETAIL PAGES
--------------------------------------
-Science Peer Mentoring:
-https://mentoring.sydney.edu.au/p/p15/
-
-Co-mentor LinkedIn reflection:
-https://www.linkedin.com/posts/gabrielamichellevivaldi_peer-mentoring-2026-what-an-amazing-6-ugcPost-7449654399313870848-f0cK/
-
-INCUBATE Startup Fundamentals:
-https://incubate.org.au/proto/
-
-Study Australia Industry Experience Program / Practera:
-https://practera.com/saiep/
+assets/
+  images/
+    education/
+      yonsei/
+      amsi/
+      history/
