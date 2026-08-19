@@ -2,7 +2,8 @@
   const experienceFiles = {
     "science-peer-mentor-2026": "experience/science-peer-mentor-2026.html",
     "incubate-startup-fundamentals-2026": "experience/incubate-startup-fundamentals-2026.html",
-    "practera-saiep-2026": "experience/practera-saiep-2026.html"
+    "practera-saiep-2026": "experience/practera-saiep-2026.html",
+    "data1002-teaching-2025": "experience/data1002-teaching-2025.html"
   };
 
   let lastFocusedElement = null;

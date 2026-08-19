@@ -317,3 +317,282 @@ body.experience-modal-open {
     grid-column: auto;
   }
 }
+
+
+/* =========================================================
+   Teaching Story — "Summer in Seoul"-inspired editorial mode
+   Uses the existing modal but turns the teaching entry into
+   a long-form visual story with chapters and evidence.
+   ========================================================= */
+
+.teaching-feature-row {
+  position: relative;
+}
+
+.teaching-feature-row::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: -1px;
+  width: min(180px, 28%);
+  height: 2px;
+  background: currentColor;
+  opacity: 0.22;
+}
+
+.teaching-story {
+  --teaching-ink: #18202b;
+  --teaching-muted: #667085;
+  --teaching-line: #e6e9ee;
+  --teaching-soft: #f6f8fb;
+  --teaching-warm: #fbf8f2;
+}
+
+.teaching-story-hero {
+  position: relative;
+  margin: -0.2rem 0 2.7rem;
+  padding: 1rem 0 2.4rem;
+  border-bottom: 1px solid var(--teaching-line);
+}
+
+.teaching-story-number {
+  margin: 1.2rem 0 0.35rem;
+  font-size: 0.69rem;
+  font-weight: 800;
+  letter-spacing: 0.13em;
+  color: var(--teaching-muted);
+}
+
+.teaching-story-hero > h2 {
+  margin: 0;
+  max-width: 700px;
+  font-size: clamp(2.15rem, 5vw, 3.55rem);
+  letter-spacing: -0.035em;
+  line-height: 1.03;
+  color: var(--teaching-ink);
+}
+
+.teaching-story-hero .experience-popup-lead {
+  max-width: 690px;
+  margin-top: 1.1rem;
+  font-size: 1.08rem;
+}
+
+.teaching-story-tags {
+  margin-top: 1.15rem;
+}
+
+.teaching-story-route {
+  display: grid;
+  grid-template-columns: repeat(7, auto);
+  align-items: center;
+  justify-content: start;
+  gap: 0.8rem;
+  margin-top: 2rem;
+  padding: 1rem 1.1rem;
+  overflow-x: auto;
+  border: 1px solid var(--teaching-line);
+  border-radius: 12px;
+  background: var(--teaching-soft);
+}
+
+.teaching-story-route span {
+  min-width: max-content;
+  font-size: 0.82rem;
+  font-weight: 750;
+  line-height: 1.3;
+  color: var(--teaching-ink);
+}
+
+.teaching-story-route small {
+  font-size: 0.66rem;
+  font-weight: 600;
+  color: var(--teaching-muted);
+}
+
+.teaching-story-route i {
+  color: #9aa2af;
+  font-style: normal;
+}
+
+.teaching-story-full-link {
+  margin: 1rem 0 0;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.teaching-story-full-link a {
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px solid #c9ced8;
+}
+
+.teaching-chapter {
+  display: grid;
+  grid-template-columns: 58px minmax(0, 1fr);
+  gap: 1.25rem;
+  margin-top: 3.2rem;
+  padding-top: 0.4rem;
+}
+
+.teaching-chapter-index {
+  padding-top: 0.1rem;
+  font-size: 1.85rem;
+  font-weight: 300;
+  color: #adb4bf;
+  letter-spacing: -0.04em;
+}
+
+.teaching-chapter h3,
+.teaching-story-ending h3 {
+  margin: 0.25rem 0 0.8rem;
+  font-size: clamp(1.25rem, 2.4vw, 1.7rem);
+  line-height: 1.25;
+  color: var(--teaching-ink);
+}
+
+.teaching-chapter p,
+.teaching-story-ending p {
+  color: #374151;
+  line-height: 1.78;
+}
+
+.teaching-pullquote {
+  margin: 1.6rem 0 0;
+  padding: 1.15rem 1.3rem;
+  border-left: 3px solid #7c8798;
+  background: var(--teaching-warm);
+  color: #2f3742;
+  font-size: 1.04rem;
+  line-height: 1.65;
+}
+
+.teaching-note {
+  margin-top: 1.15rem !important;
+  padding: 0.85rem 1rem;
+  border-radius: 8px;
+  background: var(--teaching-soft);
+  color: var(--teaching-muted) !important;
+  font-size: 0.84rem;
+}
+
+.teaching-evidence-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: 1rem;
+  margin: 1.6rem 0 0 58px;
+}
+
+.teaching-evidence-grid figure {
+  min-width: 0;
+  margin: 0;
+}
+
+.teaching-evidence-grid img {
+  display: block;
+  width: 100%;
+  max-height: 490px;
+  object-fit: contain;
+  border: 1px solid var(--teaching-line);
+  border-radius: 10px;
+  background: #fff;
+}
+
+.teaching-evidence-grid figcaption {
+  margin-top: 0.48rem;
+  color: var(--teaching-muted);
+  font-size: 0.74rem;
+  line-height: 1.5;
+}
+
+.teaching-evidence-wide {
+  min-width: 0;
+}
+
+.teaching-letter-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.teaching-letter-grid .teaching-evidence-wide {
+  grid-column: 1 / -1;
+}
+
+.teaching-letter-grid .teaching-evidence-wide img {
+  max-height: 670px;
+}
+
+.teaching-single-evidence {
+  grid-template-columns: 1fr;
+}
+
+.teaching-single-evidence img {
+  max-height: 620px;
+}
+
+.teaching-return-chapter {
+  margin-top: 3.7rem;
+  padding: 1.8rem 1.4rem 1.8rem 0;
+  border-top: 1px solid var(--teaching-line);
+  border-bottom: 1px solid var(--teaching-line);
+  background:
+    linear-gradient(90deg, transparent 0, transparent 58px, var(--teaching-warm) 58px);
+}
+
+.teaching-story-ending {
+  margin-top: 3.8rem;
+  padding: 2.2rem;
+  border-radius: 14px;
+  background: var(--teaching-ink);
+}
+
+.teaching-story-ending .meta,
+.teaching-story-ending h3,
+.teaching-story-ending p,
+.teaching-story-ending a {
+  color: #fff;
+}
+
+.teaching-story-ending .meta {
+  opacity: 0.66;
+}
+
+.teaching-story-ending p {
+  opacity: 0.88;
+}
+
+.teaching-story-links a {
+  border-bottom-color: rgba(255,255,255,0.36);
+}
+
+@media (max-width: 700px) {
+  .teaching-story-route {
+    grid-template-columns: repeat(7, max-content);
+  }
+
+  .teaching-chapter {
+    grid-template-columns: 1fr;
+    gap: 0.15rem;
+  }
+
+  .teaching-chapter-index {
+    font-size: 1.2rem;
+  }
+
+  .teaching-evidence-grid {
+    grid-template-columns: 1fr;
+    margin-left: 0;
+  }
+
+  .teaching-letter-grid .teaching-evidence-wide {
+    grid-column: auto;
+  }
+
+  .teaching-return-chapter {
+    padding: 1.4rem 1rem;
+    background: var(--teaching-warm);
+  }
+
+  .teaching-story-ending {
+    padding: 1.5rem;
+  }
+}
