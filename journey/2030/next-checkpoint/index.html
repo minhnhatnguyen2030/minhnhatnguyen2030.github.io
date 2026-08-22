@@ -3,39 +3,48 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="A research time capsule written in 2026: what kind of reliable multimodal scientific agent would we want beside humans if a future crisis like Disease Y arrived in 2030?" />
-  <meta property="og:title" content="2030: If Disease Y Arrives | My AI Journey | Thomas Nguyen" />
-  <meta property="og:description" content="A window into a proposed PhD direction: reliable multimodal scientific agents under uncertainty, inspired by Saigon 2021 and written forward to 2030." />
+
+  <meta name="description"
+        content="A research time capsule written in 2026: what kind of reliable scientific AI would we want beside humans if a future high-uncertainty crisis arrived in 2030?" />
+
+  <meta property="og:title"
+        content="2030: If Disease Y Arrives | My AI Journey | Thomas Nguyen" />
+  <meta property="og:description"
+        content="A personal research window from Saigon 2021 to a proposed PhD on reliable multimodal scientific agents under uncertainty." />
   <meta property="og:type" content="article" />
-  <meta property="og:url" content="https://minhnhatnguyen2030.github.io/journey/2030/next-checkpoint/" />
+  <meta property="og:url"
+        content="https://minhnhatnguyen2030.github.io/journey/2030/next-checkpoint/" />
 
   <title>2030: If Disease Y Arrives | My AI Journey | Thomas Nguyen</title>
 
   <link rel="stylesheet" href="/assets/css/journey.css" />
 
   <style>
-    /* Page-specific additions. The rest of the visual language comes from journey.css. */
     .future-story {
       --future-ink: #17202a;
-      --future-soft: #f5f7f9;
-      --future-line: #dce1e6;
+      --future-soft: #f6f8fa;
+      --future-line: #dce2e7;
       --future-accent: #315f7d;
       --future-accent-soft: #edf4f8;
     }
 
     .future-story .story-hero h1 {
-      max-width: 920px;
+      max-width: 900px;
     }
 
+    .future-story .story-dek {
+      max-width: 820px;
+    }
+
+    /* ---------- opening capsule ---------- */
     .capsule {
-      width: min(960px, calc(100% - 44px));
-      margin: 0 auto 84px;
-      padding: clamp(28px, 5vw, 54px);
+      width: min(900px, calc(100% - 44px));
+      margin: 0 auto 58px;
+      padding: clamp(28px, 5vw, 50px);
       border: 1px solid var(--future-line);
       border-radius: 18px;
       background:
-        radial-gradient(circle at 10% 15%, rgba(49,95,125,.09), transparent 34%),
-        radial-gradient(circle at 90% 85%, rgba(49,95,125,.06), transparent 30%),
+        radial-gradient(circle at 12% 12%, rgba(49,95,125,.09), transparent 34%),
         #fbfcfd;
       position: relative;
       overflow: hidden;
@@ -50,7 +59,7 @@
       padding: 8px 0;
       transform: rotate(35deg);
       text-align: center;
-      font: 700 .69rem/1 Inter, ui-sans-serif, sans-serif;
+      font: 700 .68rem/1 Inter, ui-sans-serif, sans-serif;
       letter-spacing: .12em;
       color: #fff;
       background: var(--future-ink);
@@ -58,68 +67,65 @@
 
     .capsule-grid {
       display: grid;
-      grid-template-columns: .8fr 1.2fr;
-      gap: 42px;
+      grid-template-columns: .75fr 1.25fr;
+      gap: 38px;
       align-items: end;
     }
 
     .capsule-year {
       font-family: Georgia, "Times New Roman", serif;
-      font-size: clamp(5rem, 13vw, 10rem);
-      line-height: .8;
+      font-size: clamp(5rem, 12vw, 9rem);
+      line-height: .82;
       letter-spacing: -.07em;
       color: var(--future-ink);
     }
 
-    .capsule-copy .eyebrow,
+    .eyebrow,
     .research-label,
     .micro-label {
       margin: 0 0 10px;
-      font: 700 .72rem/1.2 Inter, ui-sans-serif, sans-serif;
+      font: 700 .71rem/1.2 Inter, ui-sans-serif, sans-serif;
       text-transform: uppercase;
       letter-spacing: .13em;
-      color: #65717d;
+      color: #68747f;
     }
 
-    .capsule-copy h2 {
-      margin: 0 0 14px;
-      font: 500 clamp(1.8rem, 4vw, 3.3rem)/1.08 Georgia, "Times New Roman", serif;
+    .capsule h2 {
+      margin: 0 0 13px;
+      font: 500 clamp(1.8rem, 4vw, 3.1rem)/1.08 Georgia, "Times New Roman", serif;
     }
 
-    .capsule-copy p {
+    .capsule p:last-child {
       margin: 0;
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: 1.1rem;
-      line-height: 1.7;
-      color: #4b5563;
+      color: #4f5b66;
+      font: 1.05rem/1.68 Georgia, "Times New Roman", serif;
     }
 
     .future-disclaimer {
-      width: min(760px, calc(100% - 44px));
-      margin: -42px auto 82px;
-      padding: 15px 18px;
+      width: min(720px, calc(100% - 44px));
+      margin: -26px auto 72px;
+      padding: 14px 17px;
       border: 1px solid var(--future-line);
       border-radius: 10px;
-      color: #5e6872;
       background: #fff;
-      font-size: .82rem;
+      color: #626d77;
+      font-size: .8rem;
       line-height: 1.55;
     }
 
-    .future-disclaimer strong { color: var(--text); }
-
-    .timeline-bridge-2030 {
-      width: min(980px, calc(100% - 44px));
-      margin: 72px auto 90px;
+    /* ---------- 2021 → 2026 → 2030 ---------- */
+    .timeline-bridge {
+      width: min(900px, calc(100% - 44px));
+      margin: 58px auto 80px;
       display: grid;
       grid-template-columns: 1fr auto 1fr auto 1fr;
+      gap: 14px;
       align-items: center;
-      gap: 16px;
     }
 
     .time-node {
-      min-height: 150px;
-      padding: 22px;
+      min-height: 132px;
+      padding: 20px;
       border: 1px solid var(--future-line);
       border-radius: 12px;
       background: #fff;
@@ -128,95 +134,91 @@
     .time-node strong {
       display: block;
       margin-bottom: 7px;
-      font-size: 1.05rem;
+      font-size: 1rem;
     }
 
     .time-node span {
-      display: block;
-      color: #6b7280;
-      font-size: .86rem;
+      color: #6a747e;
+      font-size: .84rem;
       line-height: 1.5;
     }
 
     .time-arrow {
-      color: #8a949d;
-      font-size: 1.4rem;
+      color: #8d969f;
+      font-size: 1.25rem;
     }
 
-    .process-line-2030 {
-      margin: 34px 0 8px;
+    .process-line {
+      margin: 30px 0 6px;
       display: flex;
       flex-wrap: wrap;
-      gap: 8px;
+      gap: 7px;
       align-items: center;
       justify-content: center;
     }
 
-    .process-line-2030 span {
-      padding: 8px 12px;
+    .process-line span {
+      padding: 7px 11px;
       border: 1px solid var(--future-line);
       border-radius: 999px;
       background: var(--future-soft);
-      font: 650 .8rem/1 Inter, ui-sans-serif, sans-serif;
+      font: 650 .78rem/1 Inter, ui-sans-serif, sans-serif;
     }
 
-    .process-line-2030 b {
+    .process-line b {
       color: #929aa3;
       font-weight: 500;
     }
 
-    .photo-pair {
-      width: min(960px, calc(100% - 44px));
-      margin: 68px auto 82px;
-      display: grid;
-      grid-template-columns: 1.15fr .85fr;
-      gap: 12px;
-    }
-
-    .photo-pair figure {
-      margin: 0;
-    }
-
-    .photo-pair img {
-      width: 100%;
-      height: 100%;
-      min-height: 360px;
-      max-height: 580px;
-      object-fit: cover;
-      border-radius: 5px;
-      background: #f3f4f6;
-    }
-
-    .photo-pair figcaption {
-      margin-top: 9px;
-      color: var(--muted);
-      font-size: .78rem;
-      line-height: 1.45;
-    }
-
-    .biomafia-card {
-      margin: 42px 0 50px;
-      padding: 28px;
+    /* ---------- compact origin link ---------- */
+    .origin-card {
+      margin: 34px 0 14px;
+      padding: 23px;
       border: 1px solid var(--future-line);
       border-radius: 12px;
       background: var(--future-soft);
     }
 
-    .biomafia-card h3 {
-      margin: 3px 0 10px;
-      font: 500 1.7rem/1.15 Georgia, "Times New Roman", serif;
+    .origin-card h3 {
+      margin: 3px 0 8px;
+      font: 500 1.55rem/1.15 Georgia, "Times New Roman", serif;
     }
 
-    .biomafia-card p {
+    .origin-card p {
       margin: 0;
-      font-size: 1.02rem;
+      font-size: .98rem;
     }
 
-    .research-window {
-      width: min(960px, calc(100% - 44px));
-      margin: 24px auto 86px;
-      padding: clamp(28px, 5vw, 52px);
+    /* ---------- one NEW 2026 visual, deliberately not a reused 2021 photo ---------- */
+    .artifact-figure {
+      width: min(740px, calc(100% - 44px));
+      margin: 48px auto 76px;
+    }
+
+    .artifact-figure img {
+      display: block;
+      width: 100%;
+      height: auto;
+      max-height: 430px;
+      object-fit: contain;
       border: 1px solid var(--future-line);
+      border-radius: 10px;
+      background: #fff;
+    }
+
+    .artifact-figure figcaption {
+      margin-top: 10px;
+      color: #747e87;
+      font-size: .78rem;
+      line-height: 1.5;
+    }
+
+    /* ---------- PhD research window ---------- */
+    .research-window {
+      width: min(900px, calc(100% - 44px));
+      margin: 30px auto 78px;
+      padding: clamp(28px, 5vw, 48px);
+      border: 1px solid #2c3945;
       border-radius: 16px;
       background: #111820;
       color: #f7f9fb;
@@ -228,28 +230,26 @@
 
     .research-window h2 {
       margin: 4px 0 14px;
-      max-width: 840px;
-      font: 500 clamp(2rem, 4.7vw, 4.3rem)/1.04 Georgia, "Times New Roman", serif;
+      max-width: 800px;
+      font: 500 clamp(2rem, 4.5vw, 3.9rem)/1.05 Georgia, "Times New Roman", serif;
     }
 
-    .research-window .research-question {
-      max-width: 850px;
+    .research-question {
+      max-width: 820px;
       margin: 0;
       color: #c6d0d7;
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: clamp(1.05rem, 2vw, 1.35rem);
-      line-height: 1.65;
+      font: clamp(1.02rem, 2vw, 1.27rem)/1.65 Georgia, "Times New Roman", serif;
     }
 
     .three-problems {
-      margin-top: 34px;
+      margin-top: 30px;
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 10px;
     }
 
     .problem-card {
-      padding: 22px 20px;
+      padding: 20px 18px;
       border: 1px solid #34414d;
       border-radius: 10px;
       background: #17212a;
@@ -257,107 +257,79 @@
 
     .problem-card small {
       display: block;
-      margin-bottom: 11px;
+      margin-bottom: 9px;
       color: #9aa8b3;
       font-weight: 700;
-      letter-spacing: .09em;
+      letter-spacing: .08em;
       text-transform: uppercase;
     }
 
     .problem-card strong {
       display: block;
-      margin-bottom: 8px;
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: 1.22rem;
-      font-weight: 500;
+      margin-bottom: 7px;
+      font: 500 1.16rem/1.25 Georgia, "Times New Roman", serif;
     }
 
     .problem-card span {
       color: #b8c4cd;
-      font-size: .85rem;
-      line-height: 1.5;
+      font-size: .82rem;
+      line-height: 1.48;
     }
 
     .thesis-not-test {
-      margin-top: 28px;
-      padding-top: 22px;
+      margin-top: 25px;
+      padding-top: 20px;
       border-top: 1px solid #34414d;
       color: #d3dce3;
-      font-size: .9rem;
+      font-size: .88rem;
+      line-height: 1.55;
     }
 
+    /* ---------- SIM ---------- */
     .sim-grid {
-      width: min(960px, calc(100% - 44px));
-      margin: 56px auto 86px;
+      width: min(900px, calc(100% - 44px));
+      margin: 48px auto 74px;
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 12px;
+      gap: 10px;
     }
 
     .sim-layer {
-      padding: 24px;
+      padding: 21px;
       border: 1px solid var(--future-line);
-      border-radius: 12px;
+      border-radius: 11px;
       background: #fff;
     }
 
     .sim-layer .n {
       display: inline-grid;
-      width: 30px;
-      height: 30px;
+      width: 29px;
+      height: 29px;
       place-items: center;
-      margin-bottom: 16px;
+      margin-bottom: 13px;
       border-radius: 50%;
       background: var(--future-accent-soft);
       color: var(--future-accent);
       font-weight: 800;
-      font-size: .78rem;
+      font-size: .75rem;
     }
 
     .sim-layer h3 {
-      margin: 0 0 8px;
-      font: 600 1.08rem/1.25 Inter, ui-sans-serif, sans-serif;
+      margin: 0 0 7px;
+      font: 600 1rem/1.25 Inter, ui-sans-serif, sans-serif;
     }
 
     .sim-layer p {
       margin: 0;
       color: #66717b;
-      font-size: .86rem;
-      line-height: 1.55;
+      font-size: .82rem;
+      line-height: 1.5;
     }
 
-    .contract-grid {
-      margin: 34px 0 50px;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 12px;
-    }
-
-    .contract-card {
-      padding: 24px;
-      border-radius: 12px;
-      border: 1px solid var(--future-line);
-    }
-
-    .contract-card.can { background: #f5f8f6; }
-    .contract-card.cannot { background: #faf6f5; }
-
-    .contract-card h3 {
-      margin: 0 0 14px;
-      font-size: 1rem;
-    }
-
-    .contract-card ul {
-      margin: 0;
-      padding-left: 20px;
-      color: #56616b;
-      font-size: .9rem;
-      line-height: 1.65;
-    }
-
+    /* ---------- video smaller than the first version ---------- */
     .video-block {
-      width: min(960px, calc(100% - 44px));
-      margin: 40px auto 86px;
+      width: min(820px, calc(100% - 44px));
+      margin: 36px auto 76px;
     }
 
     .video-shell {
@@ -365,7 +337,7 @@
       width: 100%;
       aspect-ratio: 16 / 9;
       overflow: hidden;
-      border-radius: 12px;
+      border-radius: 11px;
       background: #111;
     }
 
@@ -378,48 +350,49 @@
     }
 
     .video-caption {
-      margin-top: 14px;
-      color: #65717b;
-      font-size: .82rem;
-      line-height: 1.6;
+      margin-top: 12px;
+      color: #68737d;
+      font-size: .79rem;
+      line-height: 1.55;
     }
 
     .time-links {
       display: flex;
       flex-wrap: wrap;
-      gap: 8px;
-      margin-top: 12px;
+      gap: 7px;
+      margin-top: 10px;
     }
 
     .time-links a {
       display: inline-block;
-      padding: 7px 10px;
+      padding: 6px 9px;
       border: 1px solid var(--future-line);
       border-radius: 999px;
       background: #fff;
       color: #45515c;
-      font-size: .76rem;
+      font-size: .73rem;
     }
 
+    /* ---------- 2030 scenario ---------- */
     .scenario {
-      width: min(960px, calc(100% - 44px));
-      margin: 52px auto 86px;
+      width: min(800px, calc(100% - 44px));
+      margin: 46px auto 72px;
       border-left: 1px solid var(--future-line);
     }
 
     .scenario-step {
       position: relative;
-      margin-left: 28px;
-      padding: 0 0 32px 28px;
+      margin-left: 25px;
+      padding: 0 0 27px 25px;
     }
 
     .scenario-step::before {
       content: "";
       position: absolute;
-      left: -34px;
+      left: -31px;
       top: 5px;
-      width: 9px;
-      height: 9px;
+      width: 8px;
+      height: 8px;
       border-radius: 50%;
       background: #fff;
       border: 2px solid #738391;
@@ -427,62 +400,89 @@
 
     .scenario-step strong {
       display: block;
-      margin-bottom: 6px;
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: 1.15rem;
-      font-weight: 500;
+      margin-bottom: 5px;
+      font: 500 1.08rem/1.3 Georgia, "Times New Roman", serif;
     }
 
     .scenario-step p {
       margin: 0;
       color: #65707a;
-      font-size: .9rem;
-      line-height: 1.55;
+      font-size: .87rem;
+      line-height: 1.52;
+    }
+
+    .contract-grid {
+      margin: 30px 0 42px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+
+    .contract-card {
+      padding: 21px;
+      border: 1px solid var(--future-line);
+      border-radius: 11px;
+    }
+
+    .contract-card.can { background: #f5f8f6; }
+    .contract-card.cannot { background: #faf6f5; }
+
+    .contract-card h3 {
+      margin: 0 0 12px;
+      font-size: .98rem;
+    }
+
+    .contract-card ul {
+      margin: 0;
+      padding-left: 19px;
+      color: #56616b;
+      font-size: .86rem;
+      line-height: 1.62;
     }
 
     .question-list {
-      margin: 30px 0 0;
+      margin: 27px 0 0;
       padding: 0;
       list-style: none;
       border-top: 1px solid var(--future-line);
     }
 
     .question-list li {
-      padding: 17px 0;
+      padding: 15px 0;
       border-bottom: 1px solid var(--future-line);
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: 1.12rem;
+      font: 1.06rem/1.5 Georgia, "Times New Roman", serif;
     }
 
+    /* ---------- sources ---------- */
     .research-notes {
-      width: min(960px, calc(100% - 44px));
-      margin: 10px auto 90px;
-      padding: 30px;
+      width: min(820px, calc(100% - 44px));
+      margin: 12px auto 78px;
+      padding: 27px;
       border: 1px solid var(--future-line);
-      border-radius: 14px;
+      border-radius: 13px;
       background: #fbfcfd;
     }
 
     .research-notes h2 {
       margin: 0 0 6px;
-      font: 500 1.9rem/1.15 Georgia, "Times New Roman", serif;
+      font: 500 1.75rem/1.15 Georgia, "Times New Roman", serif;
     }
 
     .research-notes > p {
-      margin: 0 0 22px;
+      margin: 0 0 19px;
       color: #69737d;
-      font-size: .86rem;
+      font-size: .83rem;
     }
 
     .source-list {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 10px;
+      gap: 9px;
     }
 
     .source-link {
       display: block;
-      padding: 16px;
+      padding: 14px;
       border: 1px solid var(--future-line);
       border-radius: 9px;
       background: #fff;
@@ -497,20 +497,20 @@
     .source-link strong {
       display: block;
       margin-bottom: 4px;
-      font-size: .88rem;
+      font-size: .84rem;
     }
 
     .source-link span {
       display: block;
       color: #6d7780;
-      font-size: .76rem;
-      line-height: 1.45;
+      font-size: .73rem;
+      line-height: 1.43;
     }
 
     .sealed-ending {
-      width: min(760px, calc(100% - 44px));
-      margin: 92px auto 30px;
-      padding: 62px 0;
+      width: min(720px, calc(100% - 44px));
+      margin: 80px auto 28px;
+      padding: 52px 0;
       border-top: 1px solid var(--future-line);
       border-bottom: 1px solid var(--future-line);
       text-align: center;
@@ -518,37 +518,33 @@
 
     .sealed-ending .seal {
       display: inline-block;
-      margin-bottom: 16px;
-      padding: 7px 11px;
+      margin-bottom: 14px;
+      padding: 6px 10px;
       border: 1px solid #9ca6af;
       border-radius: 999px;
       color: #68737c;
-      font-size: .72rem;
+      font-size: .69rem;
       font-weight: 750;
       letter-spacing: .12em;
     }
 
     .sealed-ending h2 {
-      margin: 0 0 14px;
-      font: 500 clamp(2rem, 5vw, 3.7rem)/1.08 Georgia, "Times New Roman", serif;
+      margin: 0 0 13px;
+      font: 500 clamp(2rem, 5vw, 3.4rem)/1.08 Georgia, "Times New Roman", serif;
     }
 
     .sealed-ending p {
       margin: 0 auto;
-      max-width: 650px;
+      max-width: 620px;
       color: #5d6872;
-      font: 1.05rem/1.75 Georgia, "Times New Roman", serif;
+      font: 1rem/1.72 Georgia, "Times New Roman", serif;
     }
 
     @media (max-width: 820px) {
       .capsule-grid,
-      .photo-pair,
+      .timeline-bridge,
       .contract-grid,
       .source-list {
-        grid-template-columns: 1fr;
-      }
-
-      .timeline-bridge-2030 {
         grid-template-columns: 1fr;
       }
 
@@ -562,422 +558,535 @@
         grid-template-columns: 1fr;
       }
 
-      .capsule-year { font-size: clamp(5rem, 28vw, 8rem); }
-      .photo-pair img { min-height: 0; max-height: none; }
+      .capsule-year {
+        font-size: clamp(5rem, 27vw, 7.6rem);
+      }
+
+      .artifact-figure {
+        width: min(100% - 30px, 740px);
+      }
     }
   </style>
 </head>
 
 <body class="story-page future-story">
-  <header class="journey-site-header">
-    <a class="brand" href="/">Thomas Nguyen</a>
-    <nav aria-label="Journey navigation">
-      <a href="/journey/">← My AI Journey</a>
-      <a href="/">Academic home</a>
-    </nav>
-  </header>
 
-  <main>
-    <div class="story-shell">
-      <header class="story-hero">
-        <p class="kicker">My AI Journey · 2030 Time Machine</p>
-        <h1>2030: If Disease Y Arrives</h1>
-        <p class="story-dek">
-          A research time capsule written before the PhD: one question sent forward from Saigon 2021 and Sydney 2026 — what kind of AI would I actually trust beside humans when the world becomes uncertain again?
+<header class="journey-site-header">
+  <a class="brand" href="/">Thomas Nguyen</a>
+  <nav aria-label="Journey navigation">
+    <a href="/journey/">← My AI Journey</a>
+    <a href="/">Academic home</a>
+  </nav>
+</header>
+
+<main>
+
+  <div class="story-shell">
+    <header class="story-hero">
+      <p class="kicker">My AI Journey · Research Time Capsule</p>
+      <h1>2030: If Disease Y Arrives</h1>
+
+      <p class="story-dek">
+        A question written before the PhD and sent four years forward:
+        what kind of AI would I actually trust beside humans when evidence is incomplete,
+        the world is changing, and a wrong answer can become a real action?
+      </p>
+
+      <p class="story-meta">
+        Written in Sydney · Saturday, 22 August 2026 · To be reopened in 2030
+      </p>
+    </header>
+  </div>
+
+  <section class="capsule" aria-label="2030 research time capsule">
+    <div class="capsule-grid">
+      <div class="capsule-year">2030</div>
+
+      <div>
+        <p class="eyebrow">A future I cannot see</p>
+        <h2>This is not a prediction. It is a stress test.</h2>
+        <p>
+          Suppose an unfamiliar infectious disease appears across several cities.
+          Reports conflict, models drift, evidence arrives late, and synthetic media makes
+          the information environment harder to trust. Call it <strong>Disease Y</strong>.
+          The name is fictional. The research problem is not.
         </p>
-        <p class="story-meta">Written in Sydney · Saturday, 22 August 2026 · To be reopened in 2030</p>
-      </header>
+      </div>
+    </div>
+  </section>
+
+  <p class="future-disclaimer">
+    <strong>Scientific note.</strong>
+    “Disease Y” is only a narrative placeholder for a future high-uncertainty crisis.
+    It is not a prediction of a pandemic in 2030 and not a proposal to design biological agents.
+    The research direction is reliable, verification-grounded multimodal AI under uncertainty.
+  </p>
+
+  <section class="timeline-bridge" aria-label="Journey from 2021 to 2030">
+    <div class="time-node">
+      <strong>2021 · Saigon</strong>
+      <span>A human network turned tests, reports, models and changing evidence into action during Delta.</span>
     </div>
 
-    <section class="capsule" aria-label="2030 time capsule">
-      <div class="capsule-grid">
-        <div class="capsule-year">2030</div>
-        <div class="capsule-copy">
-          <p class="eyebrow">A message to a future I cannot see</p>
-          <h2>This is not a prediction. It is a stress test.</h2>
-          <p>
-            Suppose an unfamiliar infectious disease appears across several cities. Evidence is incomplete, models disagree, the information environment is noisy, and some media may be synthetic. Call it <strong>Disease Y</strong>. The name is fictional. The research question is real.
-          </p>
-        </div>
+    <div class="time-arrow">→</div>
+
+    <div class="time-node">
+      <strong>2026 · Sydney</strong>
+      <span>I turn that memory into a research question about uncertainty, adaptation and verification.</span>
+    </div>
+
+    <div class="time-arrow">→</div>
+
+    <div class="time-node">
+      <strong>2030 · ?</strong>
+      <span>The test is not whether a machine sounds intelligent. It is whether humans can trust its evidence and limits.</span>
+    </div>
+  </section>
+
+  <article class="story-body">
+
+    <section class="story-chapter">
+      <p class="chapter-no">01</p>
+      <h2>The question I carried out of 2021</h2>
+
+      <p>
+        During the Delta outbreak in Ho Chi Minh City, I did not encounter a pandemic as a neat
+        machine-learning dataset. Laboratories measured one part of reality. Epidemiologists inferred
+        another. Models tried to see around the corner. Communicators translated changing evidence.
+        Volunteers and healthcare workers turned decisions into action. Then new observations arrived,
+        and yesterday’s assumptions could fail.
+      </p>
+
+      <p>
+        What stayed with me was not one forecast or one technology. It was the loop:
+        no person possessed the whole answer, and useful intelligence came from repeatedly
+        confronting belief with new evidence.
+      </p>
+
+      <aside class="story-callout">
+        <p>A crisis is not solved by one prediction. It is solved by a loop that keeps meeting reality.</p>
+      </aside>
+
+      <div class="process-line"
+           aria-label="Evidence belief prediction action new evidence revision">
+        <span>evidence</span><b>→</b>
+        <span>belief</span><b>→</b>
+        <span>prediction</span><b>→</b>
+        <span>action</span><b>→</b>
+        <span>new evidence</span><b>→</b>
+        <span>revision</span>
+      </div>
+
+      <div class="origin-card">
+        <p class="micro-label">Back through the time machine</p>
+        <h3>
+          <a href="/journey/2021/summer-saigon/#biomafia">BioMAFIA · Team 1.0 →</a>
+        </h3>
+        <p>
+          The full 2021 story stays where it belongs. This page only carries one idea forward:
+          hard biological problems brought different kinds of people around the same table.
+          Professor
+          <a href="https://truyentran.github.io"
+             target="_blank" rel="noopener noreferrer">Truyen Tran</a>
+          was one early bridge between that experience and the question of what AI could realistically
+          contribute during a pandemic.
+        </p>
       </div>
     </section>
 
-    <p class="future-disclaimer">
-      <strong>Scientific note.</strong> “Disease Y” is used here only as a narrative placeholder for a future high-uncertainty crisis. It is not a prediction of a pandemic in 2030 and not a proposal to design biological agents. The underlying research direction is reliable, verification-grounded multimodal AI under uncertainty.
+  </article>
+
+  <figure class="artifact-figure">
+    <img src="/assets/images/journey/2030/research-objective-2026.jpg"
+         alt="KAIST statement of purpose screen on 22 August 2026 showing the line Let the uncertainty guide you with your objective"
+         loading="lazy" />
+    <figcaption>
+      22 August 2026 — the first line I typed into the KAIST statement-of-purpose box:
+      “Let the uncertainty guide you with your objective.”
+      I later realised that this sentence also described the research philosophy itself.
+    </figcaption>
+  </figure>
+
+  <section class="research-window" aria-label="Proposed PhD research direction">
+    <p class="research-label">2026 · Working PhD direction</p>
+
+    <h2>Reliable Multimodal Scientific Agents Under Uncertainty</h2>
+
+    <p class="research-question">
+      How can an AI agent maintain calibrated beliefs when evidence is incomplete,
+      conflicting or out-of-distribution; determine what evidence or feedback it needs next;
+      and convert hypotheses into executable, independently verifiable computational experiments
+      rather than unsupported language-model conclusions?
     </p>
 
-    <section class="timeline-bridge-2030" aria-label="Journey from 2021 to 2030">
-      <div class="time-node">
-        <strong>2021 · Saigon</strong>
-        <span>A human network tried to turn tests, reports, models and changing evidence into action during the Delta outbreak.</span>
-      </div>
-      <div class="time-arrow">→</div>
-      <div class="time-node">
-        <strong>2026 · Sydney</strong>
-        <span>I ask whether some of that cognitive burden can become a rigorous AI research problem: uncertainty, adaptation and verification.</span>
-      </div>
-      <div class="time-arrow">→</div>
-      <div class="time-node">
-        <strong>2030 · ?</strong>
-        <span>The test is not whether a machine sounds intelligent. It is whether humans can trust its evidence, experiments and limits.</span>
-      </div>
-    </section>
-
-    <article class="story-body">
-      <section class="story-chapter">
-        <p class="chapter-no">01</p>
-        <h2>Before there was an agent, there was a team</h2>
-        <p>
-          In 2021, I encountered a pandemic not as a clean dataset but as a moving system. A laboratory measured one part of reality. Epidemiologists interpreted another. Models tried to see around the corner. Public communication translated changing evidence into language people could act on. Volunteers and healthcare workers carried decisions into the physical world. Then new observations arrived, and yesterday’s assumptions could fail.
-        </p>
-        <p>
-          I was young enough to keep asking naive questions: Why test so many people? Where does the data come from? What if the forecast is wrong? How do we know when a model should change its mind? Around me were people working in molecular testing, public health, communication, artificial intelligence, biotechnology and scientific advice. None of them possessed the whole answer.
-        </p>
-        <aside class="story-callout">
-          <p>A crisis is not solved by one prediction. It is solved by a loop that keeps meeting reality.</p>
-        </aside>
-        <div class="process-line-2030" aria-label="Evidence belief prediction action new evidence revision">
-          <span>evidence</span><b>→</b><span>belief</span><b>→</b><span>prediction</span><b>→</b><span>action</span><b>→</b><span>new evidence</span><b>→</b><span>revision</span>
-        </div>
-      </section>
-    </article>
-
-    <section class="photo-pair" aria-label="Images from the 2021 story">
-      <figure>
-        <img src="/assets/images/journey/2021-saigon/01-hero-saigon-volunteering.jpg" alt="COVID-19 volunteering in Saigon during Summer 2021" loading="lazy" />
-        <figcaption>Saigon, 2021 — the origin of the question. The point was never that data replaced people; it was that evidence had to move fast enough to help them.</figcaption>
-      </figure>
-      <figure>
-        <img src="/assets/images/journey/2021-saigon/03-truyen-tran-covid-forecast.jpg" alt="Pandemic-era COVID-19 forecasting material connected with Professor Truyen Tran" loading="lazy" />
-        <figcaption>One early bridge to AI was the public pandemic work of Professor Truyen Tran — an encounter with modelling before I had the vocabulary to call it a research direction.</figcaption>
-      </figure>
-    </section>
-
-    <article class="story-body">
-      <section class="story-chapter">
-        <p class="chapter-no">02</p>
-        <h2>BioMAFIA: Team 1.0</h2>
-        <p>
-          Near the end of that summer, a student biotechnology competition needed a team name. My father glanced at a copy of <em>The Bomber Mafia</em> and suggested, with unnecessary satisfaction, <strong>BioMAFIA</strong>. The joke stayed. So did the feeling behind it: difficult biological problems need different kinds of minds around the same table.
-        </p>
-
-        <div class="biomafia-card">
-          <p class="micro-label">Back through the time machine</p>
-          <h3><a href="/journey/2021/summer-saigon/#biomafia">BioMAFIA →</a></h3>
-          <p>
-            The 2021 chapter is where the name began. Professor <a href="https://truyentran.github.io" target="_blank" rel="noopener noreferrer">Truyen Tran</a> also appears in that story; his 2020 talk <a href="https://truyentran.github.io/talks/AIML-covid-19-VI.pdf" target="_blank" rel="noopener noreferrer"><em>AI giữa đại dịch Covid-19</em></a> asked what AI could realistically contribute during the pandemic.
-          </p>
-        </div>
-
-        <p>
-          From 2030, I want to imagine a second version of that team. Not a machine replacing doctors, scientists, epidemiologists or decision-makers. A machine replacing some of the <em>information bottleneck</em> that a human like me could only handle manually in 2021: searching, comparing, remembering, checking, recomputing and asking what evidence is still missing.
-        </p>
-      </section>
-    </article>
-
-    <figure class="story-media">
-      <img class="story-image" src="/assets/images/journey/2021-saigon/06-biomafia-origin.jpg" alt="BioMAFIA origin memory from the 2021 story" loading="lazy" />
-      <figcaption>BioMAFIA began as a student team name. Here it becomes a metaphor: build the future team before the future crisis.</figcaption>
-    </figure>
-
-    <section class="research-window" aria-label="PhD research window">
-      <p class="research-label">2026 · Working PhD direction</p>
-      <h2>Reliable Multimodal Scientific Agents Under Uncertainty</h2>
-      <p class="research-question">
-        How can an AI agent maintain calibrated beliefs when evidence is incomplete, conflicting or out-of-distribution; actively determine what evidence or feedback it needs next; and convert hypotheses into executable, independently verifiable computational experiments rather than unsupported language-model conclusions?
-      </p>
-
-      <div class="three-problems">
-        <div class="problem-card">
-          <small>PhD problem 1</small>
-          <strong>Reason reliably</strong>
-          <span>Track evidence, provenance, contradictions, uncertainty and distribution shift — and abstain when the evidence is not enough.</span>
-        </div>
-        <div class="problem-card">
-          <small>PhD problem 2</small>
-          <strong>Learn efficiently</strong>
-          <span>Choose useful data, feedback and experiences rather than repeatedly retraining or filling context indiscriminately.</span>
-        </div>
-        <div class="problem-card">
-          <small>PhD problem 3</small>
-          <strong>Run verified experiments</strong>
-          <span>Turn hypotheses into reproducible computational tests with independent evaluators, logs and measurable failure.</span>
-        </div>
+    <div class="three-problems">
+      <div class="problem-card">
+        <small>Problem 1</small>
+        <strong>Reason reliably</strong>
+        <span>Track evidence, provenance, contradiction, uncertainty and distribution shift — and abstain when evidence is insufficient.</span>
       </div>
 
-      <p class="thesis-not-test">
-        <strong>Disease Y is the stress test, not the thesis.</strong> The scientific contribution must remain general enough to evaluate in machine learning, optimisation, simulation, statistics and other computational domains before it is trusted in a high-stakes crisis setting.
-      </p>
-    </section>
-
-    <article class="story-body">
-      <section class="story-chapter">
-        <p class="chapter-no">03</p>
-        <h2>SIM: the Scientific Intelligence Machine</h2>
-        <p>
-          I call the thought experiment <strong>SIM</strong> — the <strong>Scientific Intelligence Machine</strong>. “Superintelligence machine” is the deliberately provocative nickname; the research version is much less mystical. SIM is an agent that can observe heterogeneous evidence, preserve where it came from, represent competing hypotheses, choose what to investigate next, execute bounded computational experiments and ask an independent process to verify the result.
-        </p>
-        <p>
-          Its most important capability may be the sentence current systems are often reluctant to say: <em>I do not know yet.</em> Uncertainty is not a defect to hide. It is information about what the system should investigate next.
-        </p>
-        <aside class="story-callout">
-          <p>Objective determines direction; uncertainty determines the next experiment.</p>
-        </aside>
-      </section>
-    </article>
-
-    <section class="sim-grid" aria-label="SIM architecture">
-      <div class="sim-layer">
-        <span class="n">01</span>
-        <h3>Multimodal perception</h3>
-        <p>Read text, images, tables, time series, maps and domain-specific representations without pretending they are interchangeable.</p>
+      <div class="problem-card">
+        <small>Problem 2</small>
+        <strong>Learn efficiently</strong>
+        <span>Select useful data, memory and feedback rather than repeatedly retraining or accumulating context without discrimination.</span>
       </div>
-      <div class="sim-layer">
-        <span class="n">02</span>
-        <h3>Evidence &amp; provenance memory</h3>
-        <p>Store observations with source, time, confidence and lineage instead of collapsing everything into one opaque context.</p>
+
+      <div class="problem-card">
+        <small>Problem 3</small>
+        <strong>Verify experimentally</strong>
+        <span>Turn hypotheses into reproducible computational tests whose outputs can be independently checked.</span>
       </div>
-      <div class="sim-layer">
-        <span class="n">03</span>
-        <h3>Belief &amp; uncertainty</h3>
-        <p>Maintain competing explanations, calibrated confidence and explicit reasons for doubt.</p>
-      </div>
-      <div class="sim-layer">
-        <span class="n">04</span>
-        <h3>Planner</h3>
-        <p>Choose whether to answer, retrieve, ask a human, simulate, run a computation or abstain.</p>
-      </div>
-      <div class="sim-layer">
-        <span class="n">05</span>
-        <h3>Sandboxed executor</h3>
-        <p>Run code and simulations inside controlled environments with permissions, budgets and reversible actions.</p>
-      </div>
-      <div class="sim-layer">
-        <span class="n">06</span>
-        <h3>Independent verifier</h3>
-        <p>Score outputs with deterministic tests, statistical tests, simulators or domain-specific evaluators whenever possible.</p>
-      </div>
-    </section>
-
-    <article class="story-body">
-      <section class="story-chapter">
-        <p class="chapter-no">04</p>
-        <h2>Why 2026 changed the question</h2>
-        <p>
-          In 2021 there was no generally capable multimodal foundation-model agent beside our team. By 2026, models can read, see, write code, call tools, maintain long contexts and increasingly operate as agents. That is exactly why reliability matters more, not less. A fluent error can now become an action.
-        </p>
-        <p>
-          Jeff Dean’s Princeton lecture in February 2026 captures both sides of the opportunity. He describes a future in which one human may coordinate many AI agents; later, when asked about near-term fears, he points to realistic synthetic misinformation; and when asked about hallucination, he discusses generating multiple candidate rollouts and evaluating them rather than trusting a single answer. For my research question, those ideas meet at one point: <strong>generation needs evidence, uncertainty and verification around it.</strong>
-        </p>
-      </section>
-    </article>
-
-    <section class="video-block" aria-label="Jeff Dean Princeton lecture">
-      <div class="video-shell">
-        <iframe
-          src="https://www.youtube-nocookie.com/embed/UTTeXZrpMR0?start=3927&rel=0"
-          title="Jeff Dean — Important Trends in AI, Princeton Distinguished Colloquium, February 10 2026"
-          loading="lazy"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen>
-        </iframe>
-      </div>
-      <p class="video-caption">
-        Jeff Dean, <em>Important Trends in AI: How Did We Get Here, What Can We Do Now, and Where are We Headed?</em>, Princeton CS Distinguished Colloquium, 10 February 2026. The embed begins near his discussion of human–agent collaboration.
-      </p>
-      <div class="time-links" aria-label="Useful timestamps">
-        <a href="https://youtu.be/UTTeXZrpMR0?t=3927" target="_blank" rel="noopener noreferrer">65:27 · humans + many agents</a>
-        <a href="https://youtu.be/UTTeXZrpMR0?t=4261" target="_blank" rel="noopener noreferrer">71:01 · misinformation</a>
-        <a href="https://youtu.be/UTTeXZrpMR0?t=4367" target="_blank" rel="noopener noreferrer">72:47 · hallucination + multiple rollouts</a>
-      </div>
-    </section>
-
-    <article class="story-body">
-      <section class="story-chapter">
-        <p class="chapter-no">05</p>
-        <h2>Turn the machine on</h2>
-        <p>
-          Now imagine that the calendar really does say 2030. Disease Y appears. SIM receives clinical reports, papers, epidemiological time series, maps, mobility patterns, wastewater signals, diagnostic images, laboratory summaries, official announcements, social-media claims, simulator outputs and expert assessments. Some are trustworthy. Some are stale. Some disagree because the world has changed. Some may be manipulated.
-        </p>
-        <p>
-          SIM’s job is not to compress all of that into one confident paragraph. Its job is to keep the chain of reasoning auditable while the situation changes underneath it.
-        </p>
-      </section>
-    </article>
-
-    <section class="scenario" aria-label="Disease Y stress test scenario">
-      <div class="scenario-step">
-        <strong>08:10 · An anomaly appears.</strong>
-        <p>Hospital and wastewater signals rise, but official case counts remain flat. SIM keeps several hypotheses alive rather than deciding prematurely.</p>
-      </div>
-      <div class="scenario-step">
-        <strong>09:40 · The evidence conflicts.</strong>
-        <p>A widely shared video contradicts the surveillance record. SIM checks provenance, temporal consistency and whether apparently independent sources are actually copying one another.</p>
-      </div>
-      <div class="scenario-step">
-        <strong>11:20 · Uncertainty becomes a query.</strong>
-        <p>Instead of guessing, SIM identifies the next observation that would best distinguish the leading hypotheses and reports why that observation matters.</p>
-      </div>
-      <div class="scenario-step">
-        <strong>14:00 · A computational experiment runs.</strong>
-        <p>Competing models are fitted in a sandbox. Code, assumptions, seeds, measurements and failures are logged. An independent evaluator checks the output.</p>
-      </div>
-      <div class="scenario-step">
-        <strong>16:30 · A human decides.</strong>
-        <p>SIM presents evidence, uncertainty and options. It does not convert reasoning permission into unrestricted execution permission. Consequential action remains governed by humans and institutions.</p>
-      </div>
-    </section>
-
-    <article class="story-body">
-      <section class="story-chapter">
-        <p class="chapter-no">06</p>
-        <h2>Replace Thomas?</h2>
-        <p>
-          The provocative version of the idea is simple: <strong>could SIM replace the role Thomas played in 2021?</strong>
-        </p>
-        <p>
-          Not the physician. Not the laboratory scientist. Not the epidemiologist. Not the policymaker. Not the person responsible for another human life. What I would like to replace is the fragile human bottleneck between fragments of information: the hours spent searching, comparing, copying, remembering, recomputing and wondering whether something important has been missed.
-        </p>
-        <p>
-          A machine can read more than I could read, remember more than I could remember and run more experiments than I could run. But scale does not automatically produce judgment. The machine earns a place on the team only if it can show where its conclusions came from, expose its uncertainty, accept correction and remain inside boundaries humans can understand.
-        </p>
-
-        <div class="contract-grid">
-          <div class="contract-card can">
-            <h3>SIM should be allowed to</h3>
-            <ul>
-              <li>retrieve and compare evidence;</li>
-              <li>quantify uncertainty and detect contradictions;</li>
-              <li>suggest informative next observations;</li>
-              <li>run sandboxed computational experiments;</li>
-              <li>record provenance, code, failures and revisions;</li>
-              <li>abstain and escalate to a human.</li>
-            </ul>
-          </div>
-          <div class="contract-card cannot">
-            <h3>SIM should not be allowed to</h3>
-            <ul>
-              <li>hide uncertainty behind fluent language;</li>
-              <li>treat self-agreement as independent verification;</li>
-              <li>turn a recommendation into unrestricted external action;</li>
-              <li>bypass privacy, credentials or operational permissions;</li>
-              <li>autonomously perform high-risk wet-lab biological design;</li>
-              <li>claim authority that belongs to accountable humans.</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      <section class="story-chapter">
-        <p class="chapter-no">07</p>
-        <h2>One life is still not a statistic</h2>
-        <p>
-          The reason to build a system like this is not that machines are more interesting than people. It is the opposite. Machine learning naturally pulls attention toward scale: more samples, more parameters, more tokens, more agents, more compute. The lesson I carried out of 2021 was that every point in an epidemic curve is somebody.
-        </p>
-        <p>
-          So the measure of SIM cannot be how persuasive its demo looks. It has to be whether it helps people reach better, faster and more defensible decisions without pretending to know what it does not know.
-        </p>
-        <aside class="story-callout story-final-callout">
-          <p>The goal is not an AI that replaces scientists during the next crisis. It is an AI that helps scientists confront uncertainty faster without hiding it from them.</p>
-        </aside>
-      </section>
-    </article>
-
-    <figure class="story-media story-ending-image">
-      <img class="story-image" src="/assets/images/journey/2021-saigon/07-thomas-with-truyen-tran.jpg" alt="Thomas Nguyen with Professor Truyen Tran, a later full-circle moment connected with the 2021 AI story" loading="lazy" />
-      <figcaption>From seeing a name beside a pandemic-era forecast to meeting one of the people behind it: a small reminder that research directions are built through people as much as papers.</figcaption>
-    </figure>
-
-    <article class="story-body">
-      <section class="story-chapter">
-        <p class="chapter-no">08</p>
-        <h2>Questions for the person who opens this in 2030</h2>
-        <p>
-          I do not know whether I will begin the Integrated M.S.–Ph.D. path at KAIST, whether this exact proposal will survive contact with graduate school, or whether the field will move so quickly that SIM will sound quaint four years from now. That uncertainty is part of the point of leaving this page here.
-        </p>
-
-        <ul class="question-list">
-          <li>Did I make it to KAIST?</li>
-          <li>Did reliable multimodal agents become the research problem I actually pursued?</li>
-          <li>Did uncertainty become something agents could use to choose their next experiment?</li>
-          <li>Did independent verification become normal, or did fluent self-evaluation remain enough?</li>
-          <li>Did humans learn how to coordinate teams of agents without surrendering responsibility to them?</li>
-          <li>Does SIM exist in any meaningful sense?</li>
-          <li>Was there a Disease Y?</li>
-          <li>And if there was: were we more prepared than we were in 2021?</li>
-        </ul>
-      </section>
-    </article>
-
-    <section class="research-notes" aria-label="Research notes and references">
-      <p class="micro-label">Research window · sources behind the story</p>
-      <h2>Read beyond the time capsule</h2>
-      <p>
-        The narrative above is personal; the research direction is intended to remain testable. These links are useful entry points into the scientific and policy context that shaped the page.
-      </p>
-
-      <div class="source-list">
-        <a class="source-link" href="https://www.cs.princeton.edu/events/important-trends-ai-how-did-we-get-here-what-can-we-do-now-and-where-are-we-headed" target="_blank" rel="noopener noreferrer">
-          <strong>Jeff Dean · Princeton CS Distinguished Colloquium</strong>
-          <span>Official event page for the 10 February 2026 talk embedded above.</span>
-        </a>
-
-        <a class="source-link" href="https://truyentran.github.io/talks/AIML-covid-19-VI.pdf" target="_blank" rel="noopener noreferrer">
-          <strong>Truyen Tran · AI giữa đại dịch Covid-19</strong>
-          <span>Pandemic-era AI talk from 2020; part of the historical thread connecting the 2021 story to AI.</span>
-        </a>
-
-        <a class="source-link" href="https://www.who.int/health-topics/who-pandemic-agreement" target="_blank" rel="noopener noreferrer">
-          <strong>WHO Pandemic Agreement</strong>
-          <span>Global preparedness context shaped by lessons from COVID-19 and future pandemic risk.</span>
-        </a>
-
-        <a class="source-link" href="https://iris.who.int/bitstream/handle/10665/380362/9789240101470-eng.pdf" target="_blank" rel="noopener noreferrer">
-          <strong>WHO R&amp;D preparedness and “Disease X”</strong>
-          <span>Background for the idea of preparing for an unknown future pathogen; “Disease Y” here remains fictional.</span>
-        </a>
-
-        <a class="source-link" href="https://deepmind.google/blog/alphaevolve-a-gemini-powered-coding-agent-for-designing-advanced-algorithms/" target="_blank" rel="noopener noreferrer">
-          <strong>Google DeepMind · AlphaEvolve</strong>
-          <span>An example of generation coupled to automated evaluators — a useful model for verification-grounded agent loops.</span>
-        </a>
-
-        <a class="source-link" href="https://deepmind.google/blog/co-scientist-a-multi-agent-ai-partner-to-accelerate-research/" target="_blank" rel="noopener noreferrer">
-          <strong>Google DeepMind · Co-Scientist</strong>
-          <span>A multi-agent research partner explicitly framed as collaboration with scientists, not replacement of expertise.</span>
-        </a>
-
-        <a class="source-link" href="https://hal.cs.princeton.edu/scienceagentbench" target="_blank" rel="noopener noreferrer">
-          <strong>ScienceAgentBench</strong>
-          <span>102 real scientific tasks used to evaluate language agents for data-driven scientific discovery.</span>
-        </a>
-
-        <a class="source-link" href="https://openai.com/index/mle-bench/" target="_blank" rel="noopener noreferrer">
-          <strong>MLE-bench</strong>
-          <span>A benchmark for autonomous machine-learning engineering across 75 Kaggle competitions.</span>
-        </a>
-      </div>
-    </section>
-
-    <section class="sealed-ending">
-      <span class="seal">TIME CAPSULE · OPEN IN 2030</span>
-      <h2>Build the teammate before the crisis.</h2>
-      <p>
-        Written in 2026, not because I know what 2030 will look like, but because I want the person who reaches it to be accountable to the question asked here: <strong>did we build AI that became more useful as uncertainty increased — or merely more confident?</strong>
-      </p>
-    </section>
-
-    <div class="story-end">
-      <p class="kicker">Research philosophy</p>
-      <h2>Reason carefully. Learn efficiently.<br />Experiment safely. Verify independently.</h2>
     </div>
 
-    <nav class="story-footer-nav" aria-label="Story navigation">
-      <a href="/journey/2026/summer-seoul/">← Previous story<strong>Summer 2026 in Seoul</strong></a>
-      <a href="/journey/">Back to<strong>My AI Journey</strong></a>
-    </nav>
-  </main>
+    <p class="thesis-not-test">
+      <strong>Disease Y is the stress test, not the thesis.</strong>
+      The AI contribution has to survive outside epidemiology — in machine learning,
+      optimisation, simulation, statistics and other computational domains — before it deserves
+      trust in a high-stakes crisis.
+    </p>
+  </section>
 
-  <footer class="site-footer">© 2026 Thomas Nguyen · My AI Journey · 2030 Time Machine</footer>
+  <article class="story-body">
+
+    <section class="story-chapter">
+      <p class="chapter-no">02</p>
+      <h2>SIM should not be an oracle</h2>
+
+      <p>
+        I call the thought experiment <strong>SIM</strong>:
+        the <strong>Scientific Intelligence Machine</strong>.
+        The name sounds grand; the useful version is deliberately less mystical.
+        SIM is a scientific teammate that can preserve where evidence came from,
+        maintain competing hypotheses, decide what information is missing,
+        run bounded computational experiments and expose the result to independent verification.
+      </p>
+
+      <p>
+        Its most important sentence may be the least impressive:
+        <em>I do not know yet.</em>
+        Uncertainty is not something to hide behind fluent language.
+        It is information about what should be investigated next.
+      </p>
+
+      <aside class="story-callout">
+        <p>Objective determines direction; uncertainty determines the next experiment.</p>
+      </aside>
+    </section>
+
+  </article>
+
+  <section class="sim-grid" aria-label="SIM architecture">
+
+    <div class="sim-layer">
+      <span class="n">01</span>
+      <h3>Perception</h3>
+      <p>Read text, images, tables, time series and maps without pretending the modalities are interchangeable.</p>
+    </div>
+
+    <div class="sim-layer">
+      <span class="n">02</span>
+      <h3>Evidence memory</h3>
+      <p>Preserve source, time, confidence and provenance instead of collapsing observations into opaque context.</p>
+    </div>
+
+    <div class="sim-layer">
+      <span class="n">03</span>
+      <h3>Uncertainty</h3>
+      <p>Maintain competing explanations and calibrated reasons for confidence or doubt.</p>
+    </div>
+
+    <div class="sim-layer">
+      <span class="n">04</span>
+      <h3>Planner</h3>
+      <p>Choose whether to answer, retrieve more evidence, ask a human, compute, simulate or abstain.</p>
+    </div>
+
+    <div class="sim-layer">
+      <span class="n">05</span>
+      <h3>Sandbox</h3>
+      <p>Run code and simulations inside controlled, permissioned and reversible environments.</p>
+    </div>
+
+    <div class="sim-layer">
+      <span class="n">06</span>
+      <h3>Verifier</h3>
+      <p>Use tests, statistics, simulators or domain evaluators to check what generation alone cannot guarantee.</p>
+    </div>
+
+  </section>
+
+  <article class="story-body">
+
+    <section class="story-chapter">
+      <p class="chapter-no">03</p>
+      <h2>Why 2026 changed the question</h2>
+
+      <p>
+        In 2021 there was no generally capable multimodal agent beside the team.
+        By 2026, models can read, see, write code and increasingly use tools.
+        That makes reliability more consequential: a fluent error can now become an action.
+      </p>
+
+      <p>
+        Jeff Dean’s February 2026 Princeton lecture gives this page a useful external reference point.
+        He discusses a future in which humans may coordinate many AI agents and, in the Q&amp;A,
+        addresses both synthetic misinformation and techniques that evaluate multiple candidate
+        reasoning trajectories rather than trusting one answer.
+        For this research direction, the lesson is simple:
+        <strong>generation needs evidence, uncertainty and verification around it.</strong>
+      </p>
+    </section>
+
+  </article>
+
+  <section class="video-block" aria-label="Jeff Dean Princeton lecture">
+    <div class="video-shell">
+      <iframe
+        src="https://www.youtube-nocookie.com/embed/UTTeXZrpMR0?start=3927&rel=0"
+        title="Jeff Dean — Important Trends in AI, Princeton Distinguished Colloquium, February 10 2026"
+        loading="lazy"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen>
+      </iframe>
+    </div>
+
+    <p class="video-caption">
+      Jeff Dean, <em>Important Trends in AI: How Did We Get Here, What Can We Do Now,
+      and Where Are We Headed?</em>, Princeton CS Distinguished Colloquium,
+      10 February 2026. The embed begins near the discussion of human–agent collaboration.
+    </p>
+
+    <div class="time-links" aria-label="Useful timestamps">
+      <a href="https://youtu.be/UTTeXZrpMR0?t=3927"
+         target="_blank" rel="noopener noreferrer">65:27 · humans + many agents</a>
+      <a href="https://youtu.be/UTTeXZrpMR0?t=4261"
+         target="_blank" rel="noopener noreferrer">71:01 · misinformation</a>
+      <a href="https://youtu.be/UTTeXZrpMR0?t=4367"
+         target="_blank" rel="noopener noreferrer">72:47 · hallucination + multiple rollouts</a>
+    </div>
+  </section>
+
+  <article class="story-body">
+
+    <section class="story-chapter">
+      <p class="chapter-no">04</p>
+      <h2>Now turn the machine on</h2>
+
+      <p>
+        Imagine that the calendar really does say 2030.
+        Disease Y appears.
+        SIM receives clinical reports, papers, epidemiological time series,
+        maps, laboratory summaries, official announcements, social-media claims,
+        simulator outputs and expert assessments.
+        Some sources are trustworthy. Some are stale. Some conflict because the world has changed.
+        Some may have been manipulated.
+      </p>
+
+      <p>
+        Its job is not to compress everything into one confident paragraph.
+        Its job is to keep the chain of reasoning inspectable while reality changes underneath it.
+      </p>
+    </section>
+
+  </article>
+
+  <section class="scenario" aria-label="Disease Y stress test">
+
+    <div class="scenario-step">
+      <strong>08:10 · An anomaly appears.</strong>
+      <p>Hospital and wastewater signals rise while reported case counts remain flat. SIM keeps several hypotheses alive.</p>
+    </div>
+
+    <div class="scenario-step">
+      <strong>09:40 · Evidence conflicts.</strong>
+      <p>A widely shared video contradicts surveillance data. SIM checks provenance, timing and whether apparently independent sources are copying one another.</p>
+    </div>
+
+    <div class="scenario-step">
+      <strong>11:20 · Uncertainty becomes a question.</strong>
+      <p>Instead of guessing, SIM identifies the next observation that would best distinguish the leading explanations.</p>
+    </div>
+
+    <div class="scenario-step">
+      <strong>14:00 · An experiment runs.</strong>
+      <p>Competing models are tested in a sandbox. Code, assumptions, measurements and failures are logged; a separate evaluator checks the result.</p>
+    </div>
+
+    <div class="scenario-step">
+      <strong>16:30 · A human decides.</strong>
+      <p>SIM presents evidence, uncertainty and options. Reasoning permission never becomes unrestricted execution permission.</p>
+    </div>
+
+  </section>
+
+  <article class="story-body">
+
+    <section class="story-chapter">
+      <p class="chapter-no">05</p>
+      <h2>What part of 2021 Thomas should a machine replace?</h2>
+
+      <p>
+        Not the physician. Not the laboratory scientist. Not the epidemiologist.
+        Not the policymaker. Not the person accountable for another human life.
+        What I would like to replace is the fragile information bottleneck:
+        the hours spent searching, comparing, copying, remembering, recomputing
+        and wondering whether something important has been missed.
+      </p>
+
+      <p>
+        A machine may read more than I can read and run more experiments than I can run.
+        That does not give it judgment by default.
+        It earns a place on the team only if it can show where its conclusions came from,
+        expose uncertainty, accept correction and stay within boundaries humans can understand.
+      </p>
+
+      <div class="contract-grid">
+
+        <div class="contract-card can">
+          <h3>SIM should be able to</h3>
+          <ul>
+            <li>retrieve and compare evidence;</li>
+            <li>quantify uncertainty and contradiction;</li>
+            <li>suggest informative next observations;</li>
+            <li>run sandboxed computational experiments;</li>
+            <li>record provenance, failures and revisions;</li>
+            <li>abstain and escalate to a human.</li>
+          </ul>
+        </div>
+
+        <div class="contract-card cannot">
+          <h3>SIM should not be able to</h3>
+          <ul>
+            <li>hide uncertainty behind fluent language;</li>
+            <li>treat self-agreement as independent verification;</li>
+            <li>turn a recommendation into unrestricted action;</li>
+            <li>bypass privacy, credentials or permissions;</li>
+            <li>autonomously perform high-risk wet-lab biological design;</li>
+            <li>claim authority that belongs to accountable humans.</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <aside class="story-callout story-final-callout">
+        <p>
+          Every point in an epidemic curve is somebody.
+          The goal is not an AI that replaces scientists during the next crisis,
+          but one that helps them confront uncertainty faster without hiding it.
+        </p>
+      </aside>
+    </section>
+
+    <section class="story-chapter">
+      <p class="chapter-no">06</p>
+      <h2>Questions for the person who opens this in 2030</h2>
+
+      <p>
+        I do not know whether I will begin the Integrated M.S.–Ph.D. path at KAIST,
+        whether this exact proposal will survive graduate school,
+        or whether the field will move so quickly that SIM will sound quaint.
+        That uncertainty is part of why this page exists.
+      </p>
+
+      <ul class="question-list">
+        <li>Did I make it to KAIST?</li>
+        <li>Did reliable scientific agents become the research problem I actually pursued?</li>
+        <li>Did uncertainty become something agents could use to choose what to investigate next?</li>
+        <li>Did verification become normal, or did fluent self-evaluation remain enough?</li>
+        <li>Does SIM exist in any meaningful form?</li>
+        <li>If a real crisis arrived, were we more prepared than we were in 2021?</li>
+      </ul>
+    </section>
+
+  </article>
+
+  <section class="research-notes" aria-label="Research references">
+    <p class="micro-label">Research window · references</p>
+    <h2>Read beyond the time capsule</h2>
+    <p>
+      The story is personal; the research claims should remain testable.
+      These are useful entry points into the ideas behind the page.
+    </p>
+
+    <div class="source-list">
+
+      <a class="source-link"
+         href="https://www.cs.princeton.edu/events/important-trends-ai-how-did-we-get-here-what-can-we-do-now-and-where-are-we-headed"
+         target="_blank" rel="noopener noreferrer">
+        <strong>Jeff Dean · Princeton CS, 2026</strong>
+        <span>Official page for the lecture embedded above.</span>
+      </a>
+
+      <a class="source-link"
+         href="https://truyentran.github.io/talks/AIML-covid-19-VI.pdf"
+         target="_blank" rel="noopener noreferrer">
+        <strong>Truyen Tran · AI amid COVID-19</strong>
+        <span>A pandemic-era bridge between the 2021 story and the later AI question.</span>
+      </a>
+
+      <a class="source-link"
+         href="https://deepmind.google/blog/alphaevolve-a-gemini-powered-coding-agent-for-designing-advanced-algorithms/"
+         target="_blank" rel="noopener noreferrer">
+        <strong>Google DeepMind · AlphaEvolve</strong>
+        <span>A concrete example of generation coupled to automated evaluators.</span>
+      </a>
+
+      <a class="source-link"
+         href="https://arxiv.org/abs/2410.05080"
+         target="_blank" rel="noopener noreferrer">
+        <strong>ScienceAgentBench</strong>
+        <span>A benchmark showing why end-to-end scientific-agent claims still require rigorous evaluation.</span>
+      </a>
+
+      <a class="source-link"
+         href="https://www.who.int/health-topics/who-pandemic-agreement"
+         target="_blank" rel="noopener noreferrer">
+        <strong>WHO Pandemic Agreement</strong>
+        <span>Policy context for preparedness, surveillance, research cooperation and future pandemic risk.</span>
+      </a>
+
+      <a class="source-link"
+         href="/journey/2021/summer-saigon/"
+         aria-label="Read the full Summer 2021 Saigon story">
+        <strong>The full 2021 origin story</strong>
+        <span>This page links back instead of duplicating the photographs and narrative already told there.</span>
+      </a>
+
+    </div>
+  </section>
+
+  <section class="sealed-ending">
+    <span class="seal">SEALED IN 2026 · OPEN IN 2030</span>
+    <h2>Build the teammate before the crisis.</h2>
+    <p>
+      I cannot know what 2030 will ask of us.
+      I can choose what kind of research question to work on before it arrives.
+    </p>
+  </section>
+
+  <div class="story-end">
+    <p class="kicker">Research principle</p>
+    <h2>Reason carefully. Learn efficiently.<br />Experiment safely. Verify independently.</h2>
+  </div>
+
+  <nav class="story-footer-nav" aria-label="Story navigation">
+    <a href="/journey/2026/summer-seoul/">
+      ← Previous story
+      <strong>Summer 2026 in Seoul</strong>
+    </a>
+
+    <a href="/journey/">
+      Back to
+      <strong>My AI Journey</strong>
+    </a>
+  </nav>
+
+</main>
+
+<footer class="site-footer">
+  © 2026 Thomas Nguyen · My AI Journey
+</footer>
+
 </body>
 </html>
